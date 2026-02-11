@@ -70,7 +70,7 @@
         <h2>Ahoj, jsem Nicol</h2>
         <p>Jsem holka, která si chce splnit jeden ze svých velkých snů. Fotografie je pro mě způsob, jak zachytit emoce a momenty, které by jinak zmizely.</p>
         <p>Specializuji se na portrétní a rodinnou fotografii. Miluji práci s přirozeným světlem, especially golden hour, kdy je světlo nejkrásnější.</p>
-        <p>Působím v Olomouckém kraji a okolí, ale ráda přijedu kamkoliv, kde je krásná příroda a vy.</p>
+        <p>Působím v okolí Hranic na Moravě, ale ráda k Vám přijedu kamkoliv v Olomouckém kraji.</p>
         <a href="/about" class="link-arrow">Více o mně →</a>
       </div>
     </div>

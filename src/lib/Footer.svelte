@@ -49,7 +49,7 @@
           <p>
             <a href="tel:+420771161818">+420 771 161 818</a>
           </p>
-          <p>Olomoucký kraj a okolí</p>
+          <p>Hranice na Moravě a okolí</p>
         </div>
         <div class="footer-socials">
           <a href="https://www.instagram.com/n.i.c.o.l_photography/" target="_blank" rel="noopener" aria-label="Instagram">

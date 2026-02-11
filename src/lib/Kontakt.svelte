@@ -71,7 +71,7 @@
             </div>
             <div>
               <h4>Lokalita</h4>
-              <span>Olomoucký kraj, Česká republika</span>
+              <span>Hranice na Moravě</span>
             </div>
           </div>
         </div>
@@ -104,7 +104,7 @@
 <!-- Map placeholder -->
 <section class="map-section">
   <div class="map-placeholder">
-    <p>Působím v Olomouckém kraji a okolí, ale ráda přijedu kamkoliv v České republice.</p>
+    <p>Působím v okolí Hranic na Moravě, ale ráda k Vám přijedu kamkoliv v Olomouckém kraji.</p>
   </div>
 </section>
 
