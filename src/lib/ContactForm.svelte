@@ -1,6 +1,4 @@
 <script>
-  import emailjs from 'emailjs-com';
-
   let name = '';
   let email = '';
   let phone = '';
@@ -11,10 +9,10 @@
   let isSubmitting = false;
 
   const services = [
-    'Svatební fotografie',
     'Portrétní focení',
     'Rodinné focení',
-    'Focení akcí',
+    'Párové focení',
+    'Focení s domácími mazlíčky',
     'Jiné'
   ];
 
@@ -24,24 +22,34 @@
     errorMessage = '';
     successMessage = '';
 
-    const templateParams = {
-      from_name: name,
-      from_email: email,
-      phone: phone,
-      service: service,
-      message: message,
-    };
-
     try {
-      // Replace with your actual EmailJS credentials
-      await emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams, 'YOUR_USER_ID');
-      successMessage = 'Zpráva byla úspěšně odeslána! Ozvu se vám co nejdříve.';
-      // Clear form
-      name = '';
-      email = '';
-      phone = '';
-      service = '';
-      message = '';
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          access_key: '457c855c-6bc1-49a9-a26d-b2212ad21ed2',
+          subject: `Nová zpráva z webu od ${name}`,
+          from_name: name,
+          email: email,
+          phone: phone || 'Neuvedeno',
+          service: service || 'Neuvedeno',
+          message: message,
+          botcheck: ''
+        })
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        successMessage = 'Zpráva byla úspěšně odeslána! Ozvu se vám co nejdříve.';
+        name = '';
+        email = '';
+        phone = '';
+        service = '';
+        message = '';
+      } else {
+        throw new Error(data.message);
+      }
     } catch (err) {
       console.error('Failed to send:', err);
       errorMessage = 'Nepodařilo se odeslat zprávu. Zkuste to prosím znovu nebo mě kontaktujte přímo.';
@@ -109,6 +117,8 @@
       required
     ></textarea>
   </div>
+
+  <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
   <button type="submit" class="btn submit-btn" disabled={isSubmitting}>
     {#if isSubmitting}
