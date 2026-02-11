@@ -23,7 +23,7 @@
 <nav class="navbar" class:scrolled={isScrolled || forceScrolled}>
   <div class="nav-container">
     <a href="/" class="nav-brand">
-      <img src="/images/logo/podpis_kribala.webp" class="nav-logo" alt="NJ Photography Logo" />
+      <img src="/images/logo/N.svg" class="nav-logo" alt="NJ Photography Logo" />
       <span class="brand-text">Nicol Juráňová photography</span>
     </a>
 

@@ -10,7 +10,7 @@
       <!-- Brand -->
       <div class="footer-section footer-brand">
         <a href="/" class="footer-logo">
-          <img src="/images/logo/podpis_kribala.webp" alt="NJ Photography Logo" />
+          <img src="/images/logo/N.svg" alt="NJ Photography Logo" />
           <span>Nicol Juráňová photography</span>
         </a>
         <p>Zachycuji příběhy, které vydrží navždy. Fotografka specializující se na portréty, rodinné a párové focení v Olomouckém kraji.</p>
