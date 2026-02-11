@@ -35,7 +35,7 @@
   <!-- Hero with Parallax -->
   <section class="hero">
     <div class="hero-bg" style="transform: translateY({scrollY * 0.5}px)">
-      <img src="./src/images/portfolio/golden-hour.png" alt="" />
+      <img src="/images/portfolio/golden-hour.png" alt="" />
     </div>
     <div class="hero-content" style="transform: translateY({scrollY * 0.2}px); opacity: {1 - scrollY / 600}">
       <h1 class="split-text">
@@ -74,7 +74,7 @@
   <!-- About with reveal -->
   <section class="about">
     <div class="about-image animate-on-scroll">
-      <img src="./src/images/portfolio/nicol-portret.png" alt="Nicol" />
+      <img src="/images/portfolio/nicol-portret.png" alt="Nicol" />
     </div>
     <div class="about-content">
       <div class="animate-on-scroll delay-1">
@@ -93,28 +93,28 @@
     <div class="services-grid">
       <div class="service-card animate-on-scroll delay-1">
         <div class="service-icon">
-          <img src="./src/images/portfolio/portret-zena.png" alt="Portréty" />
+          <img src="/images/portfolio/portret-zena.png" alt="Portréty" />
         </div>
         <h3>Portréty</h3>
         <p>Osobní i profesionální portréty s důrazem na přirozené světlo.</p>
       </div>
       <div class="service-card animate-on-scroll delay-2">
         <div class="service-icon">
-          <img src="./src/images/portfolio/rodina-vanoce.jpg" alt="Rodiny" />
+          <img src="/images/portfolio/rodina-vanoce.jpg" alt="Rodiny" />
         </div>
         <h3>Rodiny</h3>
         <p>Rodinné momenty zachycené v přírodě.</p>
       </div>
       <div class="service-card animate-on-scroll delay-3">
         <div class="service-icon">
-          <img src="./src/images/portfolio/par-makove-pole.png" alt="Páry" />
+          <img src="/images/portfolio/par-makove-pole.png" alt="Páry" />
         </div>
         <h3>Páry</h3>
         <p>Romantické focení při západu slunce.</p>
       </div>
       <div class="service-card animate-on-scroll delay-4">
         <div class="service-icon">
-          <img src="./src/images/portfolio/vanocni-foceni.png" alt="Vánoce" />
+          <img src="/images/portfolio/vanocni-foceni.png" alt="Vánoce" />
         </div>
         <h3>Vánoce</h3>
         <p>Kouzelná atmosféra zimního focení.</p>
@@ -137,7 +137,7 @@
   <!-- Contact with animation -->
   <section class="contact">
     <div class="contact-bg">
-      <img src="./src/images/portfolio/kroj-foceni.png" alt="" />
+      <img src="/images/portfolio/kroj-foceni.png" alt="" />
     </div>
     <div class="contact-content animate-on-scroll">
       <h2>Pojďme spolupracovat</h2>

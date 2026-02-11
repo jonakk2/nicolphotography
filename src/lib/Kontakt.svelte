@@ -119,7 +119,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('./src/images/background/hlavicka.webp');
+    background-image: url('/images/background/hlavicka.webp');
     background-size: cover;
     background-position: center;
     color: white;

@@ -8,25 +8,25 @@
     {
       id: 'portraits',
       name: 'Portréty',
-      cover: './src/images/thumbnails/portraits/nahled_portrety.webp',
+      cover: '/images/thumbnails/portraits/nahled_portrety.webp',
       desc: 'Osobní i profesionální portréty'
     },
     {
       id: 'family',
       name: 'Rodiny',
-      cover: './src/images/thumbnails/family/nahled_rodinne.webp',
+      cover: '/images/thumbnails/family/nahled_rodinne.webp',
       desc: 'Rodinné momenty plné lásky'
     },
     {
       id: 'couples',
       name: 'Páry',
-      cover: './src/images/thumbnails/couples/nahled_parove.webp',
+      cover: '/images/thumbnails/couples/nahled_parove.webp',
       desc: 'Romantické focení párů'
     },
     {
       id: 'animals',
       name: 'S domácími mazlíčky',
-      cover: './src/images/thumbnails/animals/nahled_sdomacimimazlicky.webp',
+      cover: '/images/thumbnails/animals/nahled_sdomacimimazlicky.webp',
       desc: 'Focení s vašimi mazlíčky'
     }
   ];
@@ -208,7 +208,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('./src/images/background/hlavicka.webp');
+    background-image: url('/images/background/hlavicka.webp');
     background-size: cover;
     background-position: center;
     color: white;

@@ -18,7 +18,7 @@
       </h1>
     </div>
     <div class="hero-image">
-      <img src="./src/images/portfolio/golden-hour.png" alt="Golden hour" />
+      <img src="/images/portfolio/golden-hour.png" alt="Golden hour" />
       <div class="hero-image-caption">
         <span>01</span>
         <p>Golden Hour / Vysočina 2024</p>
@@ -37,7 +37,7 @@
   <section class="about">
     <div class="about-left">
       <div class="about-image-1">
-        <img src="./src/images/portfolio/nicol-portret.png" alt="Nicol" />
+        <img src="/images/portfolio/nicol-portret.png" alt="Nicol" />
       </div>
       <div class="about-stats">
         <div class="stat">

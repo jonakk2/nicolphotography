@@ -15,7 +15,7 @@
 
   <!-- Featured Image - Full width -->
   <section class="featured">
-    <img src="./src/images/portfolio/golden-hour.png" alt="Featured" />
+    <img src="/images/portfolio/golden-hour.png" alt="Featured" />
   </section>
 
   <!-- Intro -->
@@ -40,7 +40,7 @@
   <!-- About -->
   <section class="about">
     <div class="about-image">
-      <img src="./src/images/portfolio/nicol-portret.png" alt="Nicol" />
+      <img src="/images/portfolio/nicol-portret.png" alt="Nicol" />
     </div>
     <div class="about-text">
       <h2>O mně</h2>

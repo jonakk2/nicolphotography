@@ -30,7 +30,7 @@
   <div class="container">
     <div class="about-intro">
       <div class="about-image-wrapper">
-        <img src="./src/images/portfolio/about/IMG_3078-2.webp" alt="Nicol Juráňová - fotografka" class="about-main-image" />
+        <img src="/images/portfolio/about/IMG_3078-2.webp" alt="Nicol Juráňová - fotografka" class="about-main-image" />
         <div class="image-decoration"></div>
       </div>
       <div class="about-text">
@@ -87,7 +87,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('./src/images/background/hlavicka.webp');
+    background-image: url('/images/background/hlavicka.webp');
     background-size: cover;
     background-position: center;
     color: white;

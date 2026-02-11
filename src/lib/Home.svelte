@@ -63,7 +63,7 @@
   <div class="container">
     <div class="about-grid">
       <div class="about-image">
-        <img src="./src/images/portfolio/nicol-portret.png" alt="Nicol - fotografka" />
+        <img src="/images/portfolio/nicol-portret.png" alt="Nicol - fotografka" />
       </div>
       <div class="about-text">
         <span class="section-label">O mně</span>
@@ -174,7 +174,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('./src/images/background/hlavicka.webp');
+    background-image: url('/images/background/hlavicka.webp');
     background-size: cover;
     background-position: center;
     color: white;

@@ -1,439 +1,439 @@
 [
   {
-    "src": "./src/images/portfolio/portraits/IMG_1664.jpg",
-    "thumb": "./src/images/thumbnails/portraits/IMG_1664.webp",
+    "src": "/images/portfolio/portraits/IMG_1664.jpg",
+    "thumb": "/images/thumbnails/portraits/IMG_1664.webp",
     "alt": "Portrét v přírodě",
     "category": "portraits"
   },
   {
-    "src": "./src/images/portfolio/portraits/IMG_1667.jpg",
-    "thumb": "./src/images/thumbnails/portraits/IMG_1667.webp",
+    "src": "/images/portfolio/portraits/IMG_1667.jpg",
+    "thumb": "/images/thumbnails/portraits/IMG_1667.webp",
     "alt": "Portrét",
     "category": "portraits"
   },
   {
-    "src": "./src/images/portfolio/portraits/IMG_1869.jpg",
-    "thumb": "./src/images/thumbnails/portraits/IMG_1869.webp",
+    "src": "/images/portfolio/portraits/IMG_1869.jpg",
+    "thumb": "/images/thumbnails/portraits/IMG_1869.webp",
     "alt": "Portrét",
     "category": "portraits"
   },
   {
-    "src": "./src/images/portfolio/portraits/IMG_1907.jpg",
-    "thumb": "./src/images/thumbnails/portraits/IMG_1907.webp",
+    "src": "/images/portfolio/portraits/IMG_1907.jpg",
+    "thumb": "/images/thumbnails/portraits/IMG_1907.webp",
     "alt": "Portrét",
     "category": "portraits"
   },
   {
-    "src": "./src/images/portfolio/portraits/IMG_2027.jpg",
-    "thumb": "./src/images/thumbnails/portraits/IMG_2027.webp",
+    "src": "/images/portfolio/portraits/IMG_2027.jpg",
+    "thumb": "/images/thumbnails/portraits/IMG_2027.webp",
     "alt": "Portrét",
     "category": "portraits"
   },
   {
-    "src": "./src/images/portfolio/portraits/IMG_2059.jpg",
-    "thumb": "./src/images/thumbnails/portraits/IMG_2059.webp",
+    "src": "/images/portfolio/portraits/IMG_2059.jpg",
+    "thumb": "/images/thumbnails/portraits/IMG_2059.webp",
     "alt": "Portrét",
     "category": "portraits"
   },
   {
-    "src": "./src/images/portfolio/portraits/IMG_2080.jpg",
-    "thumb": "./src/images/thumbnails/portraits/IMG_2080.webp",
+    "src": "/images/portfolio/portraits/IMG_2080.jpg",
+    "thumb": "/images/thumbnails/portraits/IMG_2080.webp",
     "alt": "Portrét",
     "category": "portraits"
   },
   {
-    "src": "./src/images/portfolio/portraits/IMG_2104.jpg",
-    "thumb": "./src/images/thumbnails/portraits/IMG_2104.webp",
+    "src": "/images/portfolio/portraits/IMG_2104.jpg",
+    "thumb": "/images/thumbnails/portraits/IMG_2104.webp",
     "alt": "Portrét",
     "category": "portraits"
   },
   {
-    "src": "./src/images/portfolio/portraits/IMG_3703.jpg",
-    "thumb": "./src/images/thumbnails/portraits/IMG_3703.webp",
+    "src": "/images/portfolio/portraits/IMG_3703.jpg",
+    "thumb": "/images/thumbnails/portraits/IMG_3703.webp",
     "alt": "Portrét",
     "category": "portraits"
   },
   {
-    "src": "./src/images/portfolio/portraits/IMG_3816.jpg",
-    "thumb": "./src/images/thumbnails/portraits/IMG_3816.webp",
+    "src": "/images/portfolio/portraits/IMG_3816.jpg",
+    "thumb": "/images/thumbnails/portraits/IMG_3816.webp",
     "alt": "Portrét",
     "category": "portraits"
   },
   {
-    "src": "./src/images/portfolio/portraits/IMG_3827.jpg",
-    "thumb": "./src/images/thumbnails/portraits/IMG_3827.webp",
+    "src": "/images/portfolio/portraits/IMG_3827.jpg",
+    "thumb": "/images/thumbnails/portraits/IMG_3827.webp",
     "alt": "Portrét",
     "category": "portraits"
   },
   {
-    "src": "./src/images/portfolio/portraits/IMG_3852.jpg",
-    "thumb": "./src/images/thumbnails/portraits/IMG_3852.webp",
+    "src": "/images/portfolio/portraits/IMG_3852.jpg",
+    "thumb": "/images/thumbnails/portraits/IMG_3852.webp",
     "alt": "Portrét",
     "category": "portraits"
   },
   {
-    "src": "./src/images/portfolio/portraits/IMG_4489.jpg",
-    "thumb": "./src/images/thumbnails/portraits/IMG_4489.webp",
+    "src": "/images/portfolio/portraits/IMG_4489.jpg",
+    "thumb": "/images/thumbnails/portraits/IMG_4489.webp",
     "alt": "Portrét",
     "category": "portraits"
   },
   {
-    "src": "./src/images/portfolio/portraits/IMG_4500.jpg",
-    "thumb": "./src/images/thumbnails/portraits/IMG_4500.webp",
+    "src": "/images/portfolio/portraits/IMG_4500.jpg",
+    "thumb": "/images/thumbnails/portraits/IMG_4500.webp",
     "alt": "Portrét",
     "category": "portraits"
   },
   {
-    "src": "./src/images/portfolio/portraits/IMG_4524.jpg",
-    "thumb": "./src/images/thumbnails/portraits/IMG_4524.webp",
+    "src": "/images/portfolio/portraits/IMG_4524.jpg",
+    "thumb": "/images/thumbnails/portraits/IMG_4524.webp",
     "alt": "Portrét",
     "category": "portraits"
   },
   {
-    "src": "./src/images/portfolio/portraits/IMG_4558.jpg",
-    "thumb": "./src/images/thumbnails/portraits/IMG_4558.webp",
+    "src": "/images/portfolio/portraits/IMG_4558.jpg",
+    "thumb": "/images/thumbnails/portraits/IMG_4558.webp",
     "alt": "Portrét",
     "category": "portraits"
   },
   {
-    "src": "./src/images/portfolio/portraits/IMG_4587.jpg",
-    "thumb": "./src/images/thumbnails/portraits/IMG_4587.webp",
+    "src": "/images/portfolio/portraits/IMG_4587.jpg",
+    "thumb": "/images/thumbnails/portraits/IMG_4587.webp",
     "alt": "Portrét",
     "category": "portraits"
   },
   {
-    "src": "./src/images/portfolio/portraits/IMG_4632.jpg",
-    "thumb": "./src/images/thumbnails/portraits/IMG_4632.webp",
+    "src": "/images/portfolio/portraits/IMG_4632.jpg",
+    "thumb": "/images/thumbnails/portraits/IMG_4632.webp",
     "alt": "Portrét",
     "category": "portraits"
   },
   {
-    "src": "./src/images/portfolio/portraits/IMG_4641.jpg",
-    "thumb": "./src/images/thumbnails/portraits/IMG_4641.webp",
+    "src": "/images/portfolio/portraits/IMG_4641.jpg",
+    "thumb": "/images/thumbnails/portraits/IMG_4641.webp",
     "alt": "Portrét",
     "category": "portraits"
   },
   {
-    "src": "./src/images/portfolio/couples/IMG_1791.jpg",
-    "thumb": "./src/images/thumbnails/couples/IMG_1791.webp",
+    "src": "/images/portfolio/couples/IMG_1791.jpg",
+    "thumb": "/images/thumbnails/couples/IMG_1791.webp",
     "alt": "Párové focení",
     "category": "couples"
   },
   {
-    "src": "./src/images/portfolio/couples/IMG_1801.jpg",
-    "thumb": "./src/images/thumbnails/couples/IMG_1801.webp",
+    "src": "/images/portfolio/couples/IMG_1801.jpg",
+    "thumb": "/images/thumbnails/couples/IMG_1801.webp",
     "alt": "Párové focení",
     "category": "couples"
   },
   {
-    "src": "./src/images/portfolio/couples/IMG_1805.jpg",
-    "thumb": "./src/images/thumbnails/couples/IMG_1805.webp",
+    "src": "/images/portfolio/couples/IMG_1805.jpg",
+    "thumb": "/images/thumbnails/couples/IMG_1805.webp",
     "alt": "Párové focení",
     "category": "couples"
   },
   {
-    "src": "./src/images/portfolio/couples/IMG_1957.jpg",
-    "thumb": "./src/images/thumbnails/couples/IMG_1957.webp",
+    "src": "/images/portfolio/couples/IMG_1957.jpg",
+    "thumb": "/images/thumbnails/couples/IMG_1957.webp",
     "alt": "Párové focení",
     "category": "couples"
   },
   {
-    "src": "./src/images/portfolio/couples/IMG_2266.jpg",
-    "thumb": "./src/images/thumbnails/couples/IMG_2266.webp",
+    "src": "/images/portfolio/couples/IMG_2266.jpg",
+    "thumb": "/images/thumbnails/couples/IMG_2266.webp",
     "alt": "Párové focení",
     "category": "couples"
   },
   {
-    "src": "./src/images/portfolio/couples/IMG_2275.jpg",
-    "thumb": "./src/images/thumbnails/couples/IMG_2275.webp",
+    "src": "/images/portfolio/couples/IMG_2275.jpg",
+    "thumb": "/images/thumbnails/couples/IMG_2275.webp",
     "alt": "Párové focení",
     "category": "couples"
   },
   {
-    "src": "./src/images/portfolio/couples/IMG_2294.jpg",
-    "thumb": "./src/images/thumbnails/couples/IMG_2294.webp",
+    "src": "/images/portfolio/couples/IMG_2294.jpg",
+    "thumb": "/images/thumbnails/couples/IMG_2294.webp",
     "alt": "Párové focení",
     "category": "couples"
   },
   {
-    "src": "./src/images/portfolio/couples/IMG_2332.jpg",
-    "thumb": "./src/images/thumbnails/couples/IMG_2332.webp",
+    "src": "/images/portfolio/couples/IMG_2332.jpg",
+    "thumb": "/images/thumbnails/couples/IMG_2332.webp",
     "alt": "Párové focení",
     "category": "couples"
   },
   {
-    "src": "./src/images/portfolio/couples/IMG_2360.jpg",
-    "thumb": "./src/images/thumbnails/couples/IMG_2360.webp",
+    "src": "/images/portfolio/couples/IMG_2360.jpg",
+    "thumb": "/images/thumbnails/couples/IMG_2360.webp",
     "alt": "Párové focení",
     "category": "couples"
   },
   {
-    "src": "./src/images/portfolio/couples/IMG_2376.jpg",
-    "thumb": "./src/images/thumbnails/couples/IMG_2376.webp",
+    "src": "/images/portfolio/couples/IMG_2376.jpg",
+    "thumb": "/images/thumbnails/couples/IMG_2376.webp",
     "alt": "Párové focení",
     "category": "couples"
   },
   {
-    "src": "./src/images/portfolio/couples/IMG_4712.jpg",
-    "thumb": "./src/images/thumbnails/couples/IMG_4712.webp",
+    "src": "/images/portfolio/couples/IMG_4712.jpg",
+    "thumb": "/images/thumbnails/couples/IMG_4712.webp",
     "alt": "Párové focení",
     "category": "couples"
   },
   {
-    "src": "./src/images/portfolio/couples/IMG_4716.jpg",
-    "thumb": "./src/images/thumbnails/couples/IMG_4716.webp",
+    "src": "/images/portfolio/couples/IMG_4716.jpg",
+    "thumb": "/images/thumbnails/couples/IMG_4716.webp",
     "alt": "Párové focení",
     "category": "couples"
   },
   {
-    "src": "./src/images/portfolio/couples/IMG_4725.jpg",
-    "thumb": "./src/images/thumbnails/couples/IMG_4725.webp",
+    "src": "/images/portfolio/couples/IMG_4725.jpg",
+    "thumb": "/images/thumbnails/couples/IMG_4725.webp",
     "alt": "Párové focení",
     "category": "couples"
   },
   {
-    "src": "./src/images/portfolio/couples/IMG_5081.jpg",
-    "thumb": "./src/images/thumbnails/couples/IMG_5081.webp",
+    "src": "/images/portfolio/couples/IMG_5081.jpg",
+    "thumb": "/images/thumbnails/couples/IMG_5081.webp",
     "alt": "Párové focení",
     "category": "couples"
   },
   {
-    "src": "./src/images/portfolio/family/IMG_1098-2.jpg",
-    "thumb": "./src/images/thumbnails/family/IMG_1098-2.webp",
+    "src": "/images/portfolio/family/IMG_1098-2.jpg",
+    "thumb": "/images/thumbnails/family/IMG_1098-2.webp",
     "alt": "Rodinné focení",
     "category": "family"
   },
   {
-    "src": "./src/images/portfolio/family/IMG_1114.jpg",
-    "thumb": "./src/images/thumbnails/family/IMG_1114.webp",
+    "src": "/images/portfolio/family/IMG_1114.jpg",
+    "thumb": "/images/thumbnails/family/IMG_1114.webp",
     "alt": "Rodinné focení",
     "category": "family"
   },
   {
-    "src": "./src/images/portfolio/family/IMG_1246-2 - kopie.jpg",
-    "thumb": "./src/images/thumbnails/family/IMG_1246-2 - kopie.webp",
+    "src": "/images/portfolio/family/IMG_1246-2 - kopie.jpg",
+    "thumb": "/images/thumbnails/family/IMG_1246-2 - kopie.webp",
     "alt": "Rodinné focení",
     "category": "family"
   },
   {
-    "src": "./src/images/portfolio/family/IMG_1292 - kopie.jpg",
-    "thumb": "./src/images/thumbnails/family/IMG_1292 - kopie.webp",
+    "src": "/images/portfolio/family/IMG_1292 - kopie.jpg",
+    "thumb": "/images/thumbnails/family/IMG_1292 - kopie.webp",
     "alt": "Rodinné focení",
     "category": "family"
   },
   {
-    "src": "./src/images/portfolio/family/IMG_1325 - kopie.jpg",
-    "thumb": "./src/images/thumbnails/family/IMG_1325 - kopie.webp",
+    "src": "/images/portfolio/family/IMG_1325 - kopie.jpg",
+    "thumb": "/images/thumbnails/family/IMG_1325 - kopie.webp",
     "alt": "Rodinné focení",
     "category": "family"
   },
   {
-    "src": "./src/images/portfolio/family/IMG_1342 - kopie.jpg",
-    "thumb": "./src/images/thumbnails/family/IMG_1342 - kopie.webp",
+    "src": "/images/portfolio/family/IMG_1342 - kopie.jpg",
+    "thumb": "/images/thumbnails/family/IMG_1342 - kopie.webp",
     "alt": "Rodinné focení",
     "category": "family"
   },
   {
-    "src": "./src/images/portfolio/family/IMG_1368 - kopie.jpg",
-    "thumb": "./src/images/thumbnails/family/IMG_1368 - kopie.webp",
+    "src": "/images/portfolio/family/IMG_1368 - kopie.jpg",
+    "thumb": "/images/thumbnails/family/IMG_1368 - kopie.webp",
     "alt": "Rodinné focení",
     "category": "family"
   },
   {
-    "src": "./src/images/portfolio/family/IMG_4784.jpg",
-    "thumb": "./src/images/thumbnails/family/IMG_4784.webp",
+    "src": "/images/portfolio/family/IMG_4784.jpg",
+    "thumb": "/images/thumbnails/family/IMG_4784.webp",
     "alt": "Rodinné focení",
     "category": "family"
   },
   {
-    "src": "./src/images/portfolio/family/IMG_4826.jpg",
-    "thumb": "./src/images/thumbnails/family/IMG_4826.webp",
+    "src": "/images/portfolio/family/IMG_4826.jpg",
+    "thumb": "/images/thumbnails/family/IMG_4826.webp",
     "alt": "Rodinné focení",
     "category": "family"
   },
   {
-    "src": "./src/images/portfolio/family/IMG_4918.jpg",
-    "thumb": "./src/images/thumbnails/family/IMG_4918.webp",
+    "src": "/images/portfolio/family/IMG_4918.jpg",
+    "thumb": "/images/thumbnails/family/IMG_4918.webp",
     "alt": "Rodinné focení",
     "category": "family"
   },
   {
-    "src": "./src/images/portfolio/family/IMG_4955.jpg",
-    "thumb": "./src/images/thumbnails/family/IMG_4955.webp",
+    "src": "/images/portfolio/family/IMG_4955.jpg",
+    "thumb": "/images/thumbnails/family/IMG_4955.webp",
     "alt": "Rodinné focení",
     "category": "family"
   },
   {
-    "src": "./src/images/portfolio/family/IMG_4969.jpg",
-    "thumb": "./src/images/thumbnails/family/IMG_4969.webp",
+    "src": "/images/portfolio/family/IMG_4969.jpg",
+    "thumb": "/images/thumbnails/family/IMG_4969.webp",
     "alt": "Rodinné focení",
     "category": "family"
   },
   {
-    "src": "./src/images/portfolio/family/IMG_4977.jpg",
-    "thumb": "./src/images/thumbnails/family/IMG_4977.webp",
+    "src": "/images/portfolio/family/IMG_4977.jpg",
+    "thumb": "/images/thumbnails/family/IMG_4977.webp",
     "alt": "Rodinné focení",
     "category": "family"
   },
   {
-    "src": "./src/images/portfolio/family/IMG_5037.jpg",
-    "thumb": "./src/images/thumbnails/family/IMG_5037.webp",
+    "src": "/images/portfolio/family/IMG_5037.jpg",
+    "thumb": "/images/thumbnails/family/IMG_5037.webp",
     "alt": "Rodinné focení",
     "category": "family"
   },
   {
-    "src": "./src/images/portfolio/family/IMG_5067.jpg",
-    "thumb": "./src/images/thumbnails/family/IMG_5067.webp",
+    "src": "/images/portfolio/family/IMG_5067.jpg",
+    "thumb": "/images/thumbnails/family/IMG_5067.webp",
     "alt": "Rodinné focení",
     "category": "family"
   },
   {
-    "src": "./src/images/portfolio/family/IMG_5162.jpg",
-    "thumb": "./src/images/thumbnails/family/IMG_5162.webp",
+    "src": "/images/portfolio/family/IMG_5162.jpg",
+    "thumb": "/images/thumbnails/family/IMG_5162.webp",
     "alt": "Rodinné focení",
     "category": "family"
   },
   {
-    "src": "./src/images/portfolio/family/IMG_6419.jpg",
-    "thumb": "./src/images/thumbnails/family/IMG_6419.webp",
+    "src": "/images/portfolio/family/IMG_6419.jpg",
+    "thumb": "/images/thumbnails/family/IMG_6419.webp",
     "alt": "Rodinné focení",
     "category": "family"
   },
   {
-    "src": "./src/images/portfolio/family/IMG_6567.jpg",
-    "thumb": "./src/images/thumbnails/family/IMG_6567.webp",
+    "src": "/images/portfolio/family/IMG_6567.jpg",
+    "thumb": "/images/thumbnails/family/IMG_6567.webp",
     "alt": "Rodinné focení",
     "category": "family"
   },
   {
-    "src": "./src/images/portfolio/family/IMG_6634.jpg",
-    "thumb": "./src/images/thumbnails/family/IMG_6634.webp",
+    "src": "/images/portfolio/family/IMG_6634.jpg",
+    "thumb": "/images/thumbnails/family/IMG_6634.webp",
     "alt": "Rodinné focení",
     "category": "family"
   },
   {
-    "src": "./src/images/portfolio/family/IMG_7081.jpg",
-    "thumb": "./src/images/thumbnails/family/IMG_7081.webp",
+    "src": "/images/portfolio/family/IMG_7081.jpg",
+    "thumb": "/images/thumbnails/family/IMG_7081.webp",
     "alt": "Rodinné focení",
     "category": "family"
   },
   {
-    "src": "./src/images/portfolio/family/IMG_7209.jpg",
-    "thumb": "./src/images/thumbnails/family/IMG_7209.webp",
+    "src": "/images/portfolio/family/IMG_7209.jpg",
+    "thumb": "/images/thumbnails/family/IMG_7209.webp",
     "alt": "Rodinné focení",
     "category": "family"
   },
   {
-    "src": "./src/images/portfolio/family/IMG_7220.jpg",
-    "thumb": "./src/images/thumbnails/family/IMG_7220.webp",
+    "src": "/images/portfolio/family/IMG_7220.jpg",
+    "thumb": "/images/thumbnails/family/IMG_7220.webp",
     "alt": "Rodinné focení",
     "category": "family"
   },
   {
-    "src": "./src/images/portfolio/family/IMG_7231.jpg",
-    "thumb": "./src/images/thumbnails/family/IMG_7231.webp",
+    "src": "/images/portfolio/family/IMG_7231.jpg",
+    "thumb": "/images/thumbnails/family/IMG_7231.webp",
     "alt": "Rodinné focení",
     "category": "family"
   },
   {
-    "src": "./src/images/portfolio/family/IMG_7287.jpg",
-    "thumb": "./src/images/thumbnails/family/IMG_7287.webp",
+    "src": "/images/portfolio/family/IMG_7287.jpg",
+    "thumb": "/images/thumbnails/family/IMG_7287.webp",
     "alt": "Rodinné focení",
     "category": "family"
   },
   {
-    "src": "./src/images/portfolio/family/IMG_7312 - kopie.jpg",
-    "thumb": "./src/images/thumbnails/family/IMG_7312 - kopie.webp",
+    "src": "/images/portfolio/family/IMG_7312 - kopie.jpg",
+    "thumb": "/images/thumbnails/family/IMG_7312 - kopie.webp",
     "alt": "Rodinné focení",
     "category": "family"
   },
   {
-    "src": "./src/images/portfolio/family/IMG_7458 - kopie.jpg",
-    "thumb": "./src/images/thumbnails/family/IMG_7458 - kopie.webp",
+    "src": "/images/portfolio/family/IMG_7458 - kopie.jpg",
+    "thumb": "/images/thumbnails/family/IMG_7458 - kopie.webp",
     "alt": "Rodinné focení",
     "category": "family"
   },
   {
-    "src": "./src/images/portfolio/family/IMG_7618 - kopie.jpg",
-    "thumb": "./src/images/thumbnails/family/IMG_7618 - kopie.webp",
+    "src": "/images/portfolio/family/IMG_7618 - kopie.jpg",
+    "thumb": "/images/thumbnails/family/IMG_7618 - kopie.webp",
     "alt": "Rodinné focení",
     "category": "family"
   },
   {
-    "src": "./src/images/portfolio/family/IMG_7764 - kopie.jpg",
-    "thumb": "./src/images/thumbnails/family/IMG_7764 - kopie.webp",
+    "src": "/images/portfolio/family/IMG_7764 - kopie.jpg",
+    "thumb": "/images/thumbnails/family/IMG_7764 - kopie.webp",
     "alt": "Rodinné focení",
     "category": "family"
   },
   {
-    "src": "./src/images/portfolio/family/IMG_7834.jpg",
-    "thumb": "./src/images/thumbnails/family/IMG_7834.webp",
+    "src": "/images/portfolio/family/IMG_7834.jpg",
+    "thumb": "/images/thumbnails/family/IMG_7834.webp",
     "alt": "Rodinné focení",
     "category": "family"
   },
   {
-    "src": "./src/images/portfolio/family/IMG_7898.jpg",
-    "thumb": "./src/images/thumbnails/family/IMG_7898.webp",
+    "src": "/images/portfolio/family/IMG_7898.jpg",
+    "thumb": "/images/thumbnails/family/IMG_7898.webp",
     "alt": "Rodinné focení",
     "category": "family"
   },
   {
-    "src": "./src/images/portfolio/family/IMG_7922.jpg",
-    "thumb": "./src/images/thumbnails/family/IMG_7922.webp",
+    "src": "/images/portfolio/family/IMG_7922.jpg",
+    "thumb": "/images/thumbnails/family/IMG_7922.webp",
     "alt": "Rodinné focení",
     "category": "family"
   },
   {
-    "src": "./src/images/portfolio/animals/IMG_3169.jpg",
-    "thumb": "./src/images/thumbnails/animals/IMG_3169.webp",
+    "src": "/images/portfolio/animals/IMG_3169.jpg",
+    "thumb": "/images/thumbnails/animals/IMG_3169.webp",
     "alt": "Focení se zvířátky",
     "category": "animals"
   },
   {
-    "src": "./src/images/portfolio/animals/IMG_3172.jpg",
-    "thumb": "./src/images/thumbnails/animals/IMG_3172.webp",
+    "src": "/images/portfolio/animals/IMG_3172.jpg",
+    "thumb": "/images/thumbnails/animals/IMG_3172.webp",
     "alt": "Focení se zvířátky",
     "category": "animals"
   },
   {
-    "src": "./src/images/portfolio/animals/IMG_3204.jpg",
-    "thumb": "./src/images/thumbnails/animals/IMG_3204.webp",
+    "src": "/images/portfolio/animals/IMG_3204.jpg",
+    "thumb": "/images/thumbnails/animals/IMG_3204.webp",
     "alt": "Focení se zvířátky",
     "category": "animals"
   },
   {
-    "src": "./src/images/portfolio/animals/IMG_3227.jpg",
-    "thumb": "./src/images/thumbnails/animals/IMG_3227.webp",
+    "src": "/images/portfolio/animals/IMG_3227.jpg",
+    "thumb": "/images/thumbnails/animals/IMG_3227.webp",
     "alt": "Focení se zvířátky",
     "category": "animals"
   },
   {
-    "src": "./src/images/portfolio/animals/IMG_3328.jpg",
-    "thumb": "./src/images/thumbnails/animals/IMG_3328.webp",
+    "src": "/images/portfolio/animals/IMG_3328.jpg",
+    "thumb": "/images/thumbnails/animals/IMG_3328.webp",
     "alt": "Focení se zvířátky",
     "category": "animals"
   },
   {
-    "src": "./src/images/portfolio/animals/IMG_3381.jpg",
-    "thumb": "./src/images/thumbnails/animals/IMG_3381.webp",
+    "src": "/images/portfolio/animals/IMG_3381.jpg",
+    "thumb": "/images/thumbnails/animals/IMG_3381.webp",
     "alt": "Focení se zvířátky",
     "category": "animals"
   },
   {
-    "src": "./src/images/portfolio/animals/IMG_3432.jpg",
-    "thumb": "./src/images/thumbnails/animals/IMG_3432.webp",
+    "src": "/images/portfolio/animals/IMG_3432.jpg",
+    "thumb": "/images/thumbnails/animals/IMG_3432.webp",
     "alt": "Focení se zvířátky",
     "category": "animals"
   },
   {
-    "src": "./src/images/portfolio/animals/IMG_3572.jpg",
-    "thumb": "./src/images/thumbnails/animals/IMG_3572.webp",
+    "src": "/images/portfolio/animals/IMG_3572.jpg",
+    "thumb": "/images/thumbnails/animals/IMG_3572.webp",
     "alt": "Focení se zvířátky",
     "category": "animals"
   },
   {
-    "src": "./src/images/portfolio/animals/IMG_3662.jpg",
-    "thumb": "./src/images/thumbnails/animals/IMG_3662.webp",
+    "src": "/images/portfolio/animals/IMG_3662.jpg",
+    "thumb": "/images/thumbnails/animals/IMG_3662.webp",
     "alt": "Focení se zvířátky",
     "category": "animals"
   }
