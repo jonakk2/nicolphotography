@@ -10,7 +10,7 @@
       <!-- Brand -->
       <div class="footer-section footer-brand">
         <a href="/" class="footer-logo">
-          <img src="/images/logo/N.svg" alt="NJ Photography Logo" />
+          <img src="/images/logo/iconka_nicolka.webp" alt="NJ Photography Logo" />
           <span>Nicol Juráňová photography</span>
         </a>
         <p>Zachycuji příběhy, které vydrží navždy. Fotografka specializující se na portréty, rodinné a párové focení v Olomouckém kraji.</p>
@@ -94,7 +94,7 @@
   .footer-logo img {
     height: 40px;
     width: auto;
-    filter: brightness(0) invert(1);
+    border-radius: 50%;
   }
 
   .footer-logo span {
