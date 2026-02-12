@@ -10,6 +10,7 @@
   import Cenik from "./lib/Cenik.svelte";
   import Kontakt from "./lib/Kontakt.svelte";
   import PrivacyPolicy from "./lib/PrivacyPolicy.svelte";
+  import CookieConsent from "./lib/CookieConsent.svelte";
 </script>
 
 <Router>
@@ -22,3 +23,5 @@
     <Route path="/ochrana-udaju" component={PrivacyPolicy}/>
   </div>
 </Router>
+
+<CookieConsent />
