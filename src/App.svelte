@@ -11,6 +11,7 @@
   import Kontakt from "./lib/Kontakt.svelte";
   import PrivacyPolicy from "./lib/PrivacyPolicy.svelte";
   import CookieConsent from "./lib/CookieConsent.svelte";
+  import NotFound from "./lib/NotFound.svelte";
 </script>
 
 <Router>
@@ -21,6 +22,7 @@
     <Route path="/cenik" component={Cenik}/>
     <Route path="/kontakt" component={Kontakt}/>
     <Route path="/ochrana-udaju" component={PrivacyPolicy}/>
+    <Route path="*" component={NotFound} />
   </div>
 </Router>
 
