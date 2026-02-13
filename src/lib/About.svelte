@@ -30,7 +30,7 @@
   <div class="container">
     <div class="about-intro">
       <div class="about-image-wrapper">
-        <img src="/images/portfolio/about/IMG_3078-2.webp" alt="Nicol Juráňová - fotografka" class="about-main-image" />
+        <img src="/images/portfolio/about/IMG_3078-2.webp" alt="Nicol Juráňová - fotografka" class="about-main-image" loading="lazy" />
         <div class="image-decoration"></div>
       </div>
       <div class="about-text">

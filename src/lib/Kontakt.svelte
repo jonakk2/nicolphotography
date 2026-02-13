@@ -101,10 +101,22 @@
   </div>
 </section>
 
-<!-- Map placeholder -->
+<!-- Map -->
 <section class="map-section">
-  <div class="map-placeholder">
+  <div class="map-text">
     <p>Působím v okolí Hranic na Moravě, ale ráda k Vám přijedu kamkoliv v Olomouckém kraji.</p>
+  </div>
+  <div class="map-container">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41234.77!2d17.7!3d49.55!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4713e4e3e3a3e8a1%3A0x400af0f6614e850!2sHranice%2C%20Czechia!5e0!3m2!1scs!2scz!4v1"
+      width="100%"
+      height="400"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Mapa - Hranice na Moravě"
+    ></iframe>
   </div>
 </section>
 
@@ -264,18 +276,28 @@
     background-color: var(--color-light);
   }
 
-  .map-placeholder {
-    padding: 4rem 2rem;
+  .map-text {
+    padding: 2.5rem 2rem;
     text-align: center;
     background: linear-gradient(135deg, var(--color-primary) 0%, #1a252f 100%);
     color: white;
   }
 
-  .map-placeholder p {
+  .map-text p {
     max-width: 600px;
     margin: 0 auto;
     font-size: 1.2rem;
     opacity: 0.9;
+  }
+
+  .map-container {
+    width: 100%;
+    line-height: 0;
+  }
+
+  .map-container iframe {
+    width: 100%;
+    display: block;
   }
 
   /* Responsive */
