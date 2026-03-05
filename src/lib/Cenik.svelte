@@ -17,7 +17,11 @@
     },
     {
       question: "Jak probíhá rezervace?",
-      answer: "Stačí mě kontaktovat přes formulář nebo telefonicky. Domluvíme si termín a místo focení."
+      answer: "Stačí mě kontaktovat přes formulář nebo telefonicky. Domluvíme si termín a místo focení. K potvrzení rezervace je potřeba uhradit zálohu 500 Kč."
+    },
+    {
+      question: "Je záloha vratná?",
+      answer: "Záloha 500 Kč je nevratná, ale odečítá se z celkové ceny focení. Slouží k potvrzení rezervace termínu."
     }
   ];
 </script>
@@ -64,7 +68,15 @@
         "name": "Jak probíhá rezervace?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Stačí mě kontaktovat přes formulář nebo telefonicky. Domluvíme si termín a místo focení."
+          "text": "Stačí mě kontaktovat přes formulář nebo telefonicky. Domluvíme si termín a místo focení. K potvrzení rezervace je potřeba uhradit zálohu 500 Kč."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Je záloha vratná?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Záloha 500 Kč je nevratná, ale odečítá se z celkové ceny focení. Slouží k potvrzení rezervace termínu."
         }
       }
     ]
@@ -113,6 +125,11 @@
           Focení v přírodě
         </li>
       </ul>
+
+      <div class="deposit-note">
+        Rezervační záloha: <strong>500 Kč</strong>
+        <span>Záloha je nevratná a odečítá se z celkové ceny.</span>
+      </div>
 
       <a href="/kontakt" class="pricing-cta">Mám zájem</a>
     </div>
@@ -319,6 +336,28 @@
   .check {
     color: var(--accent);
     font-size: 1.2rem;
+  }
+
+  .deposit-note {
+    margin-bottom: 2rem;
+    padding: 1rem 1.5rem;
+    border: 1px solid #333;
+    background: rgba(201, 168, 124, 0.08);
+    font-size: 0.95rem;
+    color: var(--text);
+    text-align: center;
+  }
+
+  .deposit-note strong {
+    color: var(--accent);
+    font-size: 1.1rem;
+  }
+
+  .deposit-note span {
+    display: block;
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
   }
 
   .pricing-cta {

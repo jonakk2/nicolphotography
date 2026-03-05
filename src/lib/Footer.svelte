@@ -63,7 +63,7 @@
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; {currentYear} Nicol Juráňová photography. Všechna práva vyhrazena. | <a href="/ochrana-udaju">Ochrana osobních údajů</a></p>
+      <p>&copy; {currentYear} Nicol Juráňová photography. Všechna práva vyhrazena. | <a href="/ochrana-udaju">Ochrana osobních údajů</a> | <a href="/obchodni-podminky">Obchodní podmínky</a></p>
     </div>
   </div>
 </footer>

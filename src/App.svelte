@@ -10,6 +10,7 @@
   import Cenik from "./lib/Cenik.svelte";
   import Kontakt from "./lib/Kontakt.svelte";
   import PrivacyPolicy from "./lib/PrivacyPolicy.svelte";
+  import ObchodniPodminky from "./lib/ObchodniPodminky.svelte";
   import CookieConsent from "./lib/CookieConsent.svelte";
   import NotFound from "./lib/NotFound.svelte";
 </script>
@@ -22,6 +23,7 @@
     <Route path="/cenik" component={Cenik}/>
     <Route path="/kontakt" component={Kontakt}/>
     <Route path="/ochrana-udaju" component={PrivacyPolicy}/>
+    <Route path="/obchodni-podminky" component={ObchodniPodminky}/>
     <Route path="*" component={NotFound} />
   </div>
 </Router>
