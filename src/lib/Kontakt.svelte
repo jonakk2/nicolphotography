@@ -15,114 +15,137 @@
   <meta property="og:type" content="website" />
 </svelte:head>
 
-<NavBar />
+<div class="kontakt-page">
+  <NavBar />
 
-<!-- Page Header -->
-<section class="page-header">
-  <div class="page-header-overlay"></div>
-  <div class="page-header-content">
-    <h1>Kontakt</h1>
-    <p>Pojďme společně naplánovat vaše focení</p>
-  </div>
-</section>
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="page-header-overlay"></div>
+    <div class="page-header-content">
+      <h1>Kontakt</h1>
+      <p>Pojďme společně naplánovat vaše focení</p>
+    </div>
+  </section>
 
-<!-- Contact Section -->
-<section class="contact-section">
-  <div class="container">
-    <div class="contact-grid">
-      <!-- Contact Info -->
-      <div class="contact-info">
-        <span class="section-label">Napište mi</span>
-        <h2>Těším se na spolupráci</h2>
-        <p>Máte otázky nebo chcete domluvit focení? Neváhejte mě kontaktovat. Odpovídám obvykle do 24 hodin.</p>
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <span class="label">Napište mi</span>
+          <h2>Těším se na spolupráci</h2>
+          <p>Máte otázky nebo chcete domluvit focení? Neváhejte mě kontaktovat. Odpovídám obvykle do 24 hodin.</p>
 
-        <div class="contact-details">
-          <div class="contact-item">
-            <div class="contact-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                <polyline points="22,6 12,13 2,6"/>
-              </svg>
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </div>
+              <div>
+                <h4>Email</h4>
+                <a href="mailto:njuranova2003@gmail.com">njuranova2003@gmail.com</a>
+              </div>
             </div>
-            <div>
-              <h4>Email</h4>
-              <a href="mailto:njuranova2003@gmail.com">njuranova2003@gmail.com</a>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+              </div>
+              <div>
+                <h4>Telefon</h4>
+                <a href="tel:+420771161818">+420 771 161 818</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+              </div>
+              <div>
+                <h4>Lokalita</h4>
+                <span>Hranice na Moravě</span>
+              </div>
             </div>
           </div>
 
-          <div class="contact-item">
-            <div class="contact-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-              </svg>
-            </div>
-            <div>
-              <h4>Telefon</h4>
-              <a href="tel:+420771161818">+420 771 161 818</a>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <div class="contact-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                <circle cx="12" cy="10" r="3"/>
-              </svg>
-            </div>
-            <div>
-              <h4>Lokalita</h4>
-              <span>Hranice na Moravě</span>
+          <div class="social-links">
+            <h4>Sledujte mě</h4>
+            <div class="social-icons">
+              <a href="https://www.instagram.com/n.i.c.o.l_photography/" target="_blank" rel="noopener" aria-label="Instagram">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+              </a>
+              <a href="https://www.facebook.com/profile.php?id=61572752776606" target="_blank" rel="noopener" aria-label="Facebook">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+              </a>
             </div>
           </div>
         </div>
 
-        <div class="social-links">
-          <h4>Sledujte mě</h4>
-          <div class="social-icons">
-            <a href="https://www.instagram.com/n.i.c.o.l_photography/" target="_blank" rel="noopener" aria-label="Instagram">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-              </svg>
-            </a>
-            <a href="https://www.facebook.com/profile.php?id=61572752776606" target="_blank" rel="noopener" aria-label="Facebook">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-              </svg>
-            </a>
-          </div>
+        <!-- Contact Form -->
+        <div class="contact-form-wrapper">
+          <ContactForm />
         </div>
-      </div>
-
-      <!-- Contact Form -->
-      <div class="contact-form-wrapper">
-        <ContactForm />
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Map -->
-<section class="map-section">
-  <div class="map-text">
-    <p>Působím v okolí Hranic na Moravě, ale ráda k Vám přijedu kamkoliv v Olomouckém kraji.</p>
-  </div>
-  <div class="map-container">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41234.77!2d17.7!3d49.55!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4713e4e3e3a3e8a1%3A0x400af0f6614e850!2sHranice%2C%20Czechia!5e0!3m2!1scs!2scz!4v1"
-      width="100%"
-      height="400"
-      style="border:0;"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-      title="Mapa - Hranice na Moravě"
-    ></iframe>
-  </div>
-</section>
+  <!-- Map -->
+  <section class="map-section">
+    <div class="map-text">
+      <p>Působím v okolí Hranic na Moravě, ale ráda k Vám přijedu kamkoliv v Olomouckém kraji.</p>
+    </div>
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&amp;q=Hranice+na+Moravě,Czechia&amp;zoom=12&amp;language=cs"
+        width="100%"
+        height="400"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Mapa - Hranice na Moravě"
+      ></iframe>
+    </div>
+  </section>
 
-<Footer />
+  <Footer />
+</div>
 
 <style>
+  .kontakt-page {
+    --bg: #0a0a0a;
+    --bg-secondary: #141414;
+    --text: #ffffff;
+    --text-muted: #888888;
+    --accent: #c9a87c;
+
+    background-color: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+  }
+
+  .label {
+    color: var(--accent);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    display: block;
+    margin-bottom: 1rem;
+  }
+
   /* Page Header */
   .page-header {
     position: relative;
@@ -163,8 +186,12 @@
 
   /* Contact Section */
   .contact-section {
-    padding: 6rem 0;
-    background-color: white;
+    padding: 6rem 4rem;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
   .contact-grid {
@@ -174,22 +201,16 @@
     align-items: start;
   }
 
-  .section-label {
-    display: inline-block;
-    color: var(--color-secondary);
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-  }
-
   .contact-info h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 400;
     margin-bottom: 1rem;
+    color: var(--text);
   }
 
   .contact-info > p {
-    color: var(--color-muted);
+    color: var(--text-muted);
     margin-bottom: 2rem;
     line-height: 1.7;
   }
@@ -210,36 +231,42 @@
   .contact-icon {
     width: 50px;
     height: 50px;
-    background-color: var(--color-light);
+    background-color: rgba(201, 168, 124, 0.1);
+    border: 1px solid #222;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    color: var(--color-secondary);
+    color: var(--accent);
   }
 
   .contact-item h4 {
-    font-size: 0.9rem;
-    color: var(--color-muted);
+    font-size: 0.85rem;
+    color: var(--text-muted);
     margin-bottom: 0.25rem;
     font-weight: 500;
+    font-family: 'Inter', sans-serif;
   }
 
   .contact-item a,
   .contact-item span {
-    color: var(--color-dark);
+    color: var(--text);
     font-size: 1rem;
   }
 
   .contact-item a:hover {
-    color: var(--color-secondary);
+    color: var(--accent);
   }
 
   .social-links h4 {
-    font-size: 1rem;
+    font-size: 0.85rem;
     margin-bottom: 1rem;
-    color: var(--color-primary);
+    color: var(--text-muted);
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
   }
 
   .social-icons {
@@ -250,44 +277,91 @@
   .social-icons a {
     width: 45px;
     height: 45px;
-    background-color: var(--color-light);
+    background-color: rgba(201, 168, 124, 0.1);
+    border: 1px solid #222;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-primary);
+    color: var(--text);
     transition: all 0.3s ease;
   }
 
   .social-icons a:hover {
-    background-color: var(--color-secondary);
-    color: white;
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: var(--bg);
   }
 
   /* Contact Form Wrapper */
   .contact-form-wrapper {
-    background-color: var(--color-light);
+    background-color: var(--bg-secondary);
+    border: 1px solid #222;
     padding: 2.5rem;
-    border-radius: 12px;
+  }
+
+  /* Override form colors inside dark wrapper */
+  .contact-form-wrapper :global(.contact-form h2) {
+    color: var(--text);
+  }
+
+  .contact-form-wrapper :global(.form-subtitle) {
+    color: var(--text-muted);
+  }
+
+  .contact-form-wrapper :global(.form-group label) {
+    color: var(--text-muted);
+  }
+
+  .contact-form-wrapper :global(.form-group input),
+  .contact-form-wrapper :global(.form-group select),
+  .contact-form-wrapper :global(.form-group textarea) {
+    background-color: var(--bg);
+    border-color: #333;
+    color: var(--text);
+  }
+
+  .contact-form-wrapper :global(.form-group input:focus),
+  .contact-form-wrapper :global(.form-group select:focus),
+  .contact-form-wrapper :global(.form-group textarea:focus) {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(201, 168, 124, 0.15);
+  }
+
+  .contact-form-wrapper :global(.form-group input::placeholder),
+  .contact-form-wrapper :global(.form-group textarea::placeholder) {
+    color: #555;
+  }
+
+  .contact-form-wrapper :global(.submit-btn) {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: var(--bg);
+  }
+
+  .contact-form-wrapper :global(.submit-btn:hover) {
+    background-color: var(--text);
+    border-color: var(--text);
+    color: var(--bg);
   }
 
   /* Map Section */
   .map-section {
-    background-color: var(--color-light);
+    background-color: var(--bg-secondary);
   }
 
   .map-text {
     padding: 2.5rem 2rem;
     text-align: center;
-    background: linear-gradient(135deg, var(--color-primary) 0%, #1a252f 100%);
-    color: white;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
   }
 
   .map-text p {
     max-width: 600px;
     margin: 0 auto;
-    font-size: 1.2rem;
-    opacity: 0.9;
+    font-size: 1.1rem;
+    color: var(--text-muted);
   }
 
   .map-container {
@@ -298,10 +372,15 @@
   .map-container iframe {
     width: 100%;
     display: block;
+    filter: grayscale(80%) invert(92%) contrast(83%);
   }
 
   /* Responsive */
   @media (max-width: 768px) {
+    .contact-section {
+      padding: 4rem 1.5rem;
+    }
+
     .contact-grid {
       grid-template-columns: 1fr;
       gap: 3rem;
