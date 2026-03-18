@@ -88,7 +88,7 @@
 
 <svelte:head>
   <title>Nicol Juráňová photography | Fotografka Olomoucký kraj</title>
-  <meta name="description" content="Nicol Juráňová - fotografka z Olomouckého kraje. Portrétní, rodinné a párové focení v přírodě. Spontánní fotky plné emocí." />
+  <meta name="description" content="Nicol Juráňová - fotografka z Hranic na Moravě. Fotím portréty, rodiny a páry venku v přírodě." />
   <link rel="canonical" href="https://nicolphotography.cz/" />
 </svelte:head>
 
@@ -102,7 +102,7 @@
     <div class="page-header-overlay"></div>
     <div class="page-header-content">
       <h1>Nicol Juráňová</h1>
-      <p>Pokud máte na fotkách nejraději<br/>jako pozadí naši krásnou přírodu,<br/>pak jste tady správně.</p>
+      <p>Fotím lidi, rodiny a páry.<br/>Nejčastěji venku, v přírodě kolem Hranic na Moravě.</p>
       <a href="/kontakt" class="hero-cta">Spojme se</a>
     </div>
   </section>
@@ -114,29 +114,26 @@
     </div>
     <div class="about-content">
       <span class="label">O mně</span>
-      <h2>Vítejte na<br/>mém <em>webu</em></h2>
-      <p>Mé jméno je Nicol Juráňová a focením se zabývám již pár let. Nejčastěji fotím rodinné, párové nebo portrétové fotografie s pozadím, které vytvořila sama příroda.</p>
+      <h2>Nicol<br/><em>Juráňová</em></h2>
+      <p>Focením se zabývám několik let. Nejradši fotím venku — rodinné, párové i portrétové fotky. Zakládám si na uvolněné atmosféře, kde se nemusíte přetvařovat.</p>
       <a href="/about" class="link">Více o mně →</a>
     </div>
   </section>
 
-  <!-- Values -->
+  <!-- How it works -->
   <section class="values">
     <div class="values-grid">
       <div class="value-card">
-        <span class="value-number">01</span>
-        <h3>Autenticita</h3>
-        <p>Věřím, že nejkrásnější fotografie jsou ty přirozené. Nesnažím se vytvářet umělé pózy, ale zachycuji skutečné emoce a momenty.</p>
+        <h3>Žádné nucené pózy</h3>
+        <p>Fotím spontánně. Řeknu vám kam se postavit a co dělat, ale nečekejte strnulé úsměvy do kamery. Tyhle fotky pak vypadají nejlíp.</p>
       </div>
       <div class="value-card">
-        <span class="value-number">02</span>
-        <h3>Příběh</h3>
-        <p>Každá fotografie má svůj příběh. Mým cílem je tento příběh najít a předat ho tak, aby vám přinášel radost i po letech.</p>
+        <h3>Venku je to nejhezčí</h3>
+        <p>Focení probíhá v přírodě — louky, lesy, cesty. Olomoucký kraj má spoustu krásných míst a ráda vám poradím s výběrem.</p>
       </div>
       <div class="value-card">
-        <span class="value-number">03</span>
-        <h3>Pohodlí</h3>
-        <p>Chci, abyste se při focení cítili přirozeně a uvolněně. Vytváříme společně atmosféru, ve které můžete být sami sebou.</p>
+        <h3>Fotky do 14 dnů</h3>
+        <p>Po focení dostanete online galerii, vyberete si fotky a já je upravím. Žádné měsíce čekání.</p>
       </div>
     </div>
   </section>
@@ -236,8 +233,8 @@
   <!-- CTA - Dramatic -->
   <section class="cta">
     <div class="cta-content">
-      <h2>Pojďme vytvořit<br/>něco krásného</h2>
-      <p class="cta-text">Pokud máte v hlavě i jiný nápad na focení, sem s ním! Budu se těšit.</p>
+      <h2>Chcete se<br/>objednat?</h2>
+      <p class="cta-text">Napište mi, domluvíme termín a místo. Pokud máte vlastní nápad na focení, klidně sem s ním.</p>
       <a href="/kontakt" class="cta-btn">Kontaktovat</a>
     </div>
     <div class="cta-image">
@@ -405,15 +402,6 @@
     padding: 2.5rem 2rem;
     background: var(--bg-secondary);
     border: 1px solid #222;
-  }
-
-  .value-number {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    color: var(--accent);
-    display: block;
-    margin-bottom: 1.5rem;
-    opacity: 0.5;
   }
 
   .value-card h3 {

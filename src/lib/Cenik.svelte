@@ -150,28 +150,24 @@
   <section class="included">
     <div class="included-header">
       <span class="label">Co je v ceně</span>
-      <h2>Vše, co potřebujete</h2>
+      <h2>Jak to celé funguje</h2>
     </div>
     <div class="included-grid">
       <div class="included-item">
-        <span class="included-number">01</span>
-        <h3>Konzultace</h3>
-        <p>Společně probereme vaše představy, místo a termín focení.</p>
+        <h3>Domluva</h3>
+        <p>Napíšete mi, probereme termín, místo a co chcete fotit. Poradím i s oblečením.</p>
       </div>
       <div class="included-item">
-        <span class="included-number">02</span>
         <h3>Focení</h3>
-        <p>1-2 hodiny focení v přírodě, uvolněná a přátelská atmosféra.</p>
+        <p>1-2 hodiny venku v přírodě. Bez stresu, v klidu.</p>
       </div>
       <div class="included-item">
-        <span class="included-number">03</span>
-        <h3>Úpravy</h3>
-        <p>Pečlivá úprava barev a retuše vybraných fotografií.</p>
+        <h3>Výběr</h3>
+        <p>Pošlu vám online galerii, ze které si vyberete fotky k úpravě.</p>
       </div>
       <div class="included-item">
-        <span class="included-number">04</span>
-        <h3>Galerie</h3>
-        <p>Online galerie pro snadné stažení a sdílení fotografií.</p>
+        <h3>Hotové fotky</h3>
+        <p>Vybrané fotky upravím a pošlu vám je v plném rozlišení. Do 14 dnů.</p>
       </div>
     </div>
   </section>
@@ -194,8 +190,8 @@
 
   <!-- CTA -->
   <section class="cta">
-    <h2>Máte zájem o focení?</h2>
-    <p>Napište mi a domluvíme se na termínu.</p>
+    <h2>Chcete se objednat?</h2>
+    <p>Napište mi, domluvíme termín a místo.</p>
     <a href="/kontakt" class="cta-btn">Kontaktovat</a>
   </section>
 
@@ -444,15 +440,6 @@
   .included-item {
     padding: 2rem;
     border: 1px solid #222;
-  }
-
-  .included-number {
-    font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    color: var(--accent);
-    opacity: 0.5;
-    display: block;
-    margin-bottom: 1rem;
   }
 
   .included-item h3 {

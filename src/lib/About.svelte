@@ -36,9 +36,9 @@
         <div class="about-text">
           <span class="label">O mně</span>
           <h2>Nicol Juráňová</h2>
-          <p>Dobrý den, vítejte na mém webu. Mé jméno je Nicol Juráňová a focením se zabývám již pár let. Nejčastěji fotím rodinné, párové nebo portrétové fotografie s pozadím, které vytvořila sama příroda. Pokud ale máte v hlavě i jiný nápad na focení, sem s ním!</p>
-          <p>Jsem zastáncem spíše spontánních fotek, hlavně když jde o focení s dětmi, nemusíte se ale bát, během focení své klienty instruuji a zakládám si na přátelské a uvolněné atmosféře.</p>
-          <p>V případě zájmu se mi ozvěte a společně se dohodneme na termínu. Budu se těšit!</p>
+          <p>Jmenuju se Nicol a fotím lidi v přírodě. Rodinné focení, párové, portréty — nejčastěji někde venku v okolí Hranic na Moravě. Ale pokud máte vlastní nápad, klidně sem s ním.</p>
+          <p>Při focení s dětmi hodně improvizuju — nejlepší fotky vznikají spontánně. U dospělých vás navádím, ale žádné strnulé pózy nečekejte. Chci, abyste na fotkách vypadali jako vy.</p>
+          <p>Pokud máte zájem, ozvěte se a domluvíme termín.</p>
         </div>
       </div>
     </div>
@@ -48,24 +48,21 @@
   <section class="philosophy-section">
     <div class="container">
       <div class="philosophy-header">
-        <span class="label">Můj přístup</span>
-        <h2>Vše, co potřebujete</h2>
+        <span class="label">Jak to probíhá</span>
+        <h2>Od domluvy k fotkám</h2>
       </div>
       <div class="philosophy-grid">
         <div class="philosophy-card">
-          <span class="philosophy-number">01</span>
-          <h3>Autenticita</h3>
-          <p>Věřím, že nejkrásnější fotografie jsou ty přirozené. Nesnažím se vytvářet umělé pózy, ale zachycuji skutečné emoce a momenty.</p>
+          <h3>Napíšete mi</h3>
+          <p>Domluvíme se na termínu, místě a typu focení. Poradím vám, co na sebe a kde to vypadá nejlíp.</p>
         </div>
         <div class="philosophy-card">
-          <span class="philosophy-number">02</span>
-          <h3>Příběh</h3>
-          <p>Každá fotografie má svůj příběh. Mým cílem je tento příběh najít a předat ho tak, aby vám přinášel radost i po letech.</p>
+          <h3>Fotíme 1-2 hodiny</h3>
+          <p>V klidu, bez stresu. Řeknu vám co dělat, ale nechám prostor i spontánním momentům — ty jsou pak nejlepší.</p>
         </div>
         <div class="philosophy-card">
-          <span class="philosophy-number">03</span>
-          <h3>Pohodlí</h3>
-          <p>Chci, abyste se při focení cítili přirozeně a uvolněně. Vytváříme společně atmosféru, ve které můžete být sami sebou.</p>
+          <h3>Fotky do 14 dnů</h3>
+          <p>Pošlu vám galerii, vyberete si a já vybrané fotky upravím. Hotovo.</p>
         </div>
       </div>
     </div>
@@ -73,8 +70,8 @@
 
   <!-- CTA -->
   <section class="cta">
-    <h2>Pojďme vytvořit něco krásného</h2>
-    <p>Ráda se s vámi sejdu a probereme vaše představy</p>
+    <h2>Chcete se objednat?</h2>
+    <p>Napište mi, domluvíme termín a místo.</p>
     <a href="/kontakt" class="cta-btn">Kontaktovat</a>
   </section>
 
@@ -208,15 +205,6 @@
   .philosophy-card {
     padding: 2rem;
     border: 1px solid #222;
-  }
-
-  .philosophy-number {
-    font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    color: var(--accent);
-    opacity: 0.5;
-    display: block;
-    margin-bottom: 1rem;
   }
 
   .philosophy-card h3 {

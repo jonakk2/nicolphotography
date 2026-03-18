@@ -13,7 +13,7 @@
           <img src="/images/logo/iconka_nicolka.webp" alt="NJ Photography Logo" loading="lazy" />
           <span>Nicol Juráňová photography</span>
         </a>
-        <p>Zachycuji příběhy, které vydrží navždy. Fotografka specializující se na portréty, rodinné a párové focení v Olomouckém kraji.</p>
+        <p>Fotografka z Hranic na Moravě. Portréty, rodiny, páry — nejčastěji venku v přírodě.</p>
       </div>
 
       <!-- Quick Links -->
