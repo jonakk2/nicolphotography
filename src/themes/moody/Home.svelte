@@ -102,7 +102,7 @@
     <div class="page-header-overlay"></div>
     <div class="page-header-content">
       <h1>Nicol Juráňová</h1>
-      <p>Fotím lidi, rodiny a páry.<br/>Nejčastěji venku, v přírodě kolem Hranic na Moravě.</p>
+      <p>Pokud máte na fotkách nejraději<br/>jako pozadí naši krásnou přírodu,<br/>pak jste tady správně.</p>
       <a href="/kontakt" class="hero-cta">Spojme se</a>
     </div>
   </section>
