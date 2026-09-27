@@ -1,4 +1,6 @@
 <script>
+  import { onMount } from 'svelte';
+
   let name = '';
   let email = '';
   let phone = '';
@@ -11,13 +13,41 @@
   let isSubmitting = false;
 
   const services = [
+    'Balíček Klasik (1 500 Kč)',
+    'Balíček Rodinný příběh (2 800 Kč)',
+    'Dárkový poukaz',
     'Portrétní focení',
     'Rodinné focení',
     'Párové focení',
     'Focení s domácími mazlíčky',
-    'Dárkový poukaz',
     'Jiné přání'
   ];
+
+  onMount(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const balicek = params.get('balicek') || params.get('service');
+      if (balicek) {
+        const lower = balicek.toLowerCase();
+        if (lower.includes('poukaz')) {
+          service = 'Dárkový poukaz';
+          if (!message) message = 'Dobrý den, mám zájem o dárkový poukaz na focení.';
+        } else if (lower.includes('rodin')) {
+          service = 'Balíček Rodinný příběh (2 800 Kč)';
+          if (!message) message = 'Dobrý den, rádi bychom si domluvili termín pro balíček Rodinný příběh.';
+        } else if (lower.includes('klasik')) {
+          service = 'Balíček Klasik (1 500 Kč)';
+          if (!message) message = 'Dobrý den, ráda bych si objednala balíček Klasik.';
+        } else if (lower.includes('portret')) {
+          service = 'Portrétní focení';
+        } else if (lower.includes('par')) {
+          service = 'Párové focení';
+        } else if (lower.includes('zvir')) {
+          service = 'Focení s domácími mazlíčky';
+        }
+      }
+    }
+  });
 
   const timeframes = [
     'Co nejdříve',

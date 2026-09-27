@@ -33,12 +33,51 @@
       text: 'Klobouk, pletený cardigan, šátek, rozepnutá lněná košile. Vrstvení dodává fotkám hloubku a navíc umožňuje během chvilky změnit vzhled bez zdlouhavého převlékání.'
     }
   ];
+
+  const faqs = [
+    {
+      question: "Co když bude pršet nebo špatné počasí?",
+      answer: "Pokud v den focení prší nebo je vyloženě nevlídno, bezplatně se domluvíme na náhradním termínu. Zatažená obloha ale naopak vůbec nevadí — měkké rozptýlené světlo vytváří nádherné, přirozené a jemné tóny!"
+    },
+    {
+      question: "Necítím se před objektivem dobře a neumím pózovat, zvládnu to?",
+      answer: "Naprosto přirozený pocit, který má většina klientů před prvním focením! Žádné strnulé pózy u mě nečekejte. Celé focení probíhá formou pohodové procházky v přírodě a přátelského povídání. Přirozeně vás navedu tak, abyste se cítili uvolněně a na fotkách to byli opravdu vy."
+    },
+    {
+      question: "Co když děti nebudou chtít spolupracovat nebo budou unavené?",
+      answer: "Děti jsou děti a nikdy po nich nechci, aby hodinu stály na značce a usmívaly se do objektivu. Focení vedeme formou hry, běhání, foukání bublin nebo hledání šišek. Nejkrásnější momenty vznikají právě tehdy, když zapomenou, že je někdo fotí."
+    },
+    {
+      question: "Jak a kdy dostaneme hotové fotografie?",
+      answer: "Do několika dnů od focení vám zašlu odkaz na soukromou online galerii s náhledy, kde si v klidu domova naklikáte své oblíbené snímky. Vybrané fotky pečlivě barevně vyladím, jemně vyretušuji a předám v plném rozlišení pro tisk i web do 14 dnů."
+    },
+    {
+      question: "Můžeme vzít s sebou pejska nebo jiné zvířátko?",
+      answer: "Jednoznačně ano! Domácí mazlíčci jsou součástí rodiny a focení s nimi je vždy plné radosti a spontánnosti. Jen mi to prosím dejte vědět předem, abychom vybrali vhodné a klidné místo."
+    },
+    {
+      question: "Dostaneme i neupravené RAW snímky?",
+      answer: "Neupravené soubory neposkytuji. Výběr nejlepších okamžiků, citlivé tónování barev a retuš tvoří polovinu mého autorského rukopisu. Dostanete ode mě pouze dokončené, perfektně vyladěné fotografie."
+    }
+  ];
 </script>
 
 <svelte:head>
   <title>Jak se připravit na focení | Tipy & Průvodce | Nicol Juráňová</title>
   <meta name="description" content="Kompletní průvodce pro klienty: co si vzít na sebe, jaké barvy vybrat do přírody, jak probíhá focení s dětmi a proč fotíme při zlaté hodince." />
   <link rel="canonical" href="https://nicolphotography.cz/pruvodce" />
+  {@html `<script type="application/ld+json">${JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(f => ({
+      "@type": "Question",
+      "name": f.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": f.answer
+      }
+    }))
+  })}</script>`}
 </svelte:head>
 
 <div class="guide-page">
@@ -168,6 +207,30 @@
           <li><span>✓</span> Deka na sezení, pokud chcete fotky v trávě (ráda vezmu i svou stylovou neutrální)</li>
           <li><span>✓</span> Dobrou náladu — o zbytek se postarám já</li>
         </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="container narrow">
+      <div class="faq-header text-center">
+        <span class="label">Časté otázky</span>
+        <h2>Odpovědi na vaše obavy</h2>
+        <p class="faq-sub">Vše, na co se mě klienti před prvním focením nejčastěji ptají.</p>
+      </div>
+      <div class="faq-accordion">
+        {#each faqs as faq, i}
+          <details class="faq-item" open={i === 0}>
+            <summary class="faq-summary">
+              <span class="faq-question-text">{faq.question}</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-content">
+              <p>{faq.answer}</p>
+            </div>
+          </details>
+        {/each}
       </div>
     </div>
   </section>
@@ -501,6 +564,119 @@
     color: var(--accent);
     font-weight: bold;
     font-size: 1.1rem;
+  }
+
+  /* FAQ Section */
+  .faq-section {
+    padding: 6rem 0 5rem;
+  }
+
+  .faq-header {
+    margin-bottom: 3.5rem;
+  }
+
+  .faq-header h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-bottom: 0.75rem;
+  }
+
+  .faq-sub {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+  }
+
+  .faq-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .faq-item {
+    background: var(--bg-secondary);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: border-color 0.25s ease, background-color 0.25s ease;
+  }
+
+  .faq-item[open] {
+    border-color: rgba(201, 168, 124, 0.4);
+    background: #161616;
+  }
+
+  .faq-summary {
+    list-style: none;
+    padding: 1.35rem 1.75rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    user-select: none;
+    transition: background-color 0.2s ease;
+  }
+
+  .faq-summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-summary:hover {
+    background-color: rgba(255, 255, 255, 0.02);
+  }
+
+  .faq-question-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--text);
+    text-align: left;
+  }
+
+  .faq-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    position: relative;
+    display: inline-block;
+  }
+
+  .faq-icon::before,
+  .faq-icon::after {
+    content: '';
+    position: absolute;
+    background-color: var(--accent);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+
+  .faq-icon::before {
+    width: 14px;
+    height: 2px;
+  }
+
+  .faq-icon::after {
+    width: 2px;
+    height: 14px;
+  }
+
+  .faq-item[open] .faq-icon::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+    opacity: 0;
+  }
+
+  .faq-content {
+    padding: 0 1.75rem 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .faq-content p {
+    color: #b8b8b8;
+    font-size: 0.95rem;
+    line-height: 1.75;
+    margin: 1rem 0 0;
+    text-align: left;
   }
 
   /* CTA */

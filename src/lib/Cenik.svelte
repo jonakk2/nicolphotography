@@ -4,24 +4,28 @@
 
   const faqs = [
     {
-      question: "Jak dlouho trvá dodání fotografií?",
-      answer: "Standardní doba dodání je do 14 dnů od focení."
+      question: "Co když bude pršet nebo špatné počasí?",
+      answer: "Pokud v den focení prší nebo je vyloženě nevlídno, bezplatně se domluvíme na náhradním termínu. Zatažená obloha ale naopak vůbec nevadí — měkké rozptýlené světlo vytváří nádherné, přirozené a jemné tóny!"
     },
     {
-      question: "Mohu si vybrat místo focení?",
-      answer: "Samozřejmě! Ráda se přizpůsobím vašim představám. Nejčastěji fotíme v přírodě v okolí Olomouckého kraje."
+      question: "Necítím se před objektivem dobře a neumím pózovat, zvládnu to?",
+      answer: "Naprosto přirozený pocit, který má 9 z 10 mých klientů před prvním focením! Žádné strnulé pózy u mě nečekejte. Celé focení probíhá formou pohodové procházky v přírodě a přátelského povídání. Přirozeně vás navedu tak, abyste se cítili uvolněně a na fotkách to byli opravdu vy."
     },
     {
-      question: "Co když bude špatné počasí?",
-      answer: "V případě nepříznivého počasí můžeme termín přesunout na jiný den."
+      question: "Jak probíhá výběr a kdy dostaneme hotové fotky?",
+      answer: "Do několika dnů od focení vám zašlu odkaz na soukromou online náhledovou galerii, kde si v klidu domova naklikáte své favority. Vybrané snímky pečlivě upravím a předám v plném rozlišení pro tisk i sociální sítě do 14 dnů."
     },
     {
-      question: "Jak probíhá rezervace?",
-      answer: "Stačí mě kontaktovat přes formulář nebo telefonicky. Domluvíme si termín a místo focení. K potvrzení rezervace je potřeba uhradit zálohu 500 Kč."
+      question: "Dostaneme i neupravené RAW snímky?",
+      answer: "Neupravené soubory neposkytuji. Výběr nejlepších okamžiků, citlivé tónování barev a retuš tvoří polovinu mého autorského rukopisu. Dostanete ode mě pouze dokončené, perfektně vyladěné fotografie."
     },
     {
-      question: "Je záloha vratná?",
-      answer: "Záloha 500 Kč je nevratná, ale odečítá se z celkové ceny focení. Slouží k potvrzení rezervace termínu."
+      question: "Můžeme vzít s sebou pejska nebo jiné zvířátko?",
+      answer: "Jednoznačně ano! Domácí mazlíčci jsou součástí rodiny a focení s nimi je vždy plné energie a spontánnosti. Jen mi to prosím dejte vědět předem, abychom vybrali vhodné a klidné místo."
+    },
+    {
+      question: "Jak probíhá rezervace a platba?",
+      answer: "Stačí si vybrat balíček a odeslat poptávku přes formulář nebo mi zavolat. K potvrzení termínu slouží rezervační záloha 500 Kč, která se následně odečítá z celkové ceny focení. Doplatek probíhá po focení nebo při předání galerie."
     }
   ];
 </script>
@@ -38,48 +42,14 @@
   {@html `<script type="application/ld+json">${JSON.stringify({
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Jak dlouho trvá dodání fotografií?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Standardní doba dodání je do 14 dnů od focení."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Mohu si vybrat místo focení?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Samozřejmě! Ráda se přizpůsobím vašim představám. Nejčastěji fotíme v přírodě v okolí Olomouckého kraje."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Co když bude špatné počasí?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "V případě nepříznivého počasí můžeme termín přesunout na jiný den."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Jak probíhá rezervace?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Stačí mě kontaktovat přes formulář nebo telefonicky. Domluvíme si termín a místo focení. K potvrzení rezervace je potřeba uhradit zálohu 500 Kč."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Je záloha vratná?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Záloha 500 Kč je nevratná, ale odečítá se z celkové ceny focení. Slouží k potvrzení rezervace termínu."
-        }
+    "mainEntity": faqs.map(f => ({
+      "@type": "Question",
+      "name": f.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": f.answer
       }
-    ]
+    }))
   })}</script>`}
 </svelte:head>
 
@@ -133,7 +103,7 @@
           <span>(odečítá se z celkové ceny)</span>
         </div>
 
-        <a href="/kontakt" class="pricing-cta">Objednat Klasik</a>
+        <a href="/kontakt?balicek=klasik" class="pricing-cta">Objednat Klasik</a>
       </div>
 
       <!-- Package 2: Rodinný příběh -->
@@ -176,7 +146,7 @@
           <span>(odečítá se z celkové ceny)</span>
         </div>
 
-        <a href="/kontakt" class="pricing-cta featured-cta">Objednat Rodinný příběh</a>
+        <a href="/kontakt?balicek=rodinny" class="pricing-cta featured-cta">Objednat Rodinný příběh</a>
       </div>
     </div>
 
@@ -193,7 +163,7 @@
             <span>✓ Expresní PDF e-mailem do 24 hodin</span>
           </div>
         </div>
-        <a href="/kontakt" class="btn voucher-btn">Objednat poukaz</a>
+        <a href="/kontakt?balicek=poukaz" class="btn voucher-btn">Objednat poukaz</a>
       </div>
 
       <!-- Extra Photos -->
@@ -246,15 +216,21 @@
   <!-- FAQ -->
   <section class="faq">
     <div class="faq-header">
-      <span class="label">FAQ</span>
-      <h2>Časté otázky</h2>
+      <span class="label">Odpovědi na vaše otázky</span>
+      <h2>Časté dotazy před focením</h2>
+      <p class="faq-sub">Vše, co potřebujete vědět o průběhu, počasí i předání fotografií.</p>
     </div>
-    <div class="faq-grid">
-      {#each faqs as faq}
-        <div class="faq-item">
-          <h3>{faq.question}</h3>
-          <p>{faq.answer}</p>
-        </div>
+    <div class="faq-accordion">
+      {#each faqs as faq, i}
+        <details class="faq-item" open={i === 0}>
+          <summary class="faq-summary">
+            <span class="faq-question-text">{faq.question}</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-content">
+            <p>{faq.answer}</p>
+          </div>
+        </details>
       {/each}
     </div>
   </section>
@@ -729,33 +705,108 @@
     font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
     font-weight: 400;
+    margin-bottom: 0.75rem;
   }
 
-  .faq-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    max-width: 1000px;
+  .faq-sub {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+  }
+
+  .faq-accordion {
+    max-width: 860px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
 
   .faq-item {
-    padding: 2rem;
     background: var(--bg-secondary);
-    border: 1px solid #222;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: border-color 0.25s ease, background-color 0.25s ease;
   }
 
-  .faq-item h3 {
-    font-size: 1.1rem;
+  .faq-item[open] {
+    border-color: rgba(201, 168, 124, 0.4);
+    background: #161616;
+  }
+
+  .faq-summary {
+    list-style: none;
+    padding: 1.35rem 1.75rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    user-select: none;
+    transition: background-color 0.2s ease;
+  }
+
+  .faq-summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-summary:hover {
+    background-color: rgba(255, 255, 255, 0.02);
+  }
+
+  .faq-question-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
     font-weight: 500;
-    margin-bottom: 1rem;
     color: var(--text);
+    text-align: left;
   }
 
-  .faq-item p {
-    color: var(--text-muted);
+  .faq-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    position: relative;
+    display: inline-block;
+  }
+
+  .faq-icon::before,
+  .faq-icon::after {
+    content: '';
+    position: absolute;
+    background-color: var(--accent);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+
+  .faq-icon::before {
+    width: 14px;
+    height: 2px;
+  }
+
+  .faq-icon::after {
+    width: 2px;
+    height: 14px;
+  }
+
+  .faq-item[open] .faq-icon::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+    opacity: 0;
+  }
+
+  .faq-content {
+    padding: 0 1.75rem 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .faq-content p {
+    color: #b8b8b8;
     font-size: 0.95rem;
-    line-height: 1.7;
+    line-height: 1.75;
+    margin: 1rem 0 0;
+    text-align: left;
   }
 
   /* CTA */
@@ -826,8 +877,12 @@
       padding: 4rem 1.5rem;
     }
 
-    .faq-grid {
-      grid-template-columns: 1fr;
+    .faq-summary {
+      padding: 1.15rem 1.25rem;
+    }
+
+    .faq-content {
+      padding: 0 1.25rem 1.25rem;
     }
 
     .cta {
