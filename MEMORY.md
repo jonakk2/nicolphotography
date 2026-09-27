@@ -28,12 +28,16 @@
   - **Interaktivní Before/After Slider (`BeforeAfter.svelte`):** Prezentace jemného retušování s plynulým posuvníkem (myš i dotyk) na úvodní stránce.
   - **Průvodce „Jak se připravit na focení“ (`Pruvodce.svelte`):** Kompletní klientský rádce s doporučenou paletou zemitých barev (vzorníky), tipy na zlatou hodinku, focení dětí a psů a interaktivním kontrolním seznamem. Zavedena nová routa `/pruvodce` a odkaz v navigaci.
   - **Strukturované balíčky a Dárkové poukazy (`Cenik.svelte`):** Přehledné rozdělení na *Balíček Klasik* a *Rodinný příběh* (badge Nejoblíbenější), dedikovaná karta na dárkový poukaz a upoutávka na Průvodce.
-  - **Live Deploy a Browser Validace:** Vše otestováno přes Playwright headless Chrome s 0 chybami a nasazeno na ostrou produkci `https://nicolphotography.cz/` (commit `73e9484`).
+  - **Interaktivní FAQ akordeon & FAQPage Schema.org:** Implementován elegantní rozbalovací akordeon (odpovědi na počasí, pózování, termíny, RAW fotky, mazlíčky) na `/cenik` i `/pruvodce` včetně rich snippetů pro vyhledávače.
+  - **Instagram Social Showcase:** Stylová mřížka 6 curated momentek na úvodní stránce s přímým odkazem na Instagram profil `@n.i.c.o.l_photography`.
+  - **Chytré předvyplnění formuláře (Auto Pre-fill):** Proklik z balíčku v Ceníku automaticky nastaví správnou službu a zprávu v poptávkovém formuláři (`/kontakt?balicek=...`).
+  - **Aktualizace `sitemap.xml`:** Přidány nové routy `/portfolio`, `/pruvodce`, `/obchodni-podminky` pro Google indexaci.
+  - **Live Deploy a Browser Validace:** Vše otestováno přes Playwright headless Chrome s 0 chybami a nasazeno na ostrou produkci `https://nicolphotography.cz/` (commit `ecabb0d`).
 
 ---
 
 ## 3. Další možnosti a doporučení
 1. **Lighthouse / Core Web Vitals:** Průběžná kontrola rychlosti a SEO na produkční doméně.
-2. **Instagram feed integrace:** Případné zobrazení posledních fotek z Instagramu či přímé tlačítko do feedu.
-3. **Sezónní kampaně:** Speciální podzimní nebo vánoční minibalíčky v ceníku v příslušném období.
+2. **Sezónní kampaně:** Speciální podzimní nebo vánoční minibalíčky v ceníku v příslušném období.
+
 
