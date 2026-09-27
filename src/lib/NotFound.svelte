@@ -27,48 +27,53 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 2rem;
-    background-color: var(--color-light, #f5f3ef);
+    padding: 6rem 2rem 4rem;
+    background-color: #0a0a0a;
+    color: #ffffff;
   }
 
   .not-found-content {
-    max-width: 500px;
+    max-width: 550px;
   }
 
   h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 8rem;
-    color: var(--color-secondary, #6b8f3c);
+    font-size: clamp(5rem, 12vw, 8rem);
+    color: #c9a87c;
     line-height: 1;
     margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
   }
 
   .subtitle {
     font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
-    color: var(--color-primary, #1a202c);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: #ffffff;
     margin-bottom: 1rem;
+    font-weight: 400;
   }
 
   .description {
-    color: var(--color-muted, #6b7280);
-    font-size: 1rem;
+    color: #888888;
+    font-size: 1.05rem;
     line-height: 1.7;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
   }
 
   .back-btn {
     display: inline-block;
-    background-color: var(--color-secondary, #6b8f3c);
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border-radius: 4px;
+    background-color: #c9a87c;
+    color: #0a0a0a;
+    padding: 1rem 2.5rem;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
     text-decoration: none;
-    font-weight: 500;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
   }
 
   .back-btn:hover {
-    background-color: var(--color-accent, #7da344);
+    background-color: #ffffff;
+    color: #0a0a0a;
   }
 </style>
