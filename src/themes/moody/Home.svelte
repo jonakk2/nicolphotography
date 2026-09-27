@@ -1,6 +1,7 @@
 <script>
   import NavBar from '../../lib/NavBar.svelte';
   import Footer from '../../lib/Footer.svelte';
+  import Lightbox from '../../lib/Lightbox.svelte';
   import images from '../../imageData/images.json';
 
   // Category definitions with cover images
@@ -28,6 +29,28 @@
       name: 'S domácími mazlíčky',
       cover: '/images/thumbnails/animals/nahled_sdomacimimazlicky.webp',
       desc: 'Focení s vašimi mazlíčky'
+    }
+  ];
+
+  // Testimonials for social proof
+  const testimonials = [
+    {
+      name: 'Marie S.',
+      type: 'Rodinné focení',
+      location: 'Hranice',
+      text: 'Nicolka je skvělá! Děti se při focení cítily naprosto přirozeně a fotky jsou kouzelné. Žádné nucené pózy, prostě čistá radost. Určitě se k ní vrátíme.'
+    },
+    {
+      name: 'Dominik & Klára',
+      type: 'Párové focení',
+      location: 'Olomouc',
+      text: 'Focení při západu slunce v makovém poli bylo nezapomenutelné. Nicol přesně věděla, jak nás navést, abychom se necítili trapně. Fotky předčily naše očekávání.'
+    },
+    {
+      name: 'Veronika P.',
+      type: 'Focení s pejskem',
+      location: 'Lipník nad Bečvou',
+      text: 'Měla jsem trochu strach, jak to náš divoký pes zvládne, ale Nicol měla neuvěřitelnou trpělivost. Výsledné momentky jsou nádherné a hotové byly do 10 dnů.'
     }
   ];
 
@@ -63,25 +86,9 @@
     document.body.style.overflow = '';
   }
 
-  function nextImage() {
-    currentImageIndex = (currentImageIndex + 1) % categoryImages.length;
-  }
-
-  function prevImage() {
-    currentImageIndex = (currentImageIndex - 1 + categoryImages.length) % categoryImages.length;
-  }
-
   function handleKeydown(e) {
-    if (e.key === 'Escape') {
-      if (lightboxOpen) {
-        closeLightbox();
-      } else if (galleryOpen) {
-        closeGallery();
-      }
-    }
-    if (lightboxOpen) {
-      if (e.key === 'ArrowRight') nextImage();
-      if (e.key === 'ArrowLeft') prevImage();
+    if (e.key === 'Escape' && galleryOpen && !lightboxOpen) {
+      closeGallery();
     }
   }
 </script>
@@ -184,27 +191,36 @@
     </div>
   {/if}
 
-  <!-- Lightbox Modal (single large image) -->
-  {#if lightboxOpen && categoryImages.length > 0}
-    <div class="lightbox" role="dialog" aria-modal="true" aria-label="Fotka" on:click={closeLightbox} on:keydown={handleKeydown}>
-      <button class="lightbox-close" on:click={closeLightbox} aria-label="Zpět na galerii">×</button>
+  <!-- Lightbox Component -->
+  <Lightbox
+    isOpen={lightboxOpen}
+    images={categoryImages}
+    currentIndex={currentImageIndex}
+    categoryName={currentCategory ? currentCategory.name : ''}
+    on:close={closeLightbox}
+    on:change={(e) => (currentImageIndex = e.detail.index)}
+  />
 
-      <div class="lightbox-header">
-        <h3>{currentCategory.name}</h3>
-        <span>{currentImageIndex + 1} / {categoryImages.length}</span>
-      </div>
-
-      <div class="lightbox-content" role="presentation" on:click|stopPropagation on:keydown|stopPropagation>
-        <button class="lightbox-nav prev" on:click={prevImage} aria-label="Předchozí fotka">‹</button>
-
-        <div class="lightbox-image">
-          <img src={categoryImages[currentImageIndex].src} alt={categoryImages[currentImageIndex].alt} />
-        </div>
-
-        <button class="lightbox-nav next" on:click={nextImage} aria-label="Další fotka">›</button>
-      </div>
+  <!-- Testimonials / Social Proof -->
+  <section class="testimonials">
+    <div class="testimonials-header">
+      <span class="label">Reference</span>
+      <h2>Co říkají klienti</h2>
+      <p class="testimonials-sub">Největší radost mám, když se před foťákem uvolníte a odnesete si nejen fotky, ale i příjemný zážitek.</p>
     </div>
-  {/if}
+    <div class="testimonials-grid">
+      {#each testimonials as t}
+        <div class="testimonial-card">
+          <div class="stars" aria-label="5 hvězdiček z 5">★★★★★</div>
+          <p class="quote">„{t.text}“</p>
+          <div class="author-info">
+            <span class="author-name">{t.name}</span>
+            <span class="author-meta">{t.type} · {t.location}</span>
+          </div>
+        </div>
+      {/each}
+    </div>
+  </section>
 
   <!-- Pricing -->
   <section class="pricing">
@@ -603,106 +619,107 @@
     filter: grayscale(0%);
   }
 
-  /* Lightbox */
-  .lightbox {
-    position: fixed;
-    inset: 0;
-    z-index: 10000;
-    background: rgba(0, 0, 0, 0.95);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
+  /* Testimonials */
+  .testimonials {
+    padding: 7rem 2rem;
+    background-color: #0d0d0d;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   }
 
-  .lightbox-close {
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-    background: none;
-    border: none;
-    color: var(--text);
-    font-size: 2.5rem;
-    cursor: pointer;
-    opacity: 0.7;
-    transition: opacity 0.3s ease;
-    line-height: 1;
-  }
-
-  .lightbox-close:hover {
-    opacity: 1;
-  }
-
-  .lightbox-header {
-    position: absolute;
-    top: 2rem;
-    left: 2rem;
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-  }
-
-  .lightbox-header h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: var(--text);
-  }
-
-  .lightbox-header span {
-    font-size: 0.8rem;
-    color: var(--text-muted);
-    letter-spacing: 0.1em;
-  }
-
-  .lightbox-content {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    max-width: 90vw;
-    max-height: 70vh;
-  }
-
-  .lightbox-nav {
-    background: none;
-    border: 1px solid rgba(255,255,255,0.2);
-    color: var(--text);
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    font-size: 2rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-  }
-
-  .lightbox-nav:hover {
-    background: var(--accent);
-    border-color: var(--accent);
-    color: var(--bg);
-  }
-
-  .lightbox-image {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .lightbox-image img {
-    max-width: 70vw;
-    max-height: 60vh;
-    object-fit: contain;
-  }
-
-  .lightbox-caption {
-    margin-top: 1rem;
-    font-size: 0.9rem;
-    color: var(--text-muted);
+  .testimonials-header {
     text-align: center;
+    max-width: 650px;
+    margin: 0 auto 3.5rem;
+  }
+
+  .testimonials-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: var(--text);
+  }
+
+  .testimonials-sub {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .testimonial-card {
+    background-color: #141414;
+    border: 1px solid rgba(201, 168, 124, 0.15);
+    border-radius: 8px;
+    padding: 2.25rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+  }
+
+  .testimonial-card:hover {
+    border-color: rgba(201, 168, 124, 0.4);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  }
+
+  .stars {
+    color: var(--accent);
+    font-size: 1.1rem;
+    letter-spacing: 0.15em;
+    margin-bottom: 1.25rem;
+  }
+
+  .quote {
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin: 0 0 1.5rem;
+    font-style: italic;
+    flex: 1;
+  }
+
+  .author-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 1rem;
+  }
+
+  .author-name {
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 0.95rem;
+  }
+
+  .author-meta {
+    font-size: 0.8rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  @media (max-width: 900px) {
+    .testimonials-grid {
+      grid-template-columns: 1fr;
+      max-width: 550px;
+      gap: 1.5rem;
+    }
+
+    .testimonials {
+      padding: 5rem 1.5rem;
+    }
   }
 
   /* Pricing */
@@ -916,28 +933,6 @@
 
     .gallery-grid {
       grid-template-columns: repeat(2, 1fr);
-      gap: 0.5rem;
-    }
-
-    .lightbox-content {
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .lightbox-nav {
-      width: 40px;
-      height: 40px;
-      font-size: 1.5rem;
-    }
-
-    .lightbox-image img {
-      max-width: 90vw;
-      max-height: 50vh;
-    }
-
-    .lightbox-header {
-      flex-direction: column;
-      align-items: flex-start;
       gap: 0.5rem;
     }
   }

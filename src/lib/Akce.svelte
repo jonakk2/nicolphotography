@@ -1,6 +1,7 @@
 <script>
   import NavBar from './NavBar.svelte';
   import Footer from './Footer.svelte';
+  import Lightbox from './Lightbox.svelte';
   import images from '../imageData/images.json';
 
   // Category definitions
@@ -63,25 +64,9 @@
     document.body.style.overflow = '';
   }
 
-  function nextImage() {
-    currentImageIndex = (currentImageIndex + 1) % categoryImages.length;
-  }
-
-  function prevImage() {
-    currentImageIndex = (currentImageIndex - 1 + categoryImages.length) % categoryImages.length;
-  }
-
   function handleKeydown(e) {
-    if (e.key === 'Escape') {
-      if (lightboxOpen) {
-        closeLightbox();
-      } else if (galleryOpen) {
-        closeGallery();
-      }
-    }
-    if (lightboxOpen) {
-      if (e.key === 'ArrowRight') nextImage();
-      if (e.key === 'ArrowLeft') prevImage();
+    if (e.key === 'Escape' && galleryOpen && !lightboxOpen) {
+      closeGallery();
     }
   }
 </script>
@@ -106,6 +91,7 @@
   <section class="page-header">
     <div class="page-header-overlay"></div>
     <div class="page-header-content">
+      <span class="label">Portfolio</span>
       <h1>Moje práce</h1>
       <p>Prohlédněte si ukázky z mého focení</p>
     </div>
@@ -131,7 +117,7 @@
 
   <!-- Gallery Modal -->
   {#if galleryOpen && categoryImages.length > 0}
-    <div class="gallery-modal" role="dialog" aria-modal="true">
+    <div class="gallery-modal" role="dialog" aria-modal="true" aria-label="Galerie {currentCategory.name}">
       <button class="gallery-close" on:click={closeGallery} aria-label="Zavřít">×</button>
 
       <div class="gallery-header">
@@ -153,27 +139,15 @@
     </div>
   {/if}
 
-  <!-- Lightbox Modal -->
-  {#if lightboxOpen && categoryImages.length > 0}
-    <div class="lightbox" role="dialog" aria-modal="true" on:click={closeLightbox}>
-      <button class="lightbox-close" on:click={closeLightbox} aria-label="Zpět">×</button>
-
-      <div class="lightbox-header">
-        <h3>{currentCategory.name}</h3>
-        <span>{currentImageIndex + 1} / {categoryImages.length}</span>
-      </div>
-
-      <div class="lightbox-content" on:click|stopPropagation>
-        <button class="lightbox-nav prev" on:click={prevImage} aria-label="Předchozí">‹</button>
-
-        <div class="lightbox-image">
-          <img src={categoryImages[currentImageIndex].src} alt={categoryImages[currentImageIndex].alt} />
-        </div>
-
-        <button class="lightbox-nav next" on:click={nextImage} aria-label="Další">›</button>
-      </div>
-    </div>
-  {/if}
+  <!-- Lightbox Component -->
+  <Lightbox
+    isOpen={lightboxOpen}
+    images={categoryImages}
+    currentIndex={currentImageIndex}
+    categoryName={currentCategory ? currentCategory.name : ''}
+    on:close={closeLightbox}
+    on:change={(e) => (currentImageIndex = e.detail.index)}
+  />
 
   <Footer />
 </div>
@@ -409,93 +383,6 @@
     filter: grayscale(0%);
   }
 
-  /* Lightbox */
-  .lightbox {
-    position: fixed;
-    inset: 0;
-    z-index: 10000;
-    background: rgba(0, 0, 0, 0.95);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-  }
-
-  .lightbox-close {
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-    background: none;
-    border: none;
-    color: var(--text);
-    font-size: 2.5rem;
-    cursor: pointer;
-    opacity: 0.7;
-    transition: opacity 0.3s ease;
-  }
-
-  .lightbox-close:hover {
-    opacity: 1;
-  }
-
-  .lightbox-header {
-    position: absolute;
-    top: 2rem;
-    left: 2rem;
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-  }
-
-  .lightbox-header h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: var(--text);
-  }
-
-  .lightbox-header span {
-    font-size: 0.8rem;
-    color: var(--text-muted);
-  }
-
-  .lightbox-content {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    max-width: 90vw;
-    max-height: 80vh;
-  }
-
-  .lightbox-nav {
-    background: none;
-    border: 1px solid rgba(255,255,255,0.2);
-    color: var(--text);
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    font-size: 2rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-  }
-
-  .lightbox-nav:hover {
-    background: var(--accent);
-    border-color: var(--accent);
-    color: var(--bg);
-  }
-
-  .lightbox-image img {
-    max-width: 70vw;
-    max-height: 75vh;
-    object-fit: contain;
-  }
-
   /* Responsive */
   @media (max-width: 768px) {
     .categories {
@@ -518,22 +405,6 @@
     .gallery-grid {
       grid-template-columns: repeat(2, 1fr);
       gap: 0.5rem;
-    }
-
-    .lightbox-content {
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .lightbox-nav {
-      width: 40px;
-      height: 40px;
-      font-size: 1.5rem;
-    }
-
-    .lightbox-image img {
-      max-width: 90vw;
-      max-height: 60vh;
     }
   }
 </style>

@@ -12,6 +12,7 @@
   import PrivacyPolicy from "./lib/PrivacyPolicy.svelte";
   import ObchodniPodminky from "./lib/ObchodniPodminky.svelte";
   import CookieConsent from "./lib/CookieConsent.svelte";
+  import MobileQuickContact from "./lib/MobileQuickContact.svelte";
   import NotFound from "./lib/NotFound.svelte";
 </script>
 
@@ -19,6 +20,7 @@
   <div>
     <Route path="/" component={Home} />
     <Route path="/about" component={About} />
+    <Route path="/portfolio" component={Akce} />
     <Route path="/akce" component={Akce} />
     <Route path="/cenik" component={Cenik}/>
     <Route path="/kontakt" component={Kontakt}/>
@@ -28,4 +30,5 @@
   </div>
 </Router>
 
+<MobileQuickContact />
 <CookieConsent />
