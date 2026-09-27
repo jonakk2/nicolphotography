@@ -36,9 +36,13 @@
         <div class="about-text">
           <span class="label">O mně</span>
           <h2>Nicol Juráňová</h2>
-          <p>Jmenuju se Nicol a fotím lidi v přírodě. Rodinné focení, párové, portréty — nejčastěji někde venku v okolí Hranic na Moravě. Ale pokud máte vlastní nápad, klidně sem s ním.</p>
-          <p>Při focení s dětmi hodně improvizuju — nejlepší fotky vznikají spontánně. U dospělých vás navádím, ale žádné strnulé pózy nečekejte. Chci, abyste na fotkách vypadali jako vy.</p>
-          <p>Pokud máte zájem, ozvěte se a domluvíme termín.</p>
+          <p>Jmenuju se Nicol a fotím lidi v přírodě. Rodinné focení, párové, portréty — nejčastěji někde venku v okolí Hranic na Moravě, Lipníka a Olomouce. Ale pokud máte vlastní oblíbené místo, moc ráda za vámi přijedu.</p>
+          <p>Věřím, že nejkrásnější kulisy tvoří sama příroda — teplé zapadající slunce, rozkvetlé louky a klid lesa. Při focení s dětmi hodně improvizuju — nejlepší fotky vznikají při hře a běhání. U dospělých vás jemně navádím, ale žádné strnulé pózy u mě nečekejte. Chci, abyste na fotkách vypadali jako vy a odnesli si příjemný zážitek.</p>
+          <p>Zajímá vás, jak se na focení připravit, nebo chcete rovnou domluvit termín?</p>
+          <div class="about-actions">
+            <a href="/pruvodce" class="about-link-btn secondary">Průvodce přípravou →</a>
+            <a href="/cenik" class="about-link-btn primary">Prohlédnout ceník</a>
+          </div>
         </div>
       </div>
     </div>
@@ -174,6 +178,44 @@
     margin-bottom: 1rem;
     line-height: 1.8;
     font-size: 0.95rem;
+  }
+
+  .about-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .about-link-btn {
+    display: inline-block;
+    padding: 0.85rem 1.75rem;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+  }
+
+  .about-link-btn.primary {
+    background: var(--accent);
+    color: var(--bg);
+  }
+
+  .about-link-btn.primary:hover {
+    background: var(--text);
+  }
+
+  .about-link-btn.secondary {
+    background: transparent;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+  }
+
+  .about-link-btn.secondary:hover {
+    background: var(--accent);
+    color: var(--bg);
   }
 
   /* Philosophy */

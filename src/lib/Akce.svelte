@@ -74,10 +74,10 @@
 <svelte:head>
   <title>Portfolio | Nicol Juráňová photography</title>
   <meta name="description" content="Prohlédněte si ukázky focení od Nicol Juráňové - portréty, rodinné focení, párové focení a focení s domácími mazlíčky v přírodě." />
-  <link rel="canonical" href="https://nicolphotography.cz/akce" />
+  <link rel="canonical" href="https://nicolphotography.cz/portfolio" />
   <meta property="og:title" content="Portfolio | Nicol Juráňová photography" />
   <meta property="og:description" content="Prohlédněte si ukázky focení - portréty, rodinné focení, párové focení a focení s domácími mazlíčky v přírodě." />
-  <meta property="og:url" content="https://nicolphotography.cz/akce" />
+  <meta property="og:url" content="https://nicolphotography.cz/portfolio" />
   <meta property="og:image" content="https://nicolphotography.cz/hlavicka.png" />
   <meta property="og:type" content="website" />
 </svelte:head>
@@ -148,6 +148,19 @@
     on:close={closeLightbox}
     on:change={(e) => (currentImageIndex = e.detail.index)}
   />
+
+  <!-- Portfolio CTA -->
+  <section class="portfolio-cta">
+    <div class="portfolio-cta-content">
+      <span class="label">Máte zájem o focení?</span>
+      <h2>Líbí se vám můj styl?</h2>
+      <p>Ať už plánujete rodinnou procházku, romantické párové focení nebo portrét při západu slunce, ráda pro vás zachytím přirozené momenty plné emocí.</p>
+      <div class="portfolio-cta-buttons">
+        <a href="/kontakt" class="cta-btn primary">Domluvit termín</a>
+        <a href="/cenik" class="cta-btn secondary">Zobrazit ceník</a>
+      </div>
+    </div>
+  </section>
 
   <Footer />
 </div>
@@ -381,6 +394,71 @@
 
   .gallery-thumb:hover img {
     filter: grayscale(0%);
+  }
+
+  /* Portfolio CTA */
+  .portfolio-cta {
+    padding: 6rem 2rem;
+    background-color: var(--bg-secondary);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+  }
+
+  .portfolio-cta-content {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .portfolio-cta-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 400;
+    margin-bottom: 1.25rem;
+    color: var(--text);
+  }
+
+  .portfolio-cta-content p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+  }
+
+  .portfolio-cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+  }
+
+  .cta-btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .cta-btn.primary {
+    background: var(--accent);
+    color: var(--bg);
+  }
+
+  .cta-btn.primary:hover {
+    background: var(--text);
+  }
+
+  .cta-btn.secondary {
+    background: transparent;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+  }
+
+  .cta-btn.secondary:hover {
+    background: var(--accent);
+    color: var(--bg);
   }
 
   /* Responsive */

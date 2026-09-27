@@ -14,6 +14,7 @@
   import Pruvodce from "./lib/Pruvodce.svelte";
   import CookieConsent from "./lib/CookieConsent.svelte";
   import MobileQuickContact from "./lib/MobileQuickContact.svelte";
+  import ScrollToTop from "./lib/ScrollToTop.svelte";
   import NotFound from "./lib/NotFound.svelte";
 </script>
 
@@ -32,5 +33,6 @@
   </div>
 </Router>
 
+<ScrollToTop />
 <MobileQuickContact />
 <CookieConsent />
