@@ -11,6 +11,7 @@
   import Kontakt from "./lib/Kontakt.svelte";
   import PrivacyPolicy from "./lib/PrivacyPolicy.svelte";
   import ObchodniPodminky from "./lib/ObchodniPodminky.svelte";
+  import Pruvodce from "./lib/Pruvodce.svelte";
   import CookieConsent from "./lib/CookieConsent.svelte";
   import MobileQuickContact from "./lib/MobileQuickContact.svelte";
   import NotFound from "./lib/NotFound.svelte";
@@ -23,6 +24,7 @@
     <Route path="/portfolio" component={Akce} />
     <Route path="/akce" component={Akce} />
     <Route path="/cenik" component={Cenik}/>
+    <Route path="/pruvodce" component={Pruvodce}/>
     <Route path="/kontakt" component={Kontakt}/>
     <Route path="/ochrana-udaju" component={PrivacyPolicy}/>
     <Route path="/obchodni-podminky" component={ObchodniPodminky}/>

@@ -15,6 +15,7 @@
     'Rodinné focení',
     'Párové focení',
     'Focení s domácími mazlíčky',
+    'Dárkový poukaz',
     'Jiné přání'
   ];
 

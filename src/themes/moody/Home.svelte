@@ -2,6 +2,7 @@
   import NavBar from '../../lib/NavBar.svelte';
   import Footer from '../../lib/Footer.svelte';
   import Lightbox from '../../lib/Lightbox.svelte';
+  import BeforeAfter from '../../lib/BeforeAfter.svelte';
   import images from '../../imageData/images.json';
 
   // Category definitions with cover images
@@ -222,6 +223,16 @@
     </div>
   </section>
 
+  <!-- Before / After Edit Showcase -->
+  <section class="retouch-section">
+    <div class="retouch-header">
+      <span class="label">Můj styl úpravy</span>
+      <h2>Přirozené barvy bez filtrů</h2>
+      <p class="retouch-sub">Posuňte jezdcem pro srovnání. Fotografie ladím citlivě do teplých přírodních tónů — bez voskové retuše a s důrazem na skutečné emoce.</p>
+    </div>
+    <BeforeAfter />
+  </section>
+
   <!-- Pricing -->
   <section class="pricing">
     <div class="pricing-header">
@@ -237,12 +248,16 @@
         </div>
         <ul class="pricing-features">
           <li>10 upravených fotografií</li>
-          <li>Online galerie</li>
+          <li>Online galerie k výběru</li>
           <li>Dodání do 14 dnů</li>
         </ul>
         <a href="/kontakt" class="pricing-cta">Mám zájem</a>
       </div>
-      <p class="pricing-note">Portréty, páry, rodiny i focení se zvířátky - vše za jednotnou cenu.</p>
+      <p class="pricing-note">Portréty, páry, rodiny i focení se zvířátky — vše za jednotnou cenu.</p>
+      <div class="pricing-extra-links">
+        <a href="/cenik" class="extra-link">Kompletní ceník a dárkové poukazy →</a>
+        <a href="/pruvodce" class="extra-link">Průvodce: Jak se připravit a co na sebe →</a>
+      </div>
     </div>
   </section>
 
@@ -720,6 +735,55 @@
     .testimonials {
       padding: 5rem 1.5rem;
     }
+  }
+
+  /* Retouch Showcase */
+  .retouch-section {
+    padding: 7rem 1.5rem;
+    background-color: #0b0b0b;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .retouch-header {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 3.5rem;
+  }
+
+  .retouch-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: var(--text);
+  }
+
+  .retouch-sub {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .pricing-extra-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 2rem;
+  }
+
+  .extra-link {
+    color: var(--accent);
+    font-size: 0.9rem;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    transition: all 0.2s ease;
+  }
+
+  .extra-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+    text-underline-offset: 3px;
   }
 
   /* Pricing */

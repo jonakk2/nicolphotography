@@ -35,6 +35,7 @@
       <li><a href="/" on:click={closeMenu}>Domů</a></li>
       <li><a href="/portfolio" on:click={closeMenu}>Portfolio</a></li>
       <li><a href="/cenik" on:click={closeMenu}>Ceník</a></li>
+      <li><a href="/pruvodce" on:click={closeMenu}>Průvodce</a></li>
       <li><a href="/about" on:click={closeMenu}>O mně</a></li>
       <li><a href="/kontakt" class="nav-cta" on:click={closeMenu}>Kontakt</a></li>
     </ul>
