@@ -25,9 +25,15 @@
   - **Čisté routování:** Zavedena kanonická cesta `/portfolio` se zachováním zpětné kompatibility pro `/akce`.
   - **Sestavení bez chyb:** Odstraněna veškerá a11y varování překladače, čistý build za 1.3 s.
 
+  - **Interaktivní Before/After Slider (`BeforeAfter.svelte`):** Prezentace jemného retušování s plynulým posuvníkem (myš i dotyk) na úvodní stránce.
+  - **Průvodce „Jak se připravit na focení“ (`Pruvodce.svelte`):** Kompletní klientský rádce s doporučenou paletou zemitých barev (vzorníky), tipy na zlatou hodinku, focení dětí a psů a interaktivním kontrolním seznamem. Zavedena nová routa `/pruvodce` a odkaz v navigaci.
+  - **Strukturované balíčky a Dárkové poukazy (`Cenik.svelte`):** Přehledné rozdělení na *Balíček Klasik* a *Rodinný příběh* (badge Nejoblíbenější), dedikovaná karta na dárkový poukaz a upoutávka na Průvodce.
+  - **Live Deploy a Browser Validace:** Vše otestováno přes Playwright headless Chrome s 0 chybami a nasazeno na ostrou produkci `https://nicolphotography.cz/` (commit `73e9484`).
+
 ---
 
 ## 3. Další možnosti a doporučení
-1. **Lighthouse / SEO ladění:** Průběžná kontrola Core Web Vitals na produkční doméně.
+1. **Lighthouse / Core Web Vitals:** Průběžná kontrola rychlosti a SEO na produkční doméně.
 2. **Instagram feed integrace:** Případné zobrazení posledních fotek z Instagramu či přímé tlačítko do feedu.
 3. **Sezónní kampaně:** Speciální podzimní nebo vánoční minibalíčky v ceníku v příslušném období.
+
