@@ -31,13 +31,16 @@
   - **Interaktivní FAQ akordeon & FAQPage Schema.org:** Implementován elegantní rozbalovací akordeon (odpovědi na počasí, pózování, termíny, RAW fotky, mazlíčky) na `/cenik` i `/pruvodce` včetně rich snippetů pro vyhledávače.
   - **Instagram Social Showcase:** Stylová mřížka 6 curated momentek na úvodní stránce s přímým odkazem na Instagram profil `@n.i.c.o.l_photography`.
   - **Chytré předvyplnění formuláře (Auto Pre-fill):** Proklik z balíčku v Ceníku automaticky nastaví správnou službu a zprávu v poptávkovém formuláři (`/kontakt?balicek=...`).
-  - **Aktualizace `sitemap.xml`:** Přidány nové routy `/portfolio`, `/pruvodce`, `/obchodni-podminky` pro Google indexaci.
-  - **Live Deploy a Browser Validace:** Vše otestováno přes Playwright headless Chrome s 0 chybami a nasazeno na ostrou produkci `https://nicolphotography.cz/` (commit `ecabb0d`).
+  - **Globální tlačítko Scroll-to-top (`ScrollToTop.svelte`):** Plovoucí zlaté tlačítko s plynulým posunem nahoru (zobrazí se po odscrollování > 400px), vyladěno pro koexistenci s cookie lištou i mobilním quick-contact barem.
+  - **Portfolio konverzní CTA banner (`Akce.svelte`):** Na konec portfolia přidána výzva k akci s přímými tlačítky na rezervaci termínu a ceník.
+  - **Obohacení stránky O mně (`About.svelte`):** Doplněn autentický popis fotografického stylu v Olomouckém kraji a akční odkazy na Průvodce a Ceník.
+  - **Live Deploy a Browser Validace:** Vše otestováno přes Playwright headless Chrome s 0 chybami a nasazeno na ostrou produkci `https://nicolphotography.cz/` (commit `0e4ff01`).
 
 ---
 
 ## 3. Další možnosti a doporučení
 1. **Lighthouse / Core Web Vitals:** Průběžná kontrola rychlosti a SEO na produkční doméně.
-2. **Sezónní kampaně:** Speciální podzimní nebo vánoční minibalíčky v ceníku v příslušném období.
+2. **Sezónní minibalíčky:** Speciální podzimní nebo vánoční akce v ceníku v příslušném období roku.
+
 
 
