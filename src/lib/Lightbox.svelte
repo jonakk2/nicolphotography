@@ -118,7 +118,7 @@
         on:click={close} 
         aria-label="Zavřít prohlížeč"
       >
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
           <line x1="18" y1="6" x2="6" y2="18"></line>
           <line x1="6" y1="6" x2="18" y2="18"></line>
         </svg>
@@ -139,7 +139,7 @@
         on:click={prev} 
         aria-label="Předchozí fotografie"
       >
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
           <polyline points="15 18 9 12 15 6"></polyline>
         </svg>
       </button>
@@ -170,7 +170,7 @@
         on:click={next} 
         aria-label="Další fotografie"
       >
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
           <polyline points="9 18 15 12 9 6"></polyline>
         </svg>
       </button>
@@ -232,22 +232,43 @@
   .close-btn {
     width: 44px;
     height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0 !important;
+    margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    background-color: rgba(30, 30, 30, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 50%;
     color: #ffffff;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+    flex-shrink: 0;
+  }
+
+  .close-btn svg {
+    width: 22px;
+    height: 22px;
+    stroke: #ffffff !important;
+    stroke-width: 2.5;
+    flex-shrink: 0;
+    display: block;
+    pointer-events: none;
+    transition: stroke 0.2s ease;
   }
 
   .close-btn:hover {
     background-color: #c9a87c;
-    color: #0a0a0a;
     border-color: #c9a87c;
-    transform: scale(1.05);
+    transform: scale(1.08);
+    box-shadow: 0 6px 20px rgba(201, 168, 124, 0.45);
+  }
+
+  .close-btn:hover svg {
+    stroke: #0a0a0a !important;
   }
 
   .lightbox-stage {
@@ -265,26 +286,46 @@
   }
 
   .nav-btn {
-    width: 52px;
-    height: 52px;
+    width: 54px;
+    height: 54px;
+    min-width: 54px;
+    min-height: 54px;
+    padding: 0 !important;
+    margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(20, 20, 20, 0.7);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    background-color: rgba(30, 30, 30, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 50%;
     color: #ffffff;
     cursor: pointer;
     transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
     flex-shrink: 0;
     z-index: 3;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  }
+
+  .nav-btn svg {
+    width: 28px;
+    height: 28px;
+    stroke: #ffffff !important;
+    stroke-width: 2.5;
+    flex-shrink: 0;
+    display: block;
+    pointer-events: none;
+    transition: stroke 0.2s ease;
   }
 
   .nav-btn:hover {
     background-color: #c9a87c;
-    color: #0a0a0a;
     border-color: #c9a87c;
-    transform: scale(1.08);
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(201, 168, 124, 0.45);
+  }
+
+  .nav-btn:hover svg {
+    stroke: #0a0a0a !important;
   }
 
   .image-wrapper {
@@ -370,9 +411,17 @@
     }
 
     .nav-btn {
-      width: 40px;
-      height: 40px;
-      background-color: rgba(10, 10, 10, 0.6);
+      width: 42px;
+      height: 42px;
+      min-width: 42px;
+      min-height: 42px;
+      padding: 0 !important;
+      background-color: rgba(25, 25, 25, 0.85);
+    }
+
+    .nav-btn svg {
+      width: 22px;
+      height: 22px;
     }
 
     .image-wrapper {
