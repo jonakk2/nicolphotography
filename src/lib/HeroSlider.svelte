@@ -3,13 +3,13 @@
   export let speed = 52; // Seconds per full marquee cycle
 
   const sliderImages = [
-    { src: '/images/slider/IMG_0185.webp', alt: 'Přirozené rodinné a párové focení v přírodě' },
-    { src: '/images/slider/IMG_1012.webp', alt: 'Autentické portréty s přirozeným světlem' },
-    { src: '/images/slider/IMG_1324.webp', alt: 'Příběh a emoce zachycené v krajině' },
-    { src: '/images/slider/IMG_5037.webp', alt: 'Uvolněná atmosféra při venkovním focení' },
-    { src: '/images/slider/IMG_8256.webp', alt: 'Párové focení při západu slunce' },
-    { src: '/images/slider/IMG_8999.webp', alt: 'Krásné okamžiky uprostřed přírody' },
-    { src: '/images/slider/IMG_9363.webp', alt: 'Rodinné vzpomínky, které vydrží navždy' }
+    { src: '/images/slider/IMG_0185.webp', alt: 'Přirozené rodinné a párové focení v přírodě', position: '50% 25%' },
+    { src: '/images/slider/IMG_1012.webp', alt: 'Autentické portréty s přirozeným světlem', position: '50% 45%' },
+    { src: '/images/slider/IMG_1324.webp', alt: 'Příběh a emoce zachycené v krajině', position: '50% 20%' },
+    { src: '/images/slider/IMG_5037.webp', alt: 'Uvolněná atmosféra při venkovním focení', position: '50% 25%' },
+    { src: '/images/slider/IMG_8256.webp', alt: 'Párové focení při západu slunce', position: '50% 25%' },
+    { src: '/images/slider/IMG_8999.webp', alt: 'Krásné okamžiky uprostřed přírody', position: '50% 50%' },
+    { src: '/images/slider/IMG_9363.webp', alt: 'Rodinné vzpomínky, které vydrží navždy', position: '50% 24%' }
   ];
 </script>
 
@@ -18,7 +18,7 @@
   <div class="hero-slider-track">
     {#each sliderImages as img}
       <div class="hero-slider-slide">
-        <img src={img.src} alt={img.alt} loading="eager" decoding="async" />
+        <img src={img.src} alt={img.alt} style="object-position: {img.position};" loading="eager" decoding="async" />
       </div>
     {/each}
   </div>
@@ -27,7 +27,7 @@
   <div class="hero-slider-track" aria-hidden="true">
     {#each sliderImages as img}
       <div class="hero-slider-slide">
-        <img src={img.src} alt={img.alt} loading="eager" decoding="async" />
+        <img src={img.src} alt={img.alt} style="object-position: {img.position};" loading="eager" decoding="async" />
       </div>
     {/each}
   </div>

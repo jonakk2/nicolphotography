@@ -11,25 +11,29 @@
       id: 'portraits',
       name: 'Portréty',
       cover: '/images/thumbnails/portraits/nahled_portrety.webp',
-      desc: 'Osobní i profesionální portréty'
+      desc: 'Osobní i profesionální portréty',
+      position: '50% 18%'
     },
     {
       id: 'family',
       name: 'Rodiny',
       cover: '/images/thumbnails/family/nahled_rodinne.webp',
-      desc: 'Rodinné momenty plné lásky'
+      desc: 'Rodinné momenty plné lásky',
+      position: '50% 32%'
     },
     {
       id: 'couples',
       name: 'Páry',
       cover: '/images/thumbnails/couples/nahled_parove.webp',
-      desc: 'Romantické focení párů'
+      desc: 'Romantické focení párů',
+      position: '50% 22%'
     },
     {
       id: 'animals',
       name: 'S domácími mazlíčky',
       cover: '/images/thumbnails/animals/nahled_sdomacimimazlicky.webp',
-      desc: 'Focení s vašimi mazlíčky'
+      desc: 'Focení s vašimi mazlíčky',
+      position: '50% 25%'
     }
   ];
 
@@ -104,7 +108,7 @@
     <div class="category-grid">
       {#each categories as category}
         <button class="category-tile" on:click={() => openCategory(category)}>
-          <img src={category.cover} alt={category.name} loading="lazy" />
+          <img src={category.cover} alt={category.name} style="object-position: {category.position || '50% 20%'};" loading="lazy" />
           <div class="category-overlay">
             <h3>{category.name}</h3>
             <p>{category.desc}</p>
@@ -371,37 +375,43 @@
   }
 
   .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1rem;
+    columns: 3 320px;
+    column-gap: 1.25rem;
     max-width: 1400px;
     margin: 0 auto;
   }
 
   .gallery-thumb {
-    aspect-ratio: 4/3;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 1.25rem;
+    break-inside: avoid;
+    border-radius: 6px;
     overflow: hidden;
     cursor: pointer;
     border: none;
     padding: 0;
-    background: none;
-    transition: transform 0.3s ease;
+    background: #141414;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
   }
 
   .gallery-thumb:hover {
-    transform: scale(1.02);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
   }
 
   .gallery-thumb img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: grayscale(20%);
-    transition: filter 0.3s ease;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+    filter: grayscale(12%);
+    transition: filter 0.3s ease, transform 0.5s ease;
   }
 
   .gallery-thumb:hover img {
     filter: grayscale(0%);
+    transform: scale(1.02);
   }
 
   /* Portfolio CTA */
@@ -489,8 +499,17 @@
     }
 
     .gallery-grid {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 0.5rem;
+      columns: 2 140px;
+      column-gap: 0.75rem;
+    }
+
+    .gallery-thumb {
+      margin-bottom: 0.75rem;
+      border-radius: 4px;
+    }
+
+    .gallery-thumb img {
+      border-radius: 4px;
     }
   }
 </style>

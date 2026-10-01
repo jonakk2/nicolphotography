@@ -7,6 +7,7 @@
   // Other pages
   import About from "./lib/About.svelte";
   import Akce from "./lib/Akce.svelte";
+  import VanocniFoceni from "./lib/VanocniFoceni.svelte";
   import Cenik from "./lib/Cenik.svelte";
   import Kontakt from "./lib/Kontakt.svelte";
   import PrivacyPolicy from "./lib/PrivacyPolicy.svelte";
@@ -23,7 +24,8 @@
     <Route path="/" component={Home} />
     <Route path="/about" component={About} />
     <Route path="/portfolio" component={Akce} />
-    <Route path="/akce" component={Akce} />
+    <Route path="/akce" component={VanocniFoceni} />
+    <Route path="/vanocni-foceni" component={VanocniFoceni} />
     <Route path="/cenik" component={Cenik}/>
     <Route path="/pruvodce" component={Pruvodce}/>
     <Route path="/kontakt" component={Kontakt}/>

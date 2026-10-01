@@ -71,28 +71,30 @@
     errorMessage = '';
     successMessage = '';
 
+    const payload = {
+      name,
+      email,
+      phone: phone || 'Neuvedeno',
+      service: service || 'Neuvedeno',
+      timeframe: timeframe || 'Neuvedeno',
+      location: locationPref || 'Neuvedeno',
+      message
+    };
+
+    const crmApiUrl = import.meta.env.VITE_CRM_API_URL || 'http://localhost:8092/api/v1/PhotoInquiry/create';
+
     try {
-      const response = await fetch('https://api.web3forms.com/submit', {
+      // 1. Zápis do EspoCRM (vytvoření zakázky se statusem "Nová poptávka" a karty klienta)
+      const response = await fetch(crmApiUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          access_key: '457c855c-6bc1-49a9-a26d-b2212ad21ed2',
-          subject: `Nová poptávka focení: ${name} (${service || 'Obecná'})`,
-          from_name: name,
-          email: email,
-          phone: phone || 'Neuvedeno',
-          service: service || 'Neuvedeno',
-          timeframe: timeframe || 'Neuvedeno',
-          location: locationPref || 'Neuvedeno',
-          message: message,
-          botcheck: ''
-        })
+        body: JSON.stringify(payload)
       });
 
       const data = await response.json();
 
       if (data.success) {
-        successMessage = 'Děkuji za zprávu! Ozvu se vám co nejdříve (obvykle do 24 hodin), abychom doladili detaily.';
+        successMessage = 'Děkuji za zprávu! Vaše poptávka byla úspěšně zaznamenána. Ozvu se vám co nejdříve (obvykle do 24 hodin), abychom doladili detaily.';
         name = '';
         email = '';
         phone = '';
@@ -101,11 +103,47 @@
         locationPref = '';
         message = '';
       } else {
-        throw new Error(data.message);
+        throw new Error(data.message || 'Chyba při ukládání poptávky.');
       }
     } catch (err) {
-      console.error('Failed to send:', err);
-      errorMessage = 'Nepodařilo se odeslat zprávu. Zkuste to prosím znovu nebo mi napište přímo na njuranova2003@gmail.com.';
+      console.warn('CRM nedostupné, odesílám přes záložní e-mail:', err);
+      // Fallback na Web3Forms pro případ, že lokální CRM neběží
+      try {
+        const fbResponse = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            access_key: '457c855c-6bc1-49a9-a26d-b2212ad21ed2',
+            subject: `Nová poptávka focení: ${name} (${service || 'Obecná'})`,
+            from_name: name,
+            email: email,
+            phone: phone || 'Neuvedeno',
+            service: service || 'Neuvedeno',
+            timeframe: timeframe || 'Neuvedeno',
+            location: locationPref || 'Neuvedeno',
+            message: message,
+            botcheck: ''
+          })
+        });
+
+        const fbData = await fbResponse.json();
+
+        if (fbData.success) {
+          successMessage = 'Děkuji za zprávu! Ozvu se vám co nejdříve (obvykle do 24 hodin), abychom doladili detaily.';
+          name = '';
+          email = '';
+          phone = '';
+          service = '';
+          timeframe = '';
+          locationPref = '';
+          message = '';
+        } else {
+          throw new Error(fbData.message);
+        }
+      } catch (fbErr) {
+        console.error('Failed to send:', fbErr);
+        errorMessage = 'Nepodařilo se odeslat zprávu. Zkuste to prosím znovu nebo mi napište přímo na njuranova2003@gmail.com.';
+      }
     } finally {
       isSubmitting = false;
     }

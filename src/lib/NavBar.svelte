@@ -34,6 +34,7 @@
     <ul class="nav-links" class:active={menuOpen}>
       <li><a href="/" on:click={closeMenu}>Domů</a></li>
       <li><a href="/portfolio" on:click={closeMenu}>Portfolio</a></li>
+      <li><a href="/vanocni-foceni" class="nav-xmas" on:click={closeMenu}><span class="xmas-sparkle">✨</span> Vánoční focení</a></li>
       <li><a href="/cenik" on:click={closeMenu}>Ceník</a></li>
       <li><a href="/pruvodce" on:click={closeMenu}>Průvodce</a></li>
       <li><a href="/about" on:click={closeMenu}>O mně</a></li>
@@ -236,5 +237,16 @@
     .mobile-toggle {
       display: flex;
     }
+  }
+
+  .nav-xmas {
+    color: #e5b982 !important;
+    font-weight: 500 !important;
+  }
+
+  .xmas-sparkle {
+    display: inline-block;
+    font-size: 0.85em;
+    margin-right: 0.2rem;
   }
 </style>
