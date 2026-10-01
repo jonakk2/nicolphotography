@@ -137,8 +137,6 @@
         {/each}
       </div>
     </div>
-    <div class="hero-slider-vignette-left" aria-hidden="true"></div>
-    <div class="hero-slider-vignette-right" aria-hidden="true"></div>
     <div class="page-header-overlay" aria-hidden="true"></div>
     <div class="page-header-content">
       <h1>Nicol Juráňová</h1>
@@ -414,15 +412,20 @@
     overflow: hidden;
     pointer-events: auto;
     z-index: 0;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%);
+    contain: layout paint;
   }
 
   .hero-slider-track {
     display: flex;
-    gap: 16px;
     width: max-content;
     height: 100%;
-    animation: heroSliderScroll 50s linear infinite;
+    animation: heroSliderScroll 55s linear infinite;
     will-change: transform;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
   }
 
   .hero-slider-container:hover .hero-slider-track {
@@ -445,17 +448,20 @@
   }
 
   .hero-slider-slide {
-    flex: 0 0 auto;
+    flex: 0 0 320px;
     height: 100%;
-    width: 320px;
+    margin-right: 14px;
     position: relative;
     overflow: hidden;
-    border-radius: 4px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
   }
 
   @media (min-width: 1024px) {
     .hero-slider-slide {
-      width: 380px;
+      flex: 0 0 380px;
+      margin-right: 16px;
     }
   }
 
@@ -465,35 +471,13 @@
     object-fit: cover;
     object-position: center;
     display: block;
-    filter: brightness(0.78) contrast(1.05);
-    transition: filter 0.4s ease, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-
-  .hero-slider-slide:hover img {
-    filter: brightness(0.95) contrast(1.05);
-    transform: scale(1.03);
-  }
-
-  /* Left and right edge fades */
-  .hero-slider-vignette-left,
-  .hero-slider-vignette-right {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 18vw;
-    min-width: 90px;
+    filter: brightness(0.8) contrast(1.05);
     pointer-events: none;
-    z-index: 1;
-  }
-
-  .hero-slider-vignette-left {
-    left: 0;
-    background: linear-gradient(to right, rgba(13, 13, 13, 0.95) 0%, transparent 100%);
-  }
-
-  .hero-slider-vignette-right {
-    right: 0;
-    background: linear-gradient(to left, rgba(13, 13, 13, 0.95) 0%, transparent 100%);
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
   }
 
   .page-header-overlay {
