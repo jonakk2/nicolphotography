@@ -1,6 +1,7 @@
 <script>
   import NavBar from './NavBar.svelte';
   import Footer from './Footer.svelte';
+  import HeroSlider from './HeroSlider.svelte';
 
   const colorPalette = [
     { name: 'Přírodní béžová', hex: '#d9cdb8', desc: 'Svetry, plátěné kalhoty, šaty' },
@@ -84,8 +85,9 @@
   <NavBar />
 
   <!-- Hero -->
-  <section class="page-header">
-    <div class="page-header-overlay"></div>
+  <section class="page-header" aria-label="Průvodce focením - Nicol Juráňová">
+    <HeroSlider />
+    <div class="page-header-overlay" aria-hidden="true"></div>
     <div class="page-header-content">
       <span class="label">Průvodce zážitkem</span>
       <h1>Jak se připravit na focení</h1>
@@ -286,20 +288,24 @@
   /* Header */
   .page-header {
     position: relative;
-    padding: 10rem 1.5rem 5rem;
+    height: 54vh;
+    min-height: 440px;
+    max-height: 640px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('/images/background/pojdmevytvoritnecokrasneho.webp');
-    background-size: cover;
-    background-position: center;
+    background-color: #0d0d0d;
+    overflow: hidden;
     text-align: center;
+    color: white;
   }
 
   .page-header-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(10,10,10,0.85) 0%, rgba(10,10,10,0.95) 100%);
+    background: radial-gradient(ellipse at center, rgba(13, 13, 13, 0.75) 0%, rgba(13, 13, 13, 0.55) 55%, rgba(13, 13, 13, 0.35) 100%);
+    pointer-events: none;
+    z-index: 1;
   }
 
   .page-header-content {

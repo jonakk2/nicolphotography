@@ -1,6 +1,7 @@
 <script>
   import NavBar from './NavBar.svelte';
   import Footer from './Footer.svelte';
+  import HeroSlider from './HeroSlider.svelte';
 </script>
 
 <svelte:head>
@@ -18,8 +19,9 @@
   <NavBar />
 
   <!-- Page Header -->
-  <section class="page-header">
-    <div class="page-header-overlay"></div>
+  <section class="page-header" aria-label="O mně - Nicol Juráňová">
+    <HeroSlider />
+    <div class="page-header-overlay" aria-hidden="true"></div>
     <div class="page-header-content">
       <h1>O mně</h1>
       <p>Poznejte příběh za objektivem</p>
@@ -107,39 +109,45 @@
   /* Page Header */
   .page-header {
     position: relative;
-    height: 50vh;
-    min-height: 400px;
+    height: 54vh;
+    min-height: 440px;
+    max-height: 640px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('/images/background/hlavicka.webp');
-    background-size: cover;
-    background-position: center;
+    background-color: #0d0d0d;
+    overflow: hidden;
     color: white;
   }
 
   .page-header-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6));
+    background: radial-gradient(ellipse at center, rgba(13, 13, 13, 0.72) 0%, rgba(13, 13, 13, 0.52) 55%, rgba(13, 13, 13, 0.32) 100%);
+    pointer-events: none;
+    z-index: 1;
   }
 
   .page-header-content {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     text-align: center;
+    max-width: 660px;
+    padding: 0 1.5rem;
   }
 
   .page-header h1 {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-size: clamp(2.5rem, 5vw, 4.2rem);
     color: white;
     margin-bottom: 1rem;
+    text-shadow: 0 4px 24px rgba(0, 0, 0, 0.75);
   }
 
   .page-header p {
-    font-size: 1.2rem;
-    opacity: 0.9;
+    font-size: clamp(1.05rem, 2vw, 1.25rem);
+    opacity: 0.95;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.85);
   }
 
   /* About Content */
