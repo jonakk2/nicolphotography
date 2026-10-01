@@ -244,11 +244,11 @@
     <div class="xmas-banner-card">
       <div class="xmas-banner-content">
         <span class="xmas-banner-badge">✨ Limitovaná sezónní nabídka</span>
-        <h2>Vánoční focení 2026 – venkovní scenérie</h2>
-        <p>Vánoční atmosféra uprostřed přírody, horký čaj z termosky, teplá deka a přirozené okamžiky bez spěchu. 30 minut na čerstvém vzduchu, 8 precizně upravených fotografií a garance dodání do Vánoc pod stromeček.</p>
+        <h2>Vánoční focení 2026 – na zahradě u kamenného domu</h2>
+        <p>Vánoční atmosféra na zahradě před kamenným domem, horký čaj z termosky, teplá deka a přirozené okamžiky bez spěchu. 30 minut na čerstvém vzduchu, 8 precizně upravených fotografií v online galerii a garance dodání do Vánoc pod stromeček.</p>
         <div class="xmas-banner-meta">
           <span>📅 Listopad & Prosinec 2026</span>
-          <span>📍 Příroda (Olomoucký kraj)</span>
+          <span>📍 Zahrada před kamenným domem</span>
           <span>🏷️ 1 500 Kč (záloha 500 Kč)</span>
         </div>
       </div>

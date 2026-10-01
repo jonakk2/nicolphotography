@@ -203,7 +203,7 @@
       <span class="xmas-badge">✨ Limitovaná sezónní nabídka 2026</span>
       <h1>Vánoční focení 2026 – venkovní scenérie</h1>
       <p class="hero-subtitle">
-        Zastavte se na chvíli v předvánočním shonu. Přijďte si pro společné vzpomínky na čerstvý vzduch, voňavý čaj z termosky na zahřátí a přirozené úsměvy uprostřed kouzelné zimní přírody.
+        Zastavte se na chvíli v předvánočním shonu. Přijďte si pro společné vzpomínky na čerstvý vzduch, voňavý čaj z termosky na zahřátí a přirozené úsměvy v kouzelné scenérii na zahradě před kamenným domem.
       </p>
       <div class="hero-highlights">
         <div class="hl-item">
@@ -233,14 +233,14 @@
       <div class="section-title">
         <span class="sub">Co vás čeká</span>
         <h2>Kouzlo Vánoc bez nucených póz</h2>
-        <p>Vánoční focení v přírodě je navrženo tak, aby bylo svižné, nenáročné a plné radosti pro celou rodinu.</p>
+        <p>Vánoční focení na zahradě je navrženo tak, aby bylo svižné, nenáročné a plné radosti pro celou rodinu.</p>
       </div>
 
       <div class="cards-grid">
         <div class="card">
-          <div class="card-icon">🌲</div>
-          <h3>Útulná venkovní scéna</h3>
-          <p>Kvalitní dřevěné doplňky, teplé vlněné deky, sváteční lucernička a skutečná vůně jehličí. Žádné umělé ateliérové pozadí, ale vkusná severská zimní atmosféra pod širým nebem.</p>
+          <div class="card-icon">🏡</div>
+          <h3>Vánoční scéna na zahradě</h3>
+          <p>Kouzelná venkovní scéna na zahradě před kamenným domem. Teplé vlněné deky, sváteční lucernička, jemná světýlka a vůně jehličí. Žádné umělé ateliérové pozadí, ale autentická severská atmosféra.</p>
         </div>
         <div class="card">
           <div class="card-icon">☕</div>
@@ -249,8 +249,8 @@
         </div>
         <div class="card">
           <div class="card-icon">🖼️</div>
-          <h3>Online galerie a tisk</h3>
-          <p>Sami si v teple domova v klidu vyberete svých 8 nejoblíbenějších záběrů. Vybrané fotky dostanete v plném rozlišení + dárkový tisk vzpomínek na prémiovém papíře.</p>
+          <h3>Pohodlný online výběr</h3>
+          <p>Sami si v teple domova v klidu vyberete svých 8 nejoblíbenějších záběrů. Upravené fotografie v plném rozlišení obdržíte v soukromé online galerii do 14 dnů – spolehlivě včas pod stromeček.</p>
         </div>
       </div>
     </div>
@@ -279,7 +279,7 @@
             </div>
             <div class="sum-row">
               <span>Místo:</span>
-              <span>Přírodní scenérie v Olomouckém kraji (přesnou lokalitu upřesním v potvrzení)</span>
+              <span>Zahrada před kamenným domem (přesnou adresu pošlu v potvrzení)</span>
             </div>
             <div class="sum-row">
               <span>Balíček:</span>
