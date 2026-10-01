@@ -130,9 +130,16 @@
   <section class="page-header" aria-label="Ukázky fotografií Nicol Juráňové">
     <div class="hero-slider-container">
       <div class="hero-slider-track">
-        {#each [...sliderImages, ...sliderImages] as img, i}
+        {#each sliderImages as img}
           <div class="hero-slider-slide">
-            <img src={img.src} alt={img.alt} loading={i < 4 ? "eager" : "lazy"} />
+            <img src={img.src} alt={img.alt} loading="eager" decoding="async" />
+          </div>
+        {/each}
+      </div>
+      <div class="hero-slider-track" aria-hidden="true">
+        {#each sliderImages as img}
+          <div class="hero-slider-slide">
+            <img src={img.src} alt={img.alt} loading="eager" decoding="async" />
           </div>
         {/each}
       </div>
@@ -410,18 +417,19 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
+    display: flex;
     pointer-events: auto;
     z-index: 0;
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%);
-    mask-image: linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%);
-    contain: layout paint;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
   }
 
   .hero-slider-track {
     display: flex;
+    flex-shrink: 0;
     width: max-content;
     height: 100%;
-    animation: heroSliderScroll 55s linear infinite;
+    animation: heroMarquee 52s linear infinite;
     will-change: transform;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -432,12 +440,12 @@
     animation-play-state: paused;
   }
 
-  @keyframes heroSliderScroll {
+  @keyframes heroMarquee {
     0% {
       transform: translate3d(0, 0, 0);
     }
     100% {
-      transform: translate3d(-50%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
     }
   }
 
@@ -448,20 +456,31 @@
   }
 
   .hero-slider-slide {
-    flex: 0 0 320px;
+    flex: 0 0 520px;
+    width: 520px;
     height: 100%;
-    margin-right: 14px;
+    margin-right: 18px;
     position: relative;
     overflow: hidden;
+    border-radius: 4px;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     transform: translateZ(0);
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1200px) {
     .hero-slider-slide {
-      flex: 0 0 380px;
-      margin-right: 16px;
+      flex: 0 0 650px;
+      width: 650px;
+      margin-right: 22px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero-slider-slide {
+      flex: 0 0 350px;
+      width: 350px;
+      margin-right: 12px;
     }
   }
 
