@@ -5,6 +5,17 @@
   import BeforeAfter from '../../lib/BeforeAfter.svelte';
   import images from '../../imageData/images.json';
 
+  // Hero auto-slider images from Nicol's portfolio
+  const sliderImages = [
+    { src: '/images/slider/IMG_0185.webp', alt: 'Přirozené rodinné a párové focení v přírodě' },
+    { src: '/images/slider/IMG_1012.webp', alt: 'Autentické portréty s přirozeným světlem' },
+    { src: '/images/slider/IMG_1324.webp', alt: 'Příběh a emoce zachycené v krajině' },
+    { src: '/images/slider/IMG_5037.webp', alt: 'Uvolněná atmosféra při venkovním focení' },
+    { src: '/images/slider/IMG_8256.webp', alt: 'Párové focení při západu slunce' },
+    { src: '/images/slider/IMG_8999.webp', alt: 'Krásné okamžiky uprostřed přírody' },
+    { src: '/images/slider/IMG_9363.webp', alt: 'Rodinné vzpomínky, které vydrží navždy' }
+  ];
+
   // Category definitions with cover images
   const categories = [
     {
@@ -115,9 +126,20 @@
 <div class="moody-theme">
   <NavBar />
 
-  <!-- Page Header -->
-  <section class="page-header">
-    <div class="page-header-overlay"></div>
+  <!-- Page Header with Auto-Slider -->
+  <section class="page-header" aria-label="Ukázky fotografií Nicol Juráňové">
+    <div class="hero-slider-container">
+      <div class="hero-slider-track">
+        {#each [...sliderImages, ...sliderImages] as img, i}
+          <div class="hero-slider-slide">
+            <img src={img.src} alt={img.alt} loading={i < 4 ? "eager" : "lazy"} />
+          </div>
+        {/each}
+      </div>
+    </div>
+    <div class="hero-slider-vignette-left" aria-hidden="true"></div>
+    <div class="hero-slider-vignette-right" aria-hidden="true"></div>
+    <div class="page-header-overlay" aria-hidden="true"></div>
     <div class="page-header-content">
       <h1>Nicol Juráňová</h1>
       <p>Pokud máte na fotkách nejraději<br/>jako pozadí naši krásnou přírodu,<br/>pak jste tady správně.</p>
@@ -211,6 +233,28 @@
     on:close={closeLightbox}
     on:change={(e) => (currentImageIndex = e.detail.index)}
   />
+
+  <!-- Seasonal Christmas Mini-Sessions Banner -->
+  <section class="xmas-banner-section">
+    <div class="xmas-banner-card">
+      <div class="xmas-banner-content">
+        <span class="xmas-banner-badge">✨ Limitovaná sezónní nabídka</span>
+        <h2>Vánoční focení 2026 – venkovní scenérie</h2>
+        <p>Vánoční atmosféra uprostřed přírody, horký čaj z termosky, teplá deka a přirozené okamžiky bez spěchu. 30 minut na čerstvém vzduchu, 8 precizně upravených fotografií a garance dodání do Vánoc pod stromeček.</p>
+        <div class="xmas-banner-meta">
+          <span>📅 Listopad & Prosinec 2026</span>
+          <span>📍 Příroda (Olomoucký kraj)</span>
+          <span>🏷️ 1 500 Kč (záloha 500 Kč)</span>
+        </div>
+      </div>
+      <div class="xmas-banner-action">
+        <a href="/vanocni-foceni" class="btn-xmas-cta">
+          <span>Vybrat termín & rezervovat</span>
+          <span class="cta-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
 
   <!-- Testimonials / Social Proof -->
   <section class="testimonials">
@@ -348,61 +392,161 @@
     margin-bottom: 1rem;
   }
 
-  /* Page Header */
+  /* Page Header / Hero Auto-Slider */
   .page-header {
     position: relative;
-    height: 50vh;
-    min-height: 400px;
+    height: 56vh;
+    min-height: 480px;
+    max-height: 680px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('/images/background/hlavicka.webp');
-    background-size: cover;
-    background-position: center;
+    background-color: #0d0d0d;
+    overflow: hidden;
     color: white;
+  }
+
+  .hero-slider-container {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: auto;
+    z-index: 0;
+  }
+
+  .hero-slider-track {
+    display: flex;
+    gap: 16px;
+    width: max-content;
+    height: 100%;
+    animation: heroSliderScroll 50s linear infinite;
+    will-change: transform;
+  }
+
+  .hero-slider-container:hover .hero-slider-track {
+    animation-play-state: paused;
+  }
+
+  @keyframes heroSliderScroll {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-slider-track {
+      animation: none;
+    }
+  }
+
+  .hero-slider-slide {
+    flex: 0 0 auto;
+    height: 100%;
+    width: 320px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+
+  @media (min-width: 1024px) {
+    .hero-slider-slide {
+      width: 380px;
+    }
+  }
+
+  .hero-slider-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    filter: brightness(0.78) contrast(1.05);
+    transition: filter 0.4s ease, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .hero-slider-slide:hover img {
+    filter: brightness(0.95) contrast(1.05);
+    transform: scale(1.03);
+  }
+
+  /* Left and right edge fades */
+  .hero-slider-vignette-left,
+  .hero-slider-vignette-right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 18vw;
+    min-width: 90px;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .hero-slider-vignette-left {
+    left: 0;
+    background: linear-gradient(to right, rgba(13, 13, 13, 0.95) 0%, transparent 100%);
+  }
+
+  .hero-slider-vignette-right {
+    right: 0;
+    background: linear-gradient(to left, rgba(13, 13, 13, 0.95) 0%, transparent 100%);
   }
 
   .page-header-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6));
+    background: radial-gradient(ellipse at center, rgba(13, 13, 13, 0.72) 0%, rgba(13, 13, 13, 0.5) 55%, rgba(13, 13, 13, 0.3) 100%);
+    pointer-events: none;
+    z-index: 1;
   }
 
   .page-header-content {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     text-align: center;
+    max-width: 660px;
+    padding: 0 1.5rem;
   }
 
   .page-header h1 {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-size: clamp(2.5rem, 5vw, 4.2rem);
     color: white;
     margin-bottom: 1rem;
+    text-shadow: 0 4px 24px rgba(0, 0, 0, 0.75);
   }
 
   .page-header p {
-    font-size: 1.2rem;
-    opacity: 0.9;
+    font-size: clamp(1.05rem, 2vw, 1.25rem);
+    opacity: 0.95;
     margin-bottom: 2rem;
     line-height: 1.8;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.85);
   }
 
   .hero-cta {
     display: inline-block;
     padding: 1rem 2.5rem;
-    border: 1px solid white;
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(8px);
     color: white;
     text-decoration: none;
     font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 0.2em;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
   }
 
   .hero-cta:hover {
     background: white;
-    color: var(--color-primary);
+    color: var(--color-primary, #1a1a1a);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.25);
   }
 
 
@@ -1186,5 +1330,107 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 0.5rem;
     }
+  }
+
+  /* Christmas Banner Section */
+  .xmas-banner-section {
+    padding: 2rem 2rem 5rem;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+
+  .xmas-banner-card {
+    background: radial-gradient(circle at 90% 10%, rgba(192, 57, 43, 0.22) 0%, rgba(20, 16, 15, 0.95) 60%),
+                linear-gradient(135deg, rgba(30, 24, 20, 0.9) 0%, rgba(15, 13, 12, 0.95) 100%);
+    border: 1px solid rgba(201, 168, 124, 0.35);
+    border-radius: 16px;
+    padding: 3rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    transition: border-color 0.3s ease;
+  }
+
+  @media (min-width: 900px) {
+    .xmas-banner-card {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 3.5rem 4rem;
+    }
+    .xmas-banner-content {
+      max-width: 65%;
+    }
+  }
+
+  .xmas-banner-badge {
+    display: inline-block;
+    background: rgba(201, 168, 124, 0.15);
+    border: 1px solid rgba(201, 168, 124, 0.4);
+    color: #e5b982;
+    padding: 0.35rem 0.95rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    letter-spacing: 0.04em;
+  }
+
+  .xmas-banner-card h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.15rem;
+    color: #f7f7f7;
+    margin-bottom: 1rem;
+    line-height: 1.25;
+  }
+
+  .xmas-banner-card p {
+    color: #b5b5b5;
+    font-size: 1.05rem;
+    line-height: 1.65;
+    margin-bottom: 1.5rem;
+  }
+
+  .xmas-banner-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 1.5rem;
+    font-size: 0.9rem;
+    color: #c9a87c;
+  }
+
+  .xmas-banner-action {
+    flex-shrink: 0;
+  }
+
+  .btn-xmas-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.15rem 2.25rem;
+    background: linear-gradient(135deg, #c9a87c 0%, #b89261 100%);
+    color: #121212;
+    font-weight: 600;
+    font-size: 1.05rem;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 4px 25px rgba(201, 168, 124, 0.4);
+    transition: all 0.25s ease;
+    white-space: nowrap;
+  }
+
+  .btn-xmas-cta:hover {
+    background: linear-gradient(135deg, #d8b88d 0%, #c49e6d 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(201, 168, 124, 0.55);
+  }
+
+  .cta-arrow {
+    transition: transform 0.2s ease;
+  }
+
+  .btn-xmas-cta:hover .cta-arrow {
+    transform: translateX(4px);
   }
 </style>
