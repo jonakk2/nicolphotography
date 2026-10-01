@@ -74,24 +74,35 @@
   function onImageLoad() {
     isImageLoading = false;
   }
+
+  function handleBackdropClick(e) {
+    const target = e.target;
+    // Don't close if clicked on the image, nav buttons, close button, caption, or header info
+    if (
+      target.closest('.lightbox-img') ||
+      target.closest('.nav-btn') ||
+      target.closest('.close-btn') ||
+      target.closest('.header-info') ||
+      target.closest('.caption') ||
+      target.closest('.spinner-container')
+    ) {
+      return;
+    }
+    close();
+  }
 </script>
 
 <svelte:window on:keydown={handleKeydown} />
 
 {#if isOpen && currentImg}
+  <!-- svelte-ignore a11y-no-noninteractive-element-interactions a11y-click-events-have-key-events -->
   <div 
     class="lightbox-backdrop" 
     role="dialog" 
     aria-modal="true" 
     aria-label="Prohlížeč fotografií"
+    on:click={handleBackdropClick}
   >
-    <!-- Background dismiss area -->
-    <button 
-      type="button" 
-      class="backdrop-dismiss" 
-      on:click={close} 
-      aria-label="Zavřít detail fotky"
-    ></button>
 
     <!-- Top header with counter and close button -->
     <div class="lightbox-header">
@@ -184,17 +195,7 @@
     flex-direction: column;
     justify-content: space-between;
     animation: fadeIn 0.25s ease-out;
-  }
-
-  .backdrop-dismiss {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    border: none;
-    cursor: default;
-    z-index: 1;
+    cursor: pointer;
   }
 
   .lightbox-header {
@@ -205,6 +206,7 @@
     align-items: center;
     padding: 1.25rem 2rem;
     color: #ffffff;
+    cursor: default;
   }
 
   .header-info {
@@ -259,6 +261,7 @@
     overflow: hidden;
     user-select: none;
     -webkit-user-select: none;
+    cursor: pointer;
   }
 
   .nav-btn {
@@ -294,6 +297,7 @@
     justify-content: center;
     margin: 0 auto;
     z-index: 2;
+    cursor: pointer;
   }
 
   .lightbox-img {
@@ -304,6 +308,7 @@
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
     opacity: 0;
     transition: opacity 0.25s ease-in-out, transform 0.25s ease;
+    cursor: default;
   }
 
   .lightbox-img.loaded {
