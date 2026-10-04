@@ -222,13 +222,14 @@
   <section class="xmas-banner-section">
     <div class="xmas-banner-card">
       <div class="xmas-banner-content">
-        <span class="xmas-banner-badge">✨ Limitovaná sezónní nabídka</span>
+        <span class="xmas-banner-badge">✨ Limitovaná sezónní nabídka 2026</span>
         <h2>Vánoční focení 2026 – na zahradě u kamenného domu</h2>
-        <p>Vánoční atmosféra na zahradě před kamenným domem, horký čaj z termosky, teplá deka a přirozené okamžiky bez spěchu. 30 minut na čerstvém vzduchu, 8 precizně upravených fotografií v online galerii a garance dodání do Vánoc pod stromeček.</p>
+        <p>Vánoční atmosféra na zahradě před kamenným domem, teplé kakao pro děti, horký čaj z termosky, teplá deka a přirozené okamžiky bez spěchu. 30–45 minut na čerstvém vzduchu, 10 precizně upravených fotografií v online galerii, garance dodání do Vánoc pod stromeček a domácí mazlíčci vítáni!</p>
         <div class="xmas-banner-meta">
-          <span>📅 Listopad & Prosinec 2026</span>
+          <span>📅 Listopad & Prosinec 2026 (7. 11., 14. 11., 28. 11., 5. 12.)</span>
           <span>📍 Zahrada před kamenným domem</span>
-          <span>🏷️ 1 500 Kč (záloha 500 Kč)</span>
+          <span>🏷️ 1 800 Kč / 10 fotek (záloha 500 Kč)</span>
+          <span>🎁 Nad 15 fotek dárek: 5× tisk + fotomagnetka</span>
         </div>
       </div>
       <div class="xmas-banner-action">

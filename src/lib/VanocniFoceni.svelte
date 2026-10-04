@@ -3,14 +3,20 @@
   import NavBar from './NavBar.svelte';
   import Footer from './Footer.svelte';
 
-  // Available days for Christmas mini-sessions
+  // Available days for Christmas mini-sessions (Saturdays in Nov & Dec 2026)
   const days = [
-    { date: '2026-11-14', label: 'Sobota 14. 11.', spots: 'Volné termíny' }
+    { date: '2026-11-07', label: 'Sobota 7. 11.', month: 'Listopad 2026' },
+    { date: '2026-11-14', label: 'Sobota 14. 11.', month: 'Listopad 2026' },
+    { date: '2026-11-28', label: 'Sobota 28. 11.', month: 'Listopad 2026' },
+    { date: '2026-12-05', label: 'Sobota 5. 12.', month: 'Prosinec 2026' }
   ];
 
-  // Daily time slots (30 min sessions + 15 min buffer)
+  // Daily time slots (30-45 min sessions)
   const slotTimes = [
-    '09:30'
+    '13:00',
+    '13:45',
+    '14:30',
+    '15:15'
   ];
 
   let selectedDay = days[0];
@@ -86,11 +92,13 @@
       name: customerName,
       phone: customerPhone,
       email: customerEmail,
-      service: 'Vánoční focení 2026 – venkovní scenérie',
+      service: 'Vánoční focení 2026 – venkovní scenérie (1 800 Kč / 10 fotek)',
       serviceType: 'vanocni',
       slotStart: slotDateTime,
-      durationMinutes: 30,
-      message: customerNote ? `Vánoční focení: ${customerNote}` : 'Rezervace vánočního minifocení z webu.'
+      durationMinutes: 45,
+      message: customerNote
+        ? `Vánoční focení: ${customerNote} | Balíček 1 800 Kč (10 fotek), záloha 500 Kč`
+        : 'Rezervace vánočního focení z webu (1 800 Kč / 10 fotek, záloha 500 Kč).'
     };
 
     try {
@@ -126,7 +134,7 @@
             from_name: customerName,
             email: customerEmail,
             phone: customerPhone,
-            message: `Rezervovaný termín: ${selectedDay.label} v ${selectedSlot}\nPoznámka: ${customerNote || 'Žádná'}`
+            message: `Rezervovaný termín: ${selectedDay.label} v ${selectedSlot}\nBalíček: 10 fotek (1 800 Kč, záloha 500 Kč, 150 Kč/další fotka)\nDárek nad 15 fotek: 5× tisk + fotomagnetka (garance do Vánoc)\nPoznámka: ${customerNote || 'Žádná'}`
           })
         });
 
@@ -169,27 +177,35 @@
 
   const faqs = [
     {
-      q: 'Co si máme vzít na sebe na vánoční focení?',
-      a: 'Doporučuji teplé, přírodní a neutrální tóny – krémovou, béžovou, hnědou, tmavě zelenou nebo decentní vínovou/bordó. Skvěle vypadají pletené svetry, šály či flanelové košile. Prosím vyvarujte se velkým nápisům, logům a křiklavým neonovým barvám, které odvádějí pozornost z vašich tváří.'
+      q: 'Co všechno obsahuje vánoční balíček a jaká je cena?',
+      a: 'Základní vánoční balíček stojí 1 800 Kč a zahrnuje 30–45 minut pohodového focení na venkovní vánoční scéně na zahradě před kamenným domem a 10 profesionálně upravených fotografií v plném rozlišení. Další vybrané snímky nad rámec balíčku jsou za 150 Kč / ks. A pokud si vyberete nad 15 fotografií, dostanete od nás vánoční dárek: 5 tištěných fotek na prémiovém fotopapíře a sváteční fotomagnetku na lednici s garancí dodání do Vánoc!'
     },
     {
-      q: 'Můžeme s sebou vzít pejska?',
-      a: 'Určitě ano! Venku v přírodě se pejsci cítí uvolněně a přirozeně. Určitě ho vezměte s sebou, jen mi to prosím předem připište do poznámky v rezervaci.'
+      q: 'Co si máme vzít na sebe na venkovní vánoční focení?',
+      a: 'Doporučuji teplé vrstvy v přírodních, zemitých či svátečních tónech – krémovou, béžovou, hnědou, tmavě zelenou (jehličí) nebo decentní vínovou. Nádherně vypadají pletené svetry, teplé šály, čepice či flanel. Prosím vyvarujte se velkým nápisům a křiklavým neonovým barvám.'
     },
     {
-      q: 'Kdy a jak obdržíme hotové fotografie?',
-      a: 'Do 48 hodin od focení vám pošlu odkaz na soukromou online galerii s neupravenými náhledy, kde si v klidu domova vyberete svých 8 oblíbených fotografií. Hotové, pečlivě vyretušované snímky vám předám do 14 dnů od vašeho výběru – spolehlivě včas pod stromeček!'
+      q: 'Můžeme s sebou vzít pejska nebo jiného domácího mazlíčka?',
+      a: 'Určitě ano, domácí mazlíčci jsou u nás srdečně vítáni! Zahrada je prostorná a bezpečná a zvířátka se venku cítí přirozeně a uvolněně. Jen mi prosím napište do poznámky v rezervaci, že dorazíte i s pejskem.'
+    },
+    {
+      q: 'Bude na místě něco teplého na zahřátí?',
+      a: 'Ano! Pro děti máme připravené lahodné teplé kakao a drobné cukroví, pro dospělé horký čaj z termosky a kávu. Během focení se tak můžete kdykoliv ohřát v teplé vlněné dece s hrníčkem v ruce.'
+    },
+    {
+      q: 'Kdy a jak obdržíme hotové fotografie? Stihne se to pod stromeček?',
+      a: 'Garantujeme dodání do Vánoc! Do 48 hodin po focení vám zašlu odkaz na soukromou online galerii s náhledy, kde si v klidu domova naklikáte své oblíbené snímky. Vyretušované fotografie v plném rozlišení (včetně případných tisků a magnetky při výběru nad 15 ks) obdržíte spolehlivě včas před Štědrým dnem.'
     },
     {
       q: 'Jak funguje záloha a storno termínu?',
-      a: 'Rezervační poplatek činí 500 Kč a hradí se převodem po potvrzení termínu. Zbývajících 1 000 Kč se doplácí v hotovosti nebo přes QR kód v den focení. Pokud by někdo z rodiny onemocněl, po včasné dohodě ráda najdu náhradní termín.'
+      a: 'Rezervační poplatek činí 500 Kč a hradí se převodem po potvrzení termínu. Zbývajících 1 300 Kč se doplácí v den focení (hotově nebo přes QR platbu). Pokud by někdo z rodiny onemocněl, po včasné domluvě ráda najdu náhradní termín.'
     }
   ];
 </script>
 
 <svelte:head>
   <title>Vánoční focení 2026 – venkovní scenérie | Nicol Juráňová photography</title>
-  <meta name="description" content="Rezervujte si svůj termín pro vánoční focení 2026 v kouzelné přírodě Olomouckého kraje. Pohodová sváteční atmosféra na čerstvém vzduchu, 8 fotek do 14 dnů pod stromeček." />
+  <meta name="description" content="Rezervujte si svůj termín pro vánoční focení 2026 na zahradě před kamenným domem. 30–45 minut, 10 fotek za 1 800 Kč, kakao pro děti, mazlíčci vítáni, dárek nad 15 fotek a garance dodání do Vánoc." />
   <link rel="canonical" href="https://nicolphotography.cz/vanocni-foceni" />
 </svelte:head>
 
@@ -203,24 +219,24 @@
       <span class="xmas-badge">✨ Limitovaná sezónní nabídka 2026</span>
       <h1>Vánoční focení 2026 – venkovní scenérie</h1>
       <p class="hero-subtitle">
-        Zastavte se na chvíli v předvánočním shonu. Přijďte si pro společné vzpomínky na čerstvý vzduch, voňavý čaj z termosky na zahřátí a přirozené úsměvy v kouzelné scenérii na zahradě před kamenným domem.
+        Zastavte se na chvíli v předvánočním shonu. Přijďte si pro společné rodinné vzpomínky na čerstvý vzduch, voňavé teplé kakao pro děti, horký čaj z termosky na zahřátí a přirozené úsměvy v kouzelné scenérii na zahradě před kamenným domem. Vítáni jsou i vaši čtyřnozí mazlíčci!
       </p>
       <div class="hero-highlights">
         <div class="hl-item">
           <span class="hl-icon">⏱️</span>
-          <span><strong>30 minut</strong> pohodového focení</span>
+          <span><strong>30–45 minut</strong> pohodového focení</span>
         </div>
         <div class="hl-item">
           <span class="hl-icon">📸</span>
-          <span><strong>8 fotografií</strong> v plném rozlišení</span>
-        </div>
-        <div class="hl-item">
-          <span class="hl-icon">🎁</span>
-          <span><strong>Garance do Vánoc</strong> (do 14 dnů)</span>
+          <span><strong>10 fotografií</strong> v plném rozlišení</span>
         </div>
         <div class="hl-item">
           <span class="hl-icon">🏷️</span>
-          <span><strong>1 500 Kč</strong> (záloha 500 Kč)</span>
+          <span><strong>1 800 Kč</strong> (záloha 500 Kč)</span>
+        </div>
+        <div class="hl-item">
+          <span class="hl-icon">🎁</span>
+          <span><strong>Dárek nad 15 fotek:</strong> 5× tisk + magnetka</span>
         </div>
       </div>
       <a href="#booking-section" class="btn btn-gold">Vybrat termín & rezervovat online</a>
@@ -233,24 +249,33 @@
       <div class="section-title">
         <span class="sub">Co vás čeká</span>
         <h2>Kouzlo Vánoc bez nucených póz</h2>
-        <p>Vánoční focení na zahradě je navrženo tak, aby bylo svižné, nenáročné a plné radosti pro celou rodinu.</p>
+        <p>Vánoční focení na zahradě je navrženo tak, aby bylo svižné, uvolněné a plné radosti pro celou rodinu i vaše mazlíčky.</p>
       </div>
 
       <div class="cards-grid">
         <div class="card">
           <div class="card-icon">🏡</div>
           <h3>Vánoční scéna na zahradě</h3>
-          <p>Kouzelná venkovní scéna na zahradě před kamenným domem. Teplé vlněné deky, sváteční lucernička, jemná světýlka a vůně jehličí. Žádné umělé ateliérové pozadí, ale autentická severská atmosféra.</p>
+          <p>Kouzelná venkovní scéna na zahradě před kamenným domem. Hřejivé vlněné deky, sváteční lucernička, jemná světýlka a vůně čerstvého jehličí. Žádné umělé ateliérové pozadí, ale autentická severská atmosféra.</p>
         </div>
         <div class="card">
           <div class="card-icon">☕</div>
-          <h3>Pohoda pro děti i pejsky</h3>
-          <p>Půlhodinka na čerstvém vzduchu je ideální délka, aby děti neztratily pozornost a tatínci nebyli unavení. Čeká na vás teplý čaj z termosky, drobné cukroví a volnost pro pejsky.</p>
+          <h3>Teplé kakao, čaj i mazlíčci</h3>
+          <p>Pro děti máme připravené lahodné teplé kakao a drobné cukroví, pro dospělé horký čaj z termosky na zahřátí. Doba 30–45 minut je ideální délka. Domácí mazlíčci jsou srdečně vítáni – pejsci se venku cítí skvěle a bezpečně.</p>
         </div>
         <div class="card">
-          <div class="card-icon">🖼️</div>
-          <h3>Pohodlný online výběr</h3>
-          <p>Sami si v teple domova v klidu vyberete svých 8 nejoblíbenějších záběrů. Upravené fotografie v plném rozlišení obdržíte v soukromé online galerii do 14 dnů – spolehlivě včas pod stromeček.</p>
+          <div class="card-icon">🎁</div>
+          <h3>10 fotek & dárek k výběru</h3>
+          <p>V ceně 1 800 Kč je 10 upravených fotografií (další za 150 Kč/ks). Pokud si vyberete nad 15 fotografií, automaticky od nás dostanete vánoční dárek: 5 tištěných fotek a fotomagnetku s garancí dodání do Vánoc pod stromeček!</p>
+        </div>
+      </div>
+
+      <!-- Special Gift Bonus Banner -->
+      <div class="gift-banner">
+        <div class="gift-banner-icon">🎁</div>
+        <div class="gift-banner-text">
+          <h4>Vánoční bonus: Nad 15 vybraných fotek získáte dárek</h4>
+          <p>Vyberte si ze své online galerie více než 15 fotografií a automaticky od nás dostanete <strong>5× prémiový tisk fotografií</strong> a <strong>vánoční fotomagnetku</strong> na lednici s garancí dodání do Vánoc pod stromeček. Každá další fotografie nad rámec balíčku je za 150 Kč.</p>
         </div>
       </div>
     </div>
@@ -262,7 +287,7 @@
       <div class="section-title">
         <span class="sub">Online rezervace</span>
         <h2>Vyberte si svůj volný termín</h2>
-        <p>Klikněte na preferovaný den a vyberte volný časový slot. Termín se po vyplnění ihned zarezervuje v kalendáři.</p>
+        <p>Klikněte na preferovanou sobotu a vyberte volný časový slot (13:00 – 15:15). Termín se po vyplnění ihned zarezervuje v kalendáři.</p>
       </div>
 
       {#if bookingSuccess}
@@ -283,11 +308,15 @@
             </div>
             <div class="sum-row">
               <span>Balíček:</span>
-              <span>Vánoční focení 2026 – venkovní scenérie (8 upravených fotografií)</span>
+              <span>Vánoční focení 2026 (10 upravených fotografií, 30–45 min)</span>
             </div>
             <div class="sum-row">
               <span>Cena / Záloha:</span>
-              <span>1 500 Kč (rezervační záloha 500 Kč)</span>
+              <span>1 800 Kč (rezervační záloha 500 Kč, doplatek 1 300 Kč v den focení)</span>
+            </div>
+            <div class="sum-row">
+              <span>Fotka navíc / Dárek:</span>
+              <span>150 Kč / ks (nad 15 fotek dárek: 5× tisk + fotomagnetka s garancí do Vánoc)</span>
             </div>
             <div class="sum-row">
               <span>Kontakt:</span>
@@ -297,7 +326,7 @@
 
           <div class="next-steps">
             <h4>Co se stane dál?</h4>
-            <p>Do 24 hodin se vám ozvu s podrobnými instrukcemi, informacemi k platbě zálohy (500 Kč) a tipy, jak se na focení obléknout.</p>
+            <p>Do 24 hodin se vám ozvu s podrobnými instrukcemi, informacemi k platbě zálohy (500 Kč) a tipy, jak se na focení teple obléknout.</p>
           </div>
 
           <button class="btn btn-outline" on:click={resetBooking}>Rezervovat další termín</button>
@@ -311,25 +340,38 @@
               <span class="step-num">1</span>
               <div>
                 <h3>Zvolte si den focení</h3>
-                <span class="step-hint">Listopad 2026</span>
+                <span class="step-hint">Listopad & Prosinec 2026</span>
               </div>
             </div>
 
             <div class="days-list">
               {#each days as day}
+                {@const freeCount = slotTimes.filter(t => !isSlotBooked(day.date, t)).length}
                 <button
                   type="button"
                   class="day-btn"
                   class:active={selectedDay.date === day.date}
+                  class:full={freeCount === 0}
                   on:click={() => { selectedDay = day; selectedSlot = null; }}
                 >
-                  <span class="day-label">{day.label}</span>
-                  <span class="day-spots">{day.spots}</span>
+                  <div class="day-info">
+                    <span class="day-label">{day.label}</span>
+                    <span class="day-sub">{day.month}</span>
+                  </div>
+                  <span class="day-spots" class:full={freeCount === 0}>
+                    {#if freeCount === 0}
+                      Obsazeno
+                    {:else if freeCount === 1}
+                      1 volný čas
+                    {:else}
+                      {freeCount} volné časy
+                    {/if}
+                  </span>
                 </button>
               {/each}
             </div>
             <p class="single-term-note">
-              ✨ <em>Další termíny budou postupně vypisovány podle zájmu.</em>
+              ✨ <em>Všechny termíny probíhají v sobotu odpoledne pro nejkrásnější měkké přirozené světlo.</em>
             </p>
           </div>
 
@@ -339,7 +381,7 @@
               <span class="step-num">2</span>
               <div>
                 <h3>Časový slot pro {selectedDay.label}</h3>
-                <span class="step-hint">Zvolte čas (focení trvá 30 minut)</span>
+                <span class="step-hint">Zvolte čas (focení trvá 30–45 minut)</span>
               </div>
             </div>
 
@@ -364,8 +406,14 @@
             {#if selectedSlot}
               <form class="slot-form" on:submit={handleBookingSubmit}>
                 <div class="selected-summary">
-                  <span>Vybraný termín:</span>
-                  <strong>{selectedDay.label} v {selectedSlot}</strong>
+                  <div class="summary-top">
+                    <span>Vybraný termín:</span>
+                    <strong>{selectedDay.label} v {selectedSlot}</strong>
+                  </div>
+                  <div class="summary-details">
+                    <span>🏷️ 1 800 Kč / 10 fotografií (záloha 500 Kč)</span>
+                    <span>🎁 Nad 15 fotek: 5× tisk + fotomagnetka</span>
+                  </div>
                 </div>
 
                 <div class="form-row">
@@ -403,12 +451,12 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="c-note">Kdo na focení dorazí? (děti, mazlíčci, poznámka)</label>
+                  <label for="c-note">Kdo na focení dorazí? (děti, pejsci / mazlíčci, poznámka)</label>
                   <textarea
                     id="c-note"
                     bind:value={customerNote}
                     rows="3"
-                    placeholder="např. 2 dospělí a 2 děti (4 a 7 let), rádi bychom vzali i jorkšíra..."
+                    placeholder="např. 2 dospělí a 2 děti, dorazíme i s pejskem (border kolie)..."
                   ></textarea>
                 </div>
 
@@ -426,7 +474,7 @@
                   {/if}
                 </button>
                 <p class="form-disclaimer">
-                  🔒 Rezervace je nezávazná do uhrazení rezervačního poplatku 500 Kč. Žádné skryté poplatky.
+                  🔒 Rezervace je nezávazná do uhrazení rezervačního poplatku 500 Kč. Doplatek 1 300 Kč probíhá v den focení. Žádné skryté poplatky.
                 </p>
               </form>
             {:else}
@@ -681,6 +729,37 @@
     font-size: 0.95rem;
   }
 
+  /* Special Gift Banner */
+  .gift-banner {
+    margin-top: 2rem;
+    background: linear-gradient(135deg, rgba(201, 168, 124, 0.12) 0%, rgba(255, 255, 255, 0.03) 100%);
+    border: 1px solid rgba(201, 168, 124, 0.35);
+    border-radius: 12px;
+    padding: 1.5rem 1.75rem;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .gift-banner-icon {
+    font-size: 2.25rem;
+    flex-shrink: 0;
+  }
+
+  .gift-banner-text h4 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.2rem;
+    color: #e5b982;
+    margin: 0 0 0.35rem;
+  }
+
+  .gift-banner-text p {
+    margin: 0;
+    color: #d0d0d0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
   /* Booking Section */
   .booking-section {
     padding: 5rem 0;
@@ -774,16 +853,44 @@
     color: #fff;
   }
 
+  .day-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    text-align: left;
+  }
+
   .day-label {
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #f5f5f5;
+  }
+
+  .day-sub {
+    font-size: 0.78rem;
+    color: #8c8c8c;
+  }
+
+  .day-btn.active .day-sub {
+    color: #e5b982;
   }
 
   .day-spots {
-    font-size: 0.78rem;
-    color: #c9a87c;
-    background: rgba(201, 168, 124, 0.12);
-    padding: 0.2rem 0.55rem;
+    font-size: 0.8rem;
+    color: #2ecc71;
+    background: rgba(46, 204, 113, 0.12);
+    padding: 0.25rem 0.65rem;
     border-radius: 20px;
+    font-weight: 500;
+  }
+
+  .day-spots.full {
+    background: rgba(231, 76, 60, 0.15);
+    color: #e74c3c;
+  }
+
+  .day-btn.full {
+    opacity: 0.6;
   }
 
   .single-term-note {
@@ -799,15 +906,21 @@
 
   /* Slots Grid */
   .slots-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.85rem;
     margin-bottom: 1.75rem;
   }
 
+  @media (min-width: 600px) {
+    .slots-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
   .slot-btn {
-    min-width: 140px;
-    padding: 0.85rem 1.25rem;
+    min-width: 0;
+    padding: 0.95rem 1rem;
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 8px;
@@ -884,17 +997,35 @@
 
   .selected-summary {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(201, 168, 124, 0.12);
-    padding: 0.75rem 1rem;
-    border-radius: 6px;
-    margin-bottom: 1.25rem;
-    font-size: 0.95rem;
+    flex-direction: column;
+    gap: 0.6rem;
+    background: rgba(201, 168, 124, 0.1);
+    border: 1px solid rgba(201, 168, 124, 0.35);
+    padding: 1rem 1.15rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
   }
 
-  .selected-summary strong {
+  .summary-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    color: #f5f5f5;
+  }
+
+  .summary-top strong {
     color: #e5b982;
+  }
+
+  .summary-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+    font-size: 0.82rem;
+    color: #c9a87c;
+    border-top: 1px solid rgba(201, 168, 124, 0.2);
+    padding-top: 0.5rem;
   }
 
   .form-row {
