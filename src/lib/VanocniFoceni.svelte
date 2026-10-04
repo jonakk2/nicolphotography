@@ -92,13 +92,13 @@
       name: customerName,
       phone: customerPhone,
       email: customerEmail,
-      service: 'Vánoční focení 2026 – venkovní scenérie (1 800 Kč / 10 fotek)',
+      service: 'Vánoční focení 2026 – venkovní scenérie (1 800 Kč / 8 fotek)',
       serviceType: 'vanocni',
       slotStart: slotDateTime,
       durationMinutes: 45,
       message: customerNote
-        ? `Vánoční focení: ${customerNote} | Balíček 1 800 Kč (10 fotek), záloha 500 Kč`
-        : 'Rezervace vánočního focení z webu (1 800 Kč / 10 fotek, záloha 500 Kč).'
+        ? `Vánoční focení: ${customerNote} | Balíček 1 800 Kč (8 fotek), záloha 500 Kč`
+        : 'Rezervace vánočního focení z webu (1 800 Kč / 8 fotek, záloha 500 Kč).'
     };
 
     try {
@@ -134,7 +134,7 @@
             from_name: customerName,
             email: customerEmail,
             phone: customerPhone,
-            message: `Rezervovaný termín: ${selectedDay.label} v ${selectedSlot}\nBalíček: 10 fotek (1 800 Kč, záloha 500 Kč, 150 Kč/další fotka)\nDárek nad 15 fotek: 5× tisk + fotomagnetka (garance do Vánoc)\nPoznámka: ${customerNote || 'Žádná'}`
+            message: `Rezervovaný termín: ${selectedDay.label} v ${selectedSlot}\nBalíček: 8 fotek (1 800 Kč, záloha 500 Kč, 150 Kč/další fotka)\nDárek nad 10 fotek: 5× tisk + fotomagnetka (garance do Vánoc)\nPoznámka: ${customerNote || 'Žádná'}`
           })
         });
 
@@ -178,7 +178,7 @@
   const faqs = [
     {
       q: 'Co všechno obsahuje vánoční balíček a jaká je cena?',
-      a: 'Základní vánoční balíček stojí 1 800 Kč a zahrnuje 30–45 minut pohodového focení na venkovní vánoční scéně na zahradě před kamenným domem a 10 profesionálně upravených fotografií v plném rozlišení. Další vybrané snímky nad rámec balíčku jsou za 150 Kč / ks. A pokud si vyberete nad 15 fotografií, dostanete od nás vánoční dárek: 5 tištěných fotek na prémiovém fotopapíře a sváteční fotomagnetku na lednici s garancí dodání do Vánoc!'
+      a: 'Základní vánoční balíček stojí 1 800 Kč a zahrnuje 30–45 minut pohodového focení na venkovní vánoční scéně na zahradě před kamenným domem a 8 profesionálně upravených fotografií v plném rozlišení. Další vybrané snímky nad rámec balíčku jsou za 150 Kč / ks. A pokud si vyberete nad 10 fotografií, dostanete od nás vánoční dárek: 5 tištěných fotek na prémiovém fotopapíře a sváteční fotomagnetku na lednici s garancí dodání do Vánoc!'
     },
     {
       q: 'Co si máme vzít na sebe na venkovní vánoční focení?',
@@ -194,7 +194,7 @@
     },
     {
       q: 'Kdy a jak obdržíme hotové fotografie? Stihne se to pod stromeček?',
-      a: 'Garantujeme dodání do Vánoc! Do 48 hodin po focení vám zašlu odkaz na soukromou online galerii s náhledy, kde si v klidu domova naklikáte své oblíbené snímky. Vyretušované fotografie v plném rozlišení (včetně případných tisků a magnetky při výběru nad 15 ks) obdržíte spolehlivě včas před Štědrým dnem.'
+      a: 'Garantujeme dodání do Vánoc! Do 48 hodin po focení vám zašlu odkaz na soukromou online galerii s náhledy, kde si v klidu domova naklikáte své oblíbené snímky. Vyretušované fotografie v plném rozlišení (včetně případných tisků a magnetky při výběru nad 10 ks) obdržíte spolehlivě včas před Štědrým dnem.'
     },
     {
       q: 'Jak funguje záloha a storno termínu?',
@@ -205,7 +205,7 @@
 
 <svelte:head>
   <title>Vánoční focení 2026 – venkovní scenérie | Nicol Juráňová photography</title>
-  <meta name="description" content="Rezervujte si svůj termín pro vánoční focení 2026 na zahradě před kamenným domem. 30–45 minut, 10 fotek za 1 800 Kč, kakao pro děti, mazlíčci vítáni, dárek nad 15 fotek a garance dodání do Vánoc." />
+  <meta name="description" content="Rezervujte si svůj termín pro vánoční focení 2026 na zahradě před kamenným domem. 30–45 minut, 8 fotek za 1 800 Kč, kakao pro děti, mazlíčci vítáni, dárek nad 10 fotek a garance dodání do Vánoc." />
   <link rel="canonical" href="https://nicolphotography.cz/vanocni-foceni" />
 </svelte:head>
 
@@ -228,7 +228,7 @@
         </div>
         <div class="hl-item">
           <span class="hl-icon">📸</span>
-          <span><strong>10 fotografií</strong> v plném rozlišení</span>
+          <span><strong>8 fotografií</strong> v plném rozlišení</span>
         </div>
         <div class="hl-item">
           <span class="hl-icon">🏷️</span>
@@ -236,7 +236,7 @@
         </div>
         <div class="hl-item">
           <span class="hl-icon">🎁</span>
-          <span><strong>Dárek nad 15 fotek:</strong> 5× tisk + magnetka</span>
+          <span><strong>Dárek nad 10 fotek:</strong> 5× tisk + magnetka</span>
         </div>
       </div>
       <a href="#booking-section" class="btn btn-gold">Vybrat termín & rezervovat online</a>
@@ -265,8 +265,8 @@
         </div>
         <div class="card">
           <div class="card-icon">🎁</div>
-          <h3>10 fotek & dárek k výběru</h3>
-          <p>V ceně 1 800 Kč je 10 upravených fotografií (další za 150 Kč/ks). Pokud si vyberete nad 15 fotografií, automaticky od nás dostanete vánoční dárek: 5 tištěných fotek a fotomagnetku s garancí dodání do Vánoc pod stromeček!</p>
+          <h3>8 fotek & dárek k výběru</h3>
+          <p>V ceně 1 800 Kč je 8 upravených fotografií (další za 150 Kč/ks). Pokud si vyberete nad 10 fotografií, automaticky od nás dostanete vánoční dárek: 5 tištěných fotek a fotomagnetku s garancí dodání do Vánoc pod stromeček!</p>
         </div>
       </div>
 
@@ -274,8 +274,8 @@
       <div class="gift-banner">
         <div class="gift-banner-icon">🎁</div>
         <div class="gift-banner-text">
-          <h4>Vánoční bonus: Nad 15 vybraných fotek získáte dárek</h4>
-          <p>Vyberte si ze své online galerie více než 15 fotografií a automaticky od nás dostanete <strong>5× prémiový tisk fotografií</strong> a <strong>vánoční fotomagnetku</strong> na lednici s garancí dodání do Vánoc pod stromeček. Každá další fotografie nad rámec balíčku je za 150 Kč.</p>
+          <h4>Vánoční bonus: Nad 10 vybraných fotek získáte dárek</h4>
+          <p>Vyberte si ze své online galerie více než 10 fotografií a automaticky od nás dostanete <strong>5× prémiový tisk fotografií</strong> a <strong>vánoční fotomagnetku</strong> na lednici s garancí dodání do Vánoc pod stromeček. Každá další fotografie nad rámec balíčku je za 150 Kč.</p>
         </div>
       </div>
     </div>
@@ -308,7 +308,7 @@
             </div>
             <div class="sum-row">
               <span>Balíček:</span>
-              <span>Vánoční focení 2026 (10 upravených fotografií, 30–45 min)</span>
+              <span>Vánoční focení 2026 (8 upravených fotografií, 30–45 min)</span>
             </div>
             <div class="sum-row">
               <span>Cena / Záloha:</span>
@@ -316,7 +316,7 @@
             </div>
             <div class="sum-row">
               <span>Fotka navíc / Dárek:</span>
-              <span>150 Kč / ks (nad 15 fotek dárek: 5× tisk + fotomagnetka s garancí do Vánoc)</span>
+              <span>150 Kč / ks (nad 10 fotek dárek: 5× tisk + fotomagnetka s garancí do Vánoc)</span>
             </div>
             <div class="sum-row">
               <span>Kontakt:</span>
@@ -411,8 +411,8 @@
                     <strong>{selectedDay.label} v {selectedSlot}</strong>
                   </div>
                   <div class="summary-details">
-                    <span>🏷️ 1 800 Kč / 10 fotografií (záloha 500 Kč)</span>
-                    <span>🎁 Nad 15 fotek: 5× tisk + fotomagnetka</span>
+                    <span>🏷️ 1 800 Kč / 8 fotografií (záloha 500 Kč)</span>
+                    <span>🎁 Nad 10 fotek: 5× tisk + fotomagnetka</span>
                   </div>
                 </div>
 
