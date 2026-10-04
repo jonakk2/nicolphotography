@@ -7,10 +7,10 @@
 
 <svelte:head>
   <title>Kontakt | Nicol Juráňová photography</title>
-  <meta name="description" content="Kontaktujte Nicol Juráňovou a domluvte si termín focení. Portrétní, rodinné a párové focení v Olomouckém kraji." />
+  <meta name="description" content="Kontaktujte Nicol Juráňovou a domluvte si termín focení. Působím v okolí Hranic na Moravě, ale ráda za vámi přijedu kamkoliv." />
   <link rel="canonical" href="https://nicolphotography.cz/kontakt" />
   <meta property="og:title" content="Kontakt | Nicol Juráňová photography" />
-  <meta property="og:description" content="Kontaktujte Nicol Juráňovou a domluvte si termín focení v Olomouckém kraji." />
+  <meta property="og:description" content="Kontaktujte Nicol Juráňovou. Působím v okolí Hranic na Moravě, ale ráda za vámi přijedu kamkoliv." />
   <meta property="og:url" content="https://nicolphotography.cz/kontakt" />
   <meta property="og:image" content="https://nicolphotography.cz/hlavicka.png" />
   <meta property="og:type" content="website" />
@@ -74,7 +74,7 @@
               </div>
               <div>
                 <h4>Lokalita</h4>
-                <span>Hranice na Moravě</span>
+                <span>Působím v okolí Hranic na Moravě, ale ráda za vámi přijedu kamkoliv.</span>
               </div>
             </div>
           </div>
@@ -107,7 +107,7 @@
   <!-- Map -->
   <section class="map-section">
     <div class="map-text">
-      <p>Působím v okolí Hranic na Moravě, ale ráda k Vám přijedu kamkoliv v Olomouckém kraji.</p>
+      <p>Působím v okolí Hranic na Moravě, ale ráda za vámi přijedu kamkoliv.</p>
     </div>
     <div class="map-container">
       <iframe

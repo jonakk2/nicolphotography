@@ -36,7 +36,7 @@
     <p>Aktuální ceník je uveden na stránce <a href="/cenik">Ceník</a>. Ceny jsou konečné (fotografka není plátcem DPH).</p>
     <ul>
       <li>Základní balíček: 1 500 Kč (1-2 hodiny focení, 10 upravených fotografií).</li>
-      <li>Každá další upravená fotografie nad 10 kusů: 200 Kč.</li>
+      <li>Každá další upravená fotografie nad 10 kusů: 160 Kč.</li>
     </ul>
 
     <h2>4. Platba</h2>

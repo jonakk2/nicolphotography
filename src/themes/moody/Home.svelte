@@ -126,7 +126,7 @@
     <div class="page-header-overlay" aria-hidden="true"></div>
     <div class="page-header-content">
       <h1>Nicol Juráňová</h1>
-      <p>Pokud máte na fotkách nejraději<br/>jako pozadí naši krásnou přírodu,<br/>pak jste tady správně.</p>
+      <p>Věřím, že nejkrásnější kulisy na fotkách tvoří sama příroda.</p>
       <a href="/kontakt" class="hero-cta">Spojme se</a>
     </div>
   </section>
@@ -223,13 +223,13 @@
     <div class="xmas-banner-card">
       <div class="xmas-banner-content">
         <span class="xmas-banner-badge">✨ Limitovaná sezónní nabídka 2026</span>
-        <h2>Vánoční focení 2026 – na zahradě u kamenného domu</h2>
-        <p>Vánoční atmosféra na zahradě před kamenným domem, teplé kakao pro děti, horký čaj z termosky, teplá deka a přirozené okamžiky bez spěchu. 30–45 minut na čerstvém vzduchu, 8 precizně upravených fotografií v online galerii, garance dodání do Vánoc pod stromeček a domácí mazlíčci vítáni!</p>
+        <h2>Vánoční focení 2026 – u kamenného sklípku</h2>
+        <p>Zastavte se v předvánočním shonu a přijeďte si vytvořit společné vzpomínky a ideální dárek pro vaše blízké. V pozadí netradiční kamenný sklípek, vůně jehličí a kakaa a útulná atmosféra. 30–45 minut na čerstvém vzduchu, 8 precizně upravených fotografií v online galerii, garance dodání do Vánoc pod stromeček a domácí mazlíčci vítáni!</p>
         <div class="xmas-banner-meta">
           <span>📅 Listopad & Prosinec 2026 (7. 11., 14. 11., 28. 11., 5. 12.)</span>
-          <span>📍 Zahrada před kamenným domem</span>
+          <span>📍 Zahrada před kamenným sklípkem</span>
           <span>🏷️ 1 800 Kč / 8 fotek (záloha 500 Kč)</span>
-          <span>🎁 Nad 10 fotek dárek: 5× tisk + fotomagnetka</span>
+          <span>🎁 Nad 10 fotek dárek ode mě: 5× tisk + fotomagnetka</span>
         </div>
       </div>
       <div class="xmas-banner-action">

@@ -38,8 +38,7 @@
         <div class="about-text">
           <span class="label">O mně</span>
           <h2>Nicol Juráňová</h2>
-          <p>Jmenuju se Nicol a fotím lidi v přírodě. Rodinné focení, párové, portréty — nejčastěji někde venku v okolí Hranic na Moravě, Lipníka a Olomouce. Ale pokud máte vlastní oblíbené místo, moc ráda za vámi přijedu.</p>
-          <p>Věřím, že nejkrásnější kulisy tvoří sama příroda — teplé zapadající slunce, rozkvetlé louky a klid lesa. Při focení s dětmi hodně improvizuju — nejlepší fotky vznikají při hře a běhání. U dospělých vás jemně navádím, ale žádné strnulé pózy u mě nečekejte. Chci, abyste na fotkách vypadali jako vy a odnesli si příjemný zážitek.</p>
+          <p>Mé jméno je Nicol a focení je má vášeň už pár let. Nejčastěji fotím rodiny, páry a portréty, ale neváhejte mě kontaktovat s jakýmkoliv nápadem! Působím v okolí Hranic na Moravě, ale ráda za vámi přijedu kamkoliv, kde vás srdce táhne.</p>
           <p>Zajímá vás, jak se na focení připravit, nebo chcete rovnou domluvit termín?</p>
           <div class="about-actions">
             <a href="/pruvodce" class="about-link-btn secondary">Průvodce přípravou →</a>

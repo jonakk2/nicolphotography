@@ -172,7 +172,7 @@
       <div class="extra-card">
         <span class="extra-label">Doplňkové fotky</span>
         <div class="extra-price">
-          <span class="extra-amount">200</span>
+          <span class="extra-amount">160</span>
           <span class="extra-currency">Kč / fotka</span>
         </div>
         <p>Každá další upravená fotografie nad rámec zvoleného balíčku</p>
