@@ -75,7 +75,7 @@ body {
 }
 
 /* Buttons */
-button, .btn {
+button:not(.scroll-top-btn):not(.nav-btn):not(.close-btn):not(.gallery-close):not(.mobile-toggle), .btn {
   border-radius: 9999px;
   border: 1px solid var(--color-primary);
   padding: 0.75em 1.75em;
@@ -89,7 +89,7 @@ button, .btn {
   letter-spacing: 0.06em;
 }
 
-button:hover, .btn:hover {
+button:not(.scroll-top-btn):not(.nav-btn):not(.close-btn):not(.gallery-close):not(.mobile-toggle):hover, .btn:hover {
   background-color: var(--color-secondary);
   color: #0a0a0a;
   transform: translateY(-2px);
