@@ -75,7 +75,17 @@ body {
 }
 
 /* Buttons */
-button:not(.scroll-top-btn):not(.nav-btn):not(.close-btn):not(.gallery-close):not(.mobile-toggle), .btn {
+button {
+  font-family: inherit;
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  color: inherit;
+}
+
+.btn {
   border-radius: 9999px;
   border: 1px solid var(--color-primary);
   padding: 0.75em 1.75em;
@@ -87,9 +97,13 @@ button:not(.scroll-top-btn):not(.nav-btn):not(.close-btn):not(.gallery-close):no
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   letter-spacing: 0.06em;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-button:not(.scroll-top-btn):not(.nav-btn):not(.close-btn):not(.gallery-close):not(.mobile-toggle):hover, .btn:hover {
+.btn:hover {
   background-color: var(--color-secondary);
   color: #0a0a0a;
   transform: translateY(-2px);

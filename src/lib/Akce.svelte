@@ -386,12 +386,12 @@
     width: 100%;
     margin-bottom: 1.25rem;
     break-inside: avoid;
-    border-radius: 6px;
+    border-radius: 4px;
     overflow: hidden;
     cursor: pointer;
     border: none;
     padding: 0;
-    background: #141414;
+    background: transparent;
     transition: transform 0.35s ease, box-shadow 0.35s ease;
   }
 
@@ -404,13 +404,12 @@
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 6px;
-    filter: grayscale(12%);
-    transition: filter 0.3s ease, transform 0.5s ease;
+    border-radius: 4px;
+    filter: none;
+    transition: transform 0.5s ease;
   }
 
   .gallery-thumb:hover img {
-    filter: grayscale(0%);
     transform: scale(1.02);
   }
 
