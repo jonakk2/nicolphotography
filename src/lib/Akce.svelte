@@ -43,6 +43,8 @@
   let currentCategory = null;
   let currentImageIndex = 0;
   let categoryImages = [];
+  let isGalleryLoading = false;
+  let galleryTimer = null;
 
   function openCategory(category) {
     currentCategory = category;
@@ -50,7 +52,13 @@
     currentImageIndex = 0;
     galleryOpen = true;
     lightboxOpen = false;
+    isGalleryLoading = true;
     document.body.style.overflow = 'hidden';
+
+    if (galleryTimer) clearTimeout(galleryTimer);
+    galleryTimer = setTimeout(() => {
+      isGalleryLoading = false;
+    }, 400);
   }
 
   function openLightbox(index) {
@@ -65,8 +73,10 @@
   function closeGallery() {
     galleryOpen = false;
     lightboxOpen = false;
+    isGalleryLoading = false;
     currentCategory = null;
     document.body.style.overflow = '';
+    if (galleryTimer) clearTimeout(galleryTimer);
   }
 
   function handleKeydown(e) {
@@ -131,17 +141,25 @@
         <span>{categoryImages.length} fotek</span>
       </div>
 
-      <div class="gallery-grid">
-        {#each categoryImages as img, i}
-          <button
-            class="gallery-thumb"
-            on:click={() => openLightbox(i)}
-            aria-label="Zobrazit fotku {i + 1}"
-          >
-            <img src={img.thumb || img.src} alt={img.alt} loading="lazy" />
-          </button>
-        {/each}
-      </div>
+      {#if isGalleryLoading}
+        <div class="gallery-loader" aria-live="polite">
+          <div class="gallery-spinner"></div>
+          <span class="gallery-loader-text">Načítám galerii…</span>
+        </div>
+      {:else}
+        <div class="gallery-grid">
+          {#each categoryImages as img, i}
+            <button
+              class="gallery-thumb"
+              on:click={() => openLightbox(i)}
+              aria-label="Zobrazit fotku {i + 1}"
+              style="animation-delay: {Math.min(i * 30, 360)}ms;"
+            >
+              <img src={img.thumb || img.src} alt={img.alt} loading="lazy" decoding="async" />
+            </button>
+          {/each}
+        </div>
+      {/if}
     </div>
   {/if}
 
@@ -328,9 +346,21 @@
     position: fixed;
     inset: 0;
     z-index: 9999;
-    background: var(--bg);
+    background: rgba(10, 10, 10, 0.98);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     overflow-y: auto;
     padding: 6rem 4rem 4rem;
+    animation: modalFadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  @keyframes modalFadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 
   .gallery-close {
@@ -374,14 +404,63 @@
     letter-spacing: 0.1em;
   }
 
+  /* Gallery Loader */
+  .gallery-loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 55vh;
+    gap: 1.25rem;
+    animation: loaderFadeIn 0.2s ease-out;
+  }
+
+  .gallery-spinner {
+    width: 44px;
+    height: 44px;
+    border: 2.5px solid rgba(255, 255, 255, 0.08);
+    border-top-color: #c9a87c;
+    border-right-color: rgba(201, 168, 124, 0.4);
+    border-radius: 50%;
+    animation: gallerySpin 0.75s linear infinite;
+    box-shadow: 0 0 20px rgba(201, 168, 124, 0.2);
+  }
+
+  .gallery-loader-text {
+    font-size: 0.85rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+  }
+
+  @keyframes gallerySpin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes loaderFadeIn {
+    from { opacity: 0; transform: scale(0.96); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
   .gallery-grid {
     columns: 3 320px;
     column-gap: 1.25rem;
     max-width: 1400px;
     margin: 0 auto;
+    animation: gridFadeIn 0.35s ease-out;
+  }
+
+  @keyframes gridFadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 
   .gallery-thumb {
+    position: relative;
     display: inline-block;
     width: 100%;
     margin-bottom: 1.25rem;
@@ -391,8 +470,20 @@
     cursor: pointer;
     border: none;
     padding: 0;
-    background: transparent;
+    background: #141414;
     transition: transform 0.35s ease, box-shadow 0.35s ease;
+    animation: thumbCascade 0.4s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+  }
+
+  @keyframes thumbCascade {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   .gallery-thumb:hover {
