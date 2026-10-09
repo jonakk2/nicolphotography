@@ -204,9 +204,68 @@
 </script>
 
 <svelte:head>
-  <title>Vánoční focení 2026 – venkovní scenérie | Nicol Juráňová photography</title>
-  <meta name="description" content="Rezervujte si svůj termín pro vánoční focení 2026. Přijeďte si vytvořit společné vzpomínky a ideální dárek pro vaše blízké. V pozadí netradiční kamenný sklípek, vůně jehličí a kakaa a útulná atmosféra. 30–45 minut, 8 fotek za 1 800 Kč, mazlíčci vítáni, dárek nad 10 fotek ode mě." />
+  <title>Vánoční minifocení 2026 – kamenný sklípek u Hranic | Nicol Juráňová photography</title>
+  <meta name="description" content="Rezervujte si termín pro vánoční minifocení 2026 u Hranic na Moravě. Venkovní scenérie u kamenného sklípku, vůně jehličí a kakaa. 30–45 minut, 8 fotek za 1 800 Kč, pejsci vítáni, dárek nad 10 fotek." />
+  <meta name="keywords" content="vánoční minifocení 2026, vánoční focení Hranice na Moravě, vánoční focení Olomouc, minifocení se psem, venkovní vánoční focení, vánoční fotky dětí" />
   <link rel="canonical" href="https://nicolphotography.cz/vanocni-foceni" />
+  <meta property="og:title" content="Vánoční minifocení 2026 – kamenný sklípek u Hranic | Nicol Juráňová" />
+  <meta property="og:description" content="Venkovní vánoční scenérie u netradičního kamenného sklípku, vůně jehličí, kakao pro děti a teplá deka. 8 fotek za 1 800 Kč, mazlíčci vítáni." />
+  <meta property="og:url" content="https://nicolphotography.cz/vanocni-foceni" />
+  <meta property="og:image" content="https://nicolphotography.cz/images/portfolio/vanocni-foceni.png" />
+  <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Vánoční minifocení 2026 – kamenný sklípek u Hranic | Nicol Juráňová" />
+  <meta name="twitter:description" content="Venkovní vánoční minifocení u kamenného sklípku. 8 fotek za 1 800 Kč, kakao pro děti, mazlíčci vítáni." />
+  <meta name="twitter:image" content="https://nicolphotography.cz/images/portfolio/vanocni-foceni.png" />
+  {@html `<script type="application/ld+json">${JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Event",
+        "name": "Vánoční focení 2026 – venkovní scenérie u kamenného sklípku",
+        "description": "Sezónní vánoční minifocení s vůní jehličí a kakaa u kamenného sklípku. 8 upravených fotografií, garance dodání do Vánoc, mazlíčci vítáni.",
+        "startDate": "2026-11-07T13:00:00+01:00",
+        "endDate": "2026-12-05T16:00:00+01:00",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "location": {
+          "@type": "Place",
+          "name": "Venkovní zahrada s kamenným sklípkem",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Hranice na Moravě a okolí",
+            "addressRegion": "Olomoucký kraj",
+            "addressCountry": "CZ"
+          }
+        },
+        "image": "https://nicolphotography.cz/images/portfolio/vanocni-foceni.png",
+        "organizer": {
+          "@type": "Person",
+          "name": "Nicol Juráňová",
+          "url": "https://nicolphotography.cz"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://nicolphotography.cz/vanocni-foceni",
+          "price": "1800",
+          "priceCurrency": "CZK",
+          "availability": "https://schema.org/InStock",
+          "validFrom": "2026-10-01"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": faqs.map(f => ({
+          "@type": "Question",
+          "name": f.q,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": f.a
+          }
+        }))
+      }
+    ]
+  })}</script>`}
 </svelte:head>
 
 <div class="xmas-page">

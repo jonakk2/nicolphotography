@@ -6,14 +6,19 @@
 </script>
 
 <svelte:head>
-  <title>Kontakt | Nicol Juráňová photography</title>
-  <meta name="description" content="Kontaktujte Nicol Juráňovou a domluvte si termín focení. Působím v okolí Hranic na Moravě, ale ráda za vámi přijedu kamkoliv." />
+  <title>Kontakt & Rezervace | Nicol Juráňová – Fotografka Hranice na Moravě</title>
+  <meta name="description" content="Kontaktujte fotografku Nicol Juráňovou. Domluvte si termín pro rodinné, párové, portrétní nebo vánoční focení v okolí Hranic na Moravě a Olomouckém kraji." />
+  <meta name="keywords" content="kontakt fotografka Hranice, rezervace focení Olomouc, fotograf Hranice na Moravě kontakt, Nicol Juráňová telefon email" />
   <link rel="canonical" href="https://nicolphotography.cz/kontakt" />
-  <meta property="og:title" content="Kontakt | Nicol Juráňová photography" />
-  <meta property="og:description" content="Kontaktujte Nicol Juráňovou. Působím v okolí Hranic na Moravě, ale ráda za vámi přijedu kamkoliv." />
+  <meta property="og:title" content="Kontakt & Rezervace | Nicol Juráňová photography" />
+  <meta property="og:description" content="Napište mi nebo zavolejte a domluvme si termín focení. Působím v okolí Hranic na Moravě a celém Olomouckém kraji." />
   <meta property="og:url" content="https://nicolphotography.cz/kontakt" />
-  <meta property="og:image" content="https://nicolphotography.cz/hlavicka.png" />
+  <meta property="og:image" content="https://nicolphotography.cz/og-image.jpg" />
   <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Kontakt & Rezervace | Nicol Juráňová" />
+  <meta name="twitter:description" content="Domluvte si focení v okolí Hranic na Moravě a Olomouckém kraji." />
+  <meta name="twitter:image" content="https://nicolphotography.cz/og-image.jpg" />
 </svelte:head>
 
 <div class="kontakt-page">

@@ -87,14 +87,19 @@
 </script>
 
 <svelte:head>
-  <title>Portfolio | Nicol Juráňová photography</title>
-  <meta name="description" content="Prohlédněte si ukázky focení od Nicol Juráňové - portréty, rodinné focení, párové focení a focení s domácími mazlíčky v přírodě." />
+  <title>Portfolio fotografií | Nicol Juráňová – Hranice na Moravě & Olomoucký kraj</title>
+  <meta name="description" content="Prohlédněte si portfolio přirozeného focení v přírodě od Nicol Juráňové – rodiny, páry, portréty i focení se psy a domácími mazlíčky. Hranice na Moravě a Olomouc." />
+  <meta name="keywords" content="portfolio fotografka Hranice, ukázky rodinného focení, párové fotografie Olomouc, fotky se psy Hranice, portréty v přírodě" />
   <link rel="canonical" href="https://nicolphotography.cz/portfolio" />
-  <meta property="og:title" content="Portfolio | Nicol Juráňová photography" />
-  <meta property="og:description" content="Prohlédněte si ukázky focení - portréty, rodinné focení, párové focení a focení s domácími mazlíčky v přírodě." />
+  <meta property="og:title" content="Portfolio fotografií | Nicol Juráňová photography" />
+  <meta property="og:description" content="Ukázky autentického focení v přírodě – rodiny, páry, portréty i domácí mazlíčci. Hranice na Moravě a Olomoucký kraj." />
   <meta property="og:url" content="https://nicolphotography.cz/portfolio" />
-  <meta property="og:image" content="https://nicolphotography.cz/hlavicka.png" />
+  <meta property="og:image" content="https://nicolphotography.cz/og-image.jpg" />
   <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Portfolio fotografií | Nicol Juráňová" />
+  <meta name="twitter:description" content="Ukázky přirozeného focení v přírodě – rodiny, páry, portréty i mazlíčci. Hranice a okolí." />
+  <meta name="twitter:image" content="https://nicolphotography.cz/og-image.jpg" />
 </svelte:head>
 
 <svelte:window on:keydown={handleKeydown} />

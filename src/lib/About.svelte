@@ -5,14 +5,19 @@
 </script>
 
 <svelte:head>
-  <title>O mně | Nicol Juráňová photography</title>
-  <meta name="description" content="Seznamte se s Nicol Juráňovou - fotografkou z Olomouckého kraje. Portrétní, rodinné a párové focení v přírodě s důrazem na spontánnost a přátelskou atmosféru." />
+  <title>O mně | Nicol Juráňová – Fotografka Hranice na Moravě & Olomoucký kraj</title>
+  <meta name="description" content="Seznamte se s Nicol Juráňovou – fotografkou z Hranic na Moravě. Portrétní, rodinné a párové focení v přírodě s důrazem na spontánnost a přátelskou atmosféru." />
+  <meta name="keywords" content="Nicol Juráňová fotografka, fotografka Hranice na Moravě, fotograf Olomoucký kraj, o mně Nicol Juráňová" />
   <link rel="canonical" href="https://nicolphotography.cz/about" />
   <meta property="og:title" content="O mně | Nicol Juráňová photography" />
-  <meta property="og:description" content="Seznamte se s Nicol Juráňovou - fotografkou z Olomouckého kraje. Portrétní, rodinné a párové focení v přírodě." />
+  <meta property="og:description" content="Fotografka z Hranic na Moravě. Portrétní, rodinné a párové focení v přírodě v přátelské atmosféře." />
   <meta property="og:url" content="https://nicolphotography.cz/about" />
-  <meta property="og:image" content="https://nicolphotography.cz/hlavicka.png" />
-  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://nicolphotography.cz/og-image.jpg" />
+  <meta property="og:type" content="profile" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="O mně | Nicol Juráňová photography" />
+  <meta name="twitter:description" content="Fotografka z Hranic na Moravě a Olomouckého kraje." />
+  <meta name="twitter:image" content="https://nicolphotography.cz/og-image.jpg" />
 </svelte:head>
 
 <div class="about-page">

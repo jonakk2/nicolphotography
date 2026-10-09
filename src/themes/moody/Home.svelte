@@ -120,9 +120,15 @@
 </script>
 
 <svelte:head>
-  <title>Nicol Juráňová photography | Fotografka Olomoucký kraj</title>
-  <meta name="description" content="Nicol Juráňová - fotografka z Hranic na Moravě. Fotím portréty, rodiny a páry venku v přírodě." />
+  <title>Nicol Juráňová photography | Fotografka Hranice na Moravě & Olomoucký kraj</title>
+  <meta name="description" content="Nicol Juráňová – fotografka z Hranic na Moravě. Přirozené portréty, rodinné a párové focení v přírodě i focení se psy v Olomouckém kraji bez nucených póz." />
+  <meta name="keywords" content="fotografka Hranice na Moravě, fotograf Hranice, fotografka Olomouc, rodinné focení Hranice, párové focení Olomouc, focení se psy Olomoucký kraj, vánoční minifocení Hranice" />
   <link rel="canonical" href="https://nicolphotography.cz/" />
+  <meta property="og:title" content="Nicol Juráňová photography | Fotografka Hranice & Olomoucký kraj" />
+  <meta property="og:description" content="Autentické portréty, rodiny a páry venku v přírodě bez strojených póz. Hranice na Moravě a okolí." />
+  <meta property="og:url" content="https://nicolphotography.cz/" />
+  <meta property="og:image" content="https://nicolphotography.cz/og-image.jpg" />
+  <meta property="og:type" content="website" />
 </svelte:head>
 
 <svelte:window on:keydown={handleKeydown} />
@@ -135,6 +141,7 @@
     <HeroSlider />
     <div class="page-header-overlay" aria-hidden="true"></div>
     <div class="page-header-content">
+      <span class="hero-tagline">Fotografka • Hranice na Moravě & Olomoucký kraj</span>
       <h1>Nicol Juráňová</h1>
       <p>Věřím, že nejkrásnější kulisy na fotkách tvoří sama příroda.</p>
       <a href="/kontakt" class="hero-cta">Spojme se</a>
@@ -144,12 +151,12 @@
   <!-- About - Dramatic split -->
   <section class="about">
     <div class="about-image">
-      <img src="/images/portfolio/about/IMG_3078-2.webp" alt="Nicol Juráňová" loading="lazy" />
+      <img src="/images/portfolio/about/IMG_3078-2.webp" alt="Nicol Juráňová - fotografka Hranice na Moravě" loading="lazy" />
     </div>
     <div class="about-content">
       <span class="label">O mně</span>
       <h2>Nicol<br/><em>Juráňová</em></h2>
-      <p>Focením se zabývám několik let. Nejradši fotím venku — rodinné, párové i portrétové fotky. Zakládám si na uvolněné atmosféře, kde se nemusíte přetvařovat.</p>
+      <p>Mé jméno je Nicol a focení je má vášeň už pár let. Nejčastěji fotím rodiny, páry a portréty v okolí Hranic na Moravě a v celém Olomouckém kraji, ale ráda za vámi přijedu kamkoliv, kde vás srdce táhne. Zakládám si na spontánní, uvolněné a přátelské atmosféře.</p>
       <a href="/about" class="link">Více o mně →</a>
     </div>
   </section>
@@ -423,6 +430,17 @@
     text-align: center;
     max-width: 660px;
     padding: 0 1.5rem;
+  }
+
+  .hero-tagline {
+    display: inline-block;
+    font-size: clamp(0.72rem, 1.4vw, 0.88rem);
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--color-primary, #c9a87c);
+    margin-bottom: 0.65rem;
+    font-weight: 500;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
   }
 
   .page-header h1 {

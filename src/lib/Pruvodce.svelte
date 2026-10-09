@@ -66,7 +66,17 @@
 <svelte:head>
   <title>Jak se připravit na focení | Tipy & Průvodce | Nicol Juráňová</title>
   <meta name="description" content="Kompletní průvodce pro klienty: co si vzít na sebe, jaké barvy vybrat do přírody, jak probíhá focení s dětmi a proč fotíme při zlaté hodince." />
+  <meta name="keywords" content="jak se obléct na focení, tipy na rodinné focení, focení v přírodě oblečení, zlatá hodinka focení, Nicol Juráňová tipy" />
   <link rel="canonical" href="https://nicolphotography.cz/pruvodce" />
+  <meta property="og:title" content="Jak se připravit na focení | Tipy & Průvodce | Nicol Juráňová" />
+  <meta property="og:description" content="Užitečné rady a tipy: co si obléct, jaké barvy ladí v přírodě a jak probíhá focení s dětmi." />
+  <meta property="og:url" content="https://nicolphotography.cz/pruvodce" />
+  <meta property="og:image" content="https://nicolphotography.cz/og-image.jpg" />
+  <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Jak se připravit na focení | Nicol Juráňová" />
+  <meta name="twitter:description" content="Užitečné tipy a doporučení pro přirozené focení v přírodě." />
+  <meta name="twitter:image" content="https://nicolphotography.cz/og-image.jpg" />
   {@html `<script type="application/ld+json">${JSON.stringify({
     "@context": "https://schema.org",
     "@type": "FAQPage",
