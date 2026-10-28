@@ -258,7 +258,7 @@
         </div>
       </div>
       <div class="xmas-banner-action">
-        <a href="/vanocni-foceni" class="btn-xmas-cta">
+        <a href="/vanocni-foceni?rezervace=1" class="btn-xmas-cta">
           <span>Vybrat termín & rezervovat</span>
           <span class="cta-arrow">→</span>
         </a>

@@ -36,8 +36,28 @@
   const crmSlotsUrl = import.meta.env.VITE_CRM_SLOTS_URL || 'http://localhost:8092/api/v1/PhotoInquiry/slots?serviceType=vanocni';
   const crmApiUrl = import.meta.env.VITE_CRM_API_URL || 'http://localhost:8092/api/v1/PhotoInquiry/create';
 
+  function scrollToBooking(e) {
+    if (e && e.preventDefault) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    const el = document.getElementById('booking-section');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
   onMount(async () => {
     await fetchBookedSlots();
+    if (typeof window !== 'undefined') {
+      const hash = window.location.hash;
+      const search = window.location.search;
+      if (hash === '#booking-section' || hash === '#rezervace' || search.includes('rezervace')) {
+        setTimeout(() => {
+          scrollToBooking();
+        }, 250);
+      }
+    }
   });
 
   async function fetchBookedSlots() {
@@ -297,7 +317,7 @@
           <span><strong>Dárek nad 10 fotek:</strong> 5× tisk + magnetka</span>
         </div>
       </div>
-      <a href="#booking-section" class="btn btn-gold">Vybrat termín & rezervovat online</a>
+      <button type="button" class="btn btn-gold" on:click={scrollToBooking}>Vybrat termín & rezervovat online</button>
     </div>
   </section>
 
@@ -820,6 +840,7 @@
 
   /* Booking Section */
   .booking-section {
+    scroll-margin-top: 80px;
     padding: 5rem 0;
     background: #111010;
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
