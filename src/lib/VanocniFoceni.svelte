@@ -4,20 +4,19 @@
   import Footer from './Footer.svelte';
 
   // Available days for Christmas mini-sessions (Saturdays in Nov & Dec 2026)
+  const defaultSlots = ['13:00', '13:45', '14:30', '15:15'];
+  const lateSeasonSlots = ['12:30', '13:15', '14:00', '14:45'];
+
   const days = [
-    { date: '2026-11-07', label: 'Sobota 7. 11.', month: 'Listopad 2026' },
-    { date: '2026-11-14', label: 'Sobota 14. 11.', month: 'Listopad 2026' },
-    { date: '2026-11-28', label: 'Sobota 28. 11.', month: 'Listopad 2026' },
-    { date: '2026-12-05', label: 'Sobota 5. 12.', month: 'Prosinec 2026' }
+    { date: '2026-11-07', label: 'Sobota 7. 11.', month: 'Listopad 2026', slots: defaultSlots },
+    { date: '2026-11-14', label: 'Sobota 14. 11.', month: 'Listopad 2026', slots: defaultSlots },
+    { date: '2026-11-28', label: 'Sobota 28. 11.', month: 'Listopad 2026', slots: lateSeasonSlots },
+    { date: '2026-12-05', label: 'Sobota 5. 12.', month: 'Prosinec 2026', slots: lateSeasonSlots }
   ];
 
-  // Daily time slots (30-45 min sessions)
-  const slotTimes = [
-    '13:00',
-    '13:45',
-    '14:30',
-    '15:15'
-  ];
+  function getSlotsForDay(day) {
+    return day?.slots || defaultSlots;
+  }
 
   let selectedDay = days[0];
   let selectedSlot = null;
@@ -346,7 +345,7 @@
       <div class="section-title">
         <span class="sub">Online rezervace</span>
         <h2>Vyberte si svůj volný termín</h2>
-        <p>Klikněte na preferovanou sobotu a vyberte volný časový slot (13:00 – 15:15). Termín se po vyplnění ihned zarezervuje v kalendáři.</p>
+        <p>Klikněte na preferovanou sobotu a vyberte volný časový slot. Termín se po vyplnění formuláře ihned zarezervuje v kalendáři.</p>
       </div>
 
       {#if bookingSuccess}
@@ -405,7 +404,7 @@
 
             <div class="days-list">
               {#each days as day}
-                {@const freeCount = slotTimes.filter(t => !isSlotBooked(day.date, t)).length}
+                {@const freeCount = getSlotsForDay(day).filter(t => !isSlotBooked(day.date, t)).length}
                 <button
                   type="button"
                   class="day-btn"
@@ -445,7 +444,7 @@
             </div>
 
             <div class="slots-grid">
-              {#each slotTimes as time}
+              {#each getSlotsForDay(selectedDay) as time}
                 {@const isBooked = isSlotBooked(selectedDay.date, time)}
                 <button
                   type="button"
