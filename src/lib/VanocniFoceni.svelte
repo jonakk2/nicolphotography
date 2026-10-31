@@ -77,13 +77,18 @@
     }
   }
 
-  function isSlotBooked(dayDate, time) {
+  function isSlotBooked(dayDate, time, currentBooked = bookedSlots) {
     const key = `${dayDate} ${time}`;
-    return bookedSlots.some(s => s.startsWith(key));
+    return currentBooked.some(s => s.startsWith(key));
+  }
+
+  function getFreeSlotsCount(day, currentBooked = bookedSlots) {
+    const slots = getSlotsForDay(day);
+    return slots.filter(time => !isSlotBooked(day.date, time, currentBooked)).length;
   }
 
   function selectSlot(time) {
-    if (isSlotBooked(selectedDay.date, time)) return;
+    if (isSlotBooked(selectedDay.date, time, bookedSlots)) return;
     selectedSlot = time;
     bookingError = '';
     // Smooth scroll to form on mobile
@@ -424,7 +429,7 @@
 
             <div class="days-list">
               {#each days as day}
-                {@const freeCount = getSlotsForDay(day).filter(t => !isSlotBooked(day.date, t)).length}
+                {@const freeCount = getFreeSlotsCount(day, bookedSlots)}
                 <button
                   type="button"
                   class="day-btn"
@@ -441,8 +446,10 @@
                       Obsazeno
                     {:else if freeCount === 1}
                       1 volný čas
-                    {:else}
+                    {:else if freeCount >= 2 && freeCount <= 4}
                       {freeCount} volné časy
+                    {:else}
+                      {freeCount} volných časů
                     {/if}
                   </span>
                 </button>
@@ -465,7 +472,7 @@
 
             <div class="slots-grid">
               {#each getSlotsForDay(selectedDay) as time}
-                {@const isBooked = isSlotBooked(selectedDay.date, time)}
+                {@const isBooked = isSlotBooked(selectedDay.date, time, bookedSlots)}
                 <button
                   type="button"
                   class="slot-btn"
