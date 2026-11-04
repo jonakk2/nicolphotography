@@ -120,11 +120,11 @@
 </script>
 
 <svelte:head>
-  <title>Nicol Juráňová photography | Fotografka Hranice na Moravě & Olomoucký kraj</title>
+  <title>Nicol Juráňová | Fotografka Hranice na Moravě & Olomoucký kraj</title>
   <meta name="description" content="Nicol Juráňová – fotografka z Hranic na Moravě. Přirozené portréty, rodinné a párové focení v přírodě i focení se psy v Olomouckém kraji bez nucených póz." />
   <meta name="keywords" content="fotografka Hranice na Moravě, fotograf Hranice, fotografka Olomouc, rodinné focení Hranice, párové focení Olomouc, focení se psy Olomoucký kraj, vánoční minifocení Hranice" />
   <link rel="canonical" href="https://nicolphotography.cz/" />
-  <meta property="og:title" content="Nicol Juráňová photography | Fotografka Hranice & Olomoucký kraj" />
+  <meta property="og:title" content="Nicol Juráňová | Fotografka Hranice na Moravě & Olomoucký kraj" />
   <meta property="og:description" content="Autentické portréty, rodiny a páry venku v přírodě bez strojených póz. Hranice na Moravě a okolí." />
   <meta property="og:url" content="https://nicolphotography.cz/" />
   <meta property="og:image" content="https://nicolphotography.cz/og-image.jpg" />
@@ -142,7 +142,7 @@
     <div class="page-header-overlay" aria-hidden="true"></div>
     <div class="page-header-content">
       <span class="hero-tagline">Fotografka • Hranice na Moravě & Olomoucký kraj</span>
-      <h1>Nicol Juráňová</h1>
+      <h1>Nicol Juráňová <span class="sr-only">– Přirozené rodinné, párové a portrétní focení v přírodě</span></h1>
       <p>Věřím, že nejkrásnější kulisy na fotkách tvoří sama příroda.</p>
       <a href="/kontakt" class="hero-cta">Spojme se</a>
     </div>
