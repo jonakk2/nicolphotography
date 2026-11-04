@@ -71,12 +71,12 @@
   <meta property="og:title" content="Jak se připravit na focení | Tipy & Průvodce | Nicol Juráňová" />
   <meta property="og:description" content="Užitečné rady a tipy: co si obléct, jaké barvy ladí v přírodě a jak probíhá focení s dětmi." />
   <meta property="og:url" content="https://nicolphotography.cz/pruvodce" />
-  <meta property="og:image" content="https://nicolphotography.cz/og-image.jpg" />
+  <meta property="og:image" content="https://nicolphotography.cz/og-image-2026.jpg" />
   <meta property="og:type" content="article" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Jak se připravit na focení | Nicol Juráňová" />
   <meta name="twitter:description" content="Užitečné tipy a doporučení pro přirozené focení v přírodě." />
-  <meta name="twitter:image" content="https://nicolphotography.cz/og-image.jpg" />
+  <meta name="twitter:image" content="https://nicolphotography.cz/og-image-2026.jpg" />
   {@html `<script type="application/ld+json">${JSON.stringify({
     "@context": "https://schema.org",
     "@type": "FAQPage",

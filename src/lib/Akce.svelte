@@ -94,12 +94,12 @@
   <meta property="og:title" content="Portfolio fotografií | Nicol Juráňová photography" />
   <meta property="og:description" content="Ukázky autentického focení v přírodě – rodiny, páry, portréty i domácí mazlíčci. Hranice na Moravě a Olomoucký kraj." />
   <meta property="og:url" content="https://nicolphotography.cz/portfolio" />
-  <meta property="og:image" content="https://nicolphotography.cz/og-image.jpg" />
+  <meta property="og:image" content="https://nicolphotography.cz/og-image-2026.jpg" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Portfolio fotografií | Nicol Juráňová" />
   <meta name="twitter:description" content="Ukázky přirozeného focení v přírodě – rodiny, páry, portréty i mazlíčci. Hranice a okolí." />
-  <meta name="twitter:image" content="https://nicolphotography.cz/og-image.jpg" />
+  <meta name="twitter:image" content="https://nicolphotography.cz/og-image-2026.jpg" />
 </svelte:head>
 
 <svelte:window on:keydown={handleKeydown} />

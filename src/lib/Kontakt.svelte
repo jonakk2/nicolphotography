@@ -13,12 +13,12 @@
   <meta property="og:title" content="Kontakt & Rezervace | Nicol Juráňová photography" />
   <meta property="og:description" content="Napište mi nebo zavolejte a domluvme si termín focení. Působím v okolí Hranic na Moravě a celém Olomouckém kraji." />
   <meta property="og:url" content="https://nicolphotography.cz/kontakt" />
-  <meta property="og:image" content="https://nicolphotography.cz/og-image.jpg" />
+  <meta property="og:image" content="https://nicolphotography.cz/og-image-2026.jpg" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Kontakt & Rezervace | Nicol Juráňová" />
   <meta name="twitter:description" content="Domluvte si focení v okolí Hranic na Moravě a Olomouckém kraji." />
-  <meta name="twitter:image" content="https://nicolphotography.cz/og-image.jpg" />
+  <meta name="twitter:image" content="https://nicolphotography.cz/og-image-2026.jpg" />
 </svelte:head>
 
 <div class="kontakt-page">

@@ -39,12 +39,12 @@
   <meta property="og:title" content="Ceník focení | Nicol Juráňová photography" />
   <meta property="og:description" content="Přirozené focení v přírodě od 1 500 Kč. Rodiny, páry, portréty i mazlíčci. Hranice na Moravě a Olomoucký kraj." />
   <meta property="og:url" content="https://nicolphotography.cz/cenik" />
-  <meta property="og:image" content="https://nicolphotography.cz/og-image.jpg" />
+  <meta property="og:image" content="https://nicolphotography.cz/og-image-2026.jpg" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Ceník focení | Nicol Juráňová photography" />
   <meta name="twitter:description" content="Férový ceník focení v přírodě od 1 500 Kč. Hranice na Moravě a Olomoucký kraj." />
-  <meta name="twitter:image" content="https://nicolphotography.cz/og-image.jpg" />
+  <meta name="twitter:image" content="https://nicolphotography.cz/og-image-2026.jpg" />
   {@html `<script type="application/ld+json">${JSON.stringify({
     "@context": "https://schema.org",
     "@type": "FAQPage",

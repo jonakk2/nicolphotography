@@ -12,12 +12,14 @@
   <meta property="og:title" content="O mně | Nicol Juráňová photography" />
   <meta property="og:description" content="Fotografka z Hranic na Moravě. Portrétní, rodinné a párové focení v přírodě v přátelské atmosféře." />
   <meta property="og:url" content="https://nicolphotography.cz/about" />
-  <meta property="og:image" content="https://nicolphotography.cz/og-image.jpg" />
+  <meta property="og:image" content="https://nicolphotography.cz/og-image-2026.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:type" content="profile" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="O mně | Nicol Juráňová photography" />
   <meta name="twitter:description" content="Fotografka z Hranic na Moravě a Olomouckého kraje." />
-  <meta name="twitter:image" content="https://nicolphotography.cz/og-image.jpg" />
+  <meta name="twitter:image" content="https://nicolphotography.cz/og-image-2026.jpg" />
 </svelte:head>
 
 <div class="about-page">

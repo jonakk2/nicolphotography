@@ -127,7 +127,10 @@
   <meta property="og:title" content="Nicol Juráňová | Fotografka Hranice na Moravě & Olomoucký kraj" />
   <meta property="og:description" content="Autentické portréty, rodiny a páry venku v přírodě bez strojených póz. Hranice na Moravě a okolí." />
   <meta property="og:url" content="https://nicolphotography.cz/" />
-  <meta property="og:image" content="https://nicolphotography.cz/og-image.jpg" />
+  <meta property="og:image" content="https://nicolphotography.cz/og-image-2026.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Nicol Juráňová photography – fotografka Hranice na Moravě & Olomoucký kraj" />
   <meta property="og:type" content="website" />
 </svelte:head>
 
