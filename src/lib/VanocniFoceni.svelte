@@ -2,6 +2,7 @@
   import { onMount } from 'svelte';
   import NavBar from './NavBar.svelte';
   import Footer from './Footer.svelte';
+  import Lightbox from './Lightbox.svelte';
 
   // Available days for Christmas mini-sessions (Saturdays in Nov & Dec 2026)
   const defaultSlots = ['13:00', '13:45', '14:30', '15:15'];
@@ -29,6 +30,31 @@
   // Výchozí den nastaven na nejbližší volnou sobotu (Sobota 14. 11.)
   let selectedDay = days[1];
   let selectedSlot = null;
+
+  // Real Christmas 2026 Sample Photos
+  const samplePhotos = [
+    { src: '/images/portfolio/christmas/IMG_3801.jpg', thumb: '/images/thumbnails/christmas/IMG_3801.webp', alt: 'Vánoční scéna u kamenného sklípku' },
+    { src: '/images/portfolio/christmas/IMG_3848.jpg', thumb: '/images/thumbnails/christmas/IMG_3848.webp', alt: 'Kouzelná sváteční atmosféra v přírodě' },
+    { src: '/images/portfolio/christmas/IMG_3812.jpg', thumb: '/images/thumbnails/christmas/IMG_3812.webp', alt: 'Přirozené momentky bez nucených póz' },
+    { src: '/images/portfolio/christmas/IMG_3829.jpg', thumb: '/images/thumbnails/christmas/IMG_3829.webp', alt: 'Vánoční minifocení s vůní jehličí' },
+    { src: '/images/portfolio/christmas/IMG_3776.jpg', thumb: '/images/thumbnails/christmas/IMG_3776.webp', alt: 'Autentické vánoční okamžiky u sklípku' },
+    { src: '/images/portfolio/christmas/IMG_3929.jpg', thumb: '/images/thumbnails/christmas/IMG_3929.webp', alt: 'Venkovní vánoční dekorace a hřejivá atmosféra' },
+    { src: '/images/portfolio/christmas/IMG_3893.jpg', thumb: '/images/thumbnails/christmas/IMG_3893.webp', alt: 'Útulná zimní scenérie na zahradě' },
+    { src: '/images/portfolio/christmas/IMG_3954.jpg', thumb: '/images/thumbnails/christmas/IMG_3954.webp', alt: 'Vánoční detaily a sváteční lucerna' },
+    { src: '/images/portfolio/christmas/IMG_3873.jpg', thumb: '/images/thumbnails/christmas/IMG_3873.webp', alt: 'Teplé kakao, čaj a vánoční pohoda' },
+    { src: '/images/portfolio/christmas/IMG_3908.jpg', thumb: '/images/thumbnails/christmas/IMG_3908.webp', alt: 'Radost z vánočního focení pro celou rodinu' },
+    { src: '/images/portfolio/christmas/IMG_3736.jpg', thumb: '/images/thumbnails/christmas/IMG_3736.webp', alt: 'Sváteční portrét u kamenného sklípku' },
+    { src: '/images/portfolio/christmas/IMG_3963.jpg', thumb: '/images/thumbnails/christmas/IMG_3963.webp', alt: 'Vánoční minifocení v uvolněném stylu' },
+    { src: '/images/portfolio/christmas/IMG_3978.jpg', thumb: '/images/thumbnails/christmas/IMG_3978.webp', alt: 'Kouzlo Vánoc pod širým nebem' }
+  ];
+
+  let lightboxOpen = false;
+  let currentImageIndex = 0;
+
+  function openLightbox(index) {
+    currentImageIndex = index;
+    lightboxOpen = true;
+  }
 
   let customerName = '';
   let customerPhone = '';
@@ -362,20 +388,32 @@
       </div>
 
       <div class="cards-grid">
-        <div class="card">
-          <div class="card-icon">🏡</div>
-          <h3>Vánoční scéna u sklípku</h3>
-          <p>Kouzelná venkovní scéna na zahradě s netradičním kamenným sklípkem v pozadí. Vůně jehličí a kakaa, útulná atmosféra, hřejivé vlněné deky a sváteční lucernička. Žádné umělé ateliérové pozadí, ale autentická severská atmosféra.</p>
+        <div class="card has-photo">
+          <div class="card-photo">
+            <img src="/images/thumbnails/christmas/IMG_3801.webp" alt="Vánoční scéna u sklípku" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3>Vánoční scéna u sklípku</h3>
+            <p>Kouzelná venkovní scéna na zahradě s netradičním kamenným sklípkem v pozadí. Vůně jehličí a kakaa, útulná atmosféra, hřejivé vlněné deky a sváteční lucernička. Žádné umělé ateliérové pozadí, ale autentická severská atmosféra.</p>
+          </div>
         </div>
-        <div class="card">
-          <div class="card-icon">☕</div>
-          <h3>Teplé kakao, čaj i mazlíčci</h3>
-          <p>Pro děti máme připravené lahodné teplé kakao a drobné cukroví, pro dospělé horký čaj z termosky na zahřátí. Doba 30–45 minut je ideální délka. Domácí mazlíčci jsou srdečně vítáni – pejsci se venku cítí skvěle a bezpečně.</p>
+        <div class="card has-photo">
+          <div class="card-photo">
+            <img src="/images/thumbnails/christmas/IMG_3873.webp" alt="Teplé kakao, čaj i mazlíčci" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3>Teplé kakao, čaj i mazlíčci</h3>
+            <p>Pro děti máme připravené lahodné teplé kakao a drobné cukroví, pro dospělé horký čaj z termosky na zahřátí. Doba 30–45 minut je ideální délka. Domácí mazlíčci jsou srdečně vítáni – pejsci se venku cítí skvěle a bezpečně.</p>
+          </div>
         </div>
-        <div class="card">
-          <div class="card-icon">🎁</div>
-          <h3>8 fotek & dárek k výběru</h3>
-          <p>V ceně 1 800 Kč je 8 upravených fotografií (další za 150 Kč/ks). Pokud si vyberete nad 10 fotografií, automaticky ode mě dostanete vánoční dárek: 5 tištěných fotek a fotomagnetku s garancí dodání do Vánoc pod stromeček!</p>
+        <div class="card has-photo">
+          <div class="card-photo">
+            <img src="/images/thumbnails/christmas/IMG_3848.webp" alt="8 fotek a dárek k výběru" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3>8 fotek & dárek k výběru</h3>
+            <p>V ceně 1 800 Kč je 8 upravených fotografií (další za 150 Kč/ks). Pokud si vyberete nad 10 fotografií, automaticky ode mě dostanete vánoční dárek: 5 tištěných fotek a fotomagnetku s garancí dodání do Vánoc pod stromeček!</p>
+          </div>
         </div>
       </div>
 
@@ -386,6 +424,33 @@
           <h4>Vánoční bonus: Nad 10 vybraných fotek získáte dárek</h4>
           <p>Vyberte si ze své online galerie více než 10 fotografií a automaticky ode mě dostanete <strong>5× prémiový tisk fotografií</strong> a <strong>vánoční fotomagnetku</strong> na lednici s garancí dodání do Vánoc pod stromeček. Každá další fotografie nad rámec balíčku je za 150 Kč.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Real Photos Showcase Gallery Section -->
+  <section class="xmas-gallery-section">
+    <div class="container">
+      <div class="section-title">
+        <span class="sub">Ukázka z letošního focení</span>
+        <h2>Jak vypadá vánoční focení u sklípku</h2>
+        <p>Prohlédněte si skutečné záběry z naší vánoční zahrady. Autentické momentky, vůně jehličí, lucernička a sváteční atmosféra. Kliknutím fotografii zvětšíte.</p>
+      </div>
+
+      <div class="xmas-gallery-grid">
+        {#each samplePhotos as photo, i}
+          <button 
+            type="button" 
+            class="xmas-gallery-item"
+            on:click={() => openLightbox(i)}
+            aria-label={`Zvětšit fotografii: ${photo.alt}`}
+          >
+            <img src={photo.thumb} alt={photo.alt} loading="lazy" decoding="async" />
+            <div class="gallery-item-overlay">
+              <span class="zoom-badge">🔍 Zvětšit</span>
+            </div>
+          </button>
+        {/each}
       </div>
     </div>
   </section>
@@ -631,6 +696,16 @@
     </div>
   </section>
 
+  <!-- Lightbox for Christmas Samples -->
+  <Lightbox
+    isOpen={lightboxOpen}
+    images={samplePhotos}
+    currentIndex={currentImageIndex}
+    categoryName="Vánoční minifocení 2026"
+    on:close={() => (lightboxOpen = false)}
+    on:change={(e) => (currentImageIndex = e.detail.index)}
+  />
+
   <Footer />
 </div>
 
@@ -822,14 +897,41 @@
     transition: transform 0.3s ease, border-color 0.3s ease;
   }
 
+  .card.has-photo {
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-photo {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+    background: #141312;
+  }
+
+  .card-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .card:hover .card-photo img {
+    transform: scale(1.05);
+  }
+
+  .card-body {
+    padding: 1.75rem 1.75rem 2rem;
+    flex: 1;
+  }
+
   .card:hover {
     transform: translateY(-4px);
     border-color: rgba(201, 168, 124, 0.4);
-  }
-
-  .card-icon {
-    font-size: 2.25rem;
-    margin-bottom: 1.25rem;
   }
 
   .card h3 {
@@ -843,6 +945,93 @@
     color: #a0a0a0;
     line-height: 1.6;
     font-size: 0.95rem;
+  }
+
+  /* Real Photos Showcase Gallery */
+  .xmas-gallery-section {
+    padding: 5rem 0;
+    background: #0d0c0c;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .xmas-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .xmas-gallery-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .xmas-gallery-grid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+  }
+
+  .xmas-gallery-item {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: #141312;
+    cursor: pointer;
+    padding: 0;
+    width: 100%;
+    display: block;
+    text-align: left;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .xmas-gallery-item:hover {
+    transform: translateY(-4px);
+    border-color: rgba(201, 168, 124, 0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  }
+
+  .xmas-gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .xmas-gallery-item:hover img {
+    transform: scale(1.06);
+  }
+
+  .gallery-item-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 1.25rem;
+  }
+
+  .xmas-gallery-item:hover .gallery-item-overlay {
+    opacity: 1;
+  }
+
+  .zoom-badge {
+    background: rgba(201, 168, 124, 0.95);
+    color: #0e0d0c;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.4rem 0.9rem;
+    border-radius: 9999px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
   }
 
   /* Special Gift Banner */

@@ -34,6 +34,13 @@
       cover: '/images/thumbnails/animals/nahled_sdomacimimazlicky.webp',
       desc: 'Focení s vašimi mazlíčky',
       position: '50% 25%'
+    },
+    {
+      id: 'christmas',
+      name: 'Vánoční focení',
+      cover: '/images/thumbnails/christmas/nahled_vanoce.webp',
+      desc: 'Kouzelná scéna u kamenného sklípku',
+      position: '50% 25%'
     }
   ];
 
