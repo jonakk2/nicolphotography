@@ -7,8 +7,16 @@
   const defaultSlots = ['13:00', '13:45', '14:30', '15:15'];
   const lateSeasonSlots = ['12:30', '13:15', '14:00', '14:45'];
 
+  // Termíny, které již proběhly nebo jsou plně obsazené
+  const closedSlots = [
+    '2026-11-07 13:00',
+    '2026-11-07 13:45',
+    '2026-11-07 14:30',
+    '2026-11-07 15:15'
+  ];
+
   const days = [
-    { date: '2026-11-07', label: 'Sobota 7. 11.', month: 'Listopad 2026', slots: defaultSlots },
+    { date: '2026-11-07', label: 'Sobota 7. 11.', month: 'Listopad 2026 (Proběhlo)', slots: defaultSlots },
     { date: '2026-11-14', label: 'Sobota 14. 11.', month: 'Listopad 2026', slots: defaultSlots },
     { date: '2026-11-28', label: 'Sobota 28. 11.', month: 'Listopad 2026', slots: lateSeasonSlots },
     { date: '2026-12-05', label: 'Sobota 5. 12.', month: 'Prosinec 2026', slots: lateSeasonSlots }
@@ -18,7 +26,8 @@
     return day?.slots || defaultSlots;
   }
 
-  let selectedDay = days[0];
+  // Výchozí den nastaven na nejbližší volnou sobotu (Sobota 14. 11.)
+  let selectedDay = days[1];
   let selectedSlot = null;
 
   let customerName = '';
@@ -79,6 +88,7 @@
 
   function isSlotBooked(dayDate, time, currentBooked = bookedSlots) {
     const key = `${dayDate} ${time}`;
+    if (closedSlots.some(s => s.startsWith(key))) return true;
     return currentBooked.some(s => s.startsWith(key));
   }
 
@@ -143,6 +153,14 @@
           email: customerEmail,
           phone: customerPhone
         };
+        if (typeof window !== 'undefined' && window.gtag) {
+          window.gtag('event', 'generate_lead', {
+            event_category: 'Booking',
+            event_label: `Vánoční minifocení: ${selectedDay.label} ${selectedSlot}`,
+            value: 1800,
+            currency: 'CZK'
+          });
+        }
       } else {
         throw new Error(data.message || 'Chyba při rezervaci termínu.');
       }
@@ -173,6 +191,14 @@
             email: customerEmail,
             phone: customerPhone
           };
+          if (typeof window !== 'undefined' && window.gtag) {
+            window.gtag('event', 'generate_lead', {
+              event_category: 'Booking',
+              event_label: `Vánoční minifocení: ${selectedDay.label} ${selectedSlot}`,
+              value: 1800,
+              currency: 'CZK'
+            });
+          }
         } else {
           throw new Error('Nepodařilo se odeslat rezervaci.');
         }
@@ -564,8 +590,13 @@
               </form>
             {:else}
               <div class="select-prompt">
-                <span class="prompt-icon">👆</span>
-                <p>Klikněte prosím výše na jeden ze zelených časových slotů, který vám nejvíce vyhovuje.</p>
+                {#if getFreeSlotsCount(selectedDay, bookedSlots) === 0}
+                  <span class="prompt-icon">📅</span>
+                  <p>Všechny časy pro tento den jsou již obsazené. Zvolte prosím vlevo některou z dalších volných sobot.</p>
+                {:else}
+                  <span class="prompt-icon">👆</span>
+                  <p>Klikněte prosím výše na jeden ze zelených časových slotů, který vám nejvíce vyhovuje.</p>
+                {/if}
               </div>
             {/if}
           </div>

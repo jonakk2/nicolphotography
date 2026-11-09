@@ -254,7 +254,7 @@
         <h2>Vánoční focení 2026 – u kamenného sklípku</h2>
         <p>Zastavte se v předvánočním shonu a přijeďte si vytvořit společné vzpomínky a ideální dárek pro vaše blízké. V pozadí netradiční kamenný sklípek, vůně jehličí a kakaa a útulná atmosféra. 30–45 minut na čerstvém vzduchu, 8 precizně upravených fotografií v online galerii, garance dodání do Vánoc pod stromeček a domácí mazlíčci vítáni!</p>
         <div class="xmas-banner-meta">
-          <span>📅 Listopad & Prosinec 2026 (7. 11., 14. 11., 28. 11., 5. 12.)</span>
+          <span>📅 Volné termíny: 14. 11., 28. 11. a 5. 12. 2026</span>
           <span>📍 Zahrada před kamenným sklípkem</span>
           <span>🏷️ 1 800 Kč / 8 fotek (záloha 500 Kč)</span>
           <span>🎁 Nad 10 fotek dárek ode mě: 5× tisk + fotomagnetka</span>

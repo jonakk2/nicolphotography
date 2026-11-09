@@ -95,6 +95,12 @@
 
       if (data.success) {
         successMessage = 'Děkuji za zprávu! Vaše poptávka byla úspěšně zaznamenána. Ozvu se vám co nejdříve (obvykle do 24 hodin), abychom doladili detaily.';
+        if (typeof window !== 'undefined' && window.gtag) {
+          window.gtag('event', 'generate_lead', {
+            event_category: 'Contact',
+            event_label: `Poptávka: ${service || 'Obecná'}`
+          });
+        }
         name = '';
         email = '';
         phone = '';
@@ -130,6 +136,12 @@
 
         if (fbData.success) {
           successMessage = 'Děkuji za zprávu! Ozvu se vám co nejdříve (obvykle do 24 hodin), abychom doladili detaily.';
+          if (typeof window !== 'undefined' && window.gtag) {
+            window.gtag('event', 'generate_lead', {
+              event_category: 'Contact',
+              event_label: `Poptávka: ${service || 'Obecná'}`
+            });
+          }
           name = '';
           email = '';
           phone = '';
