@@ -5,26 +5,32 @@
   import Lightbox from './Lightbox.svelte';
 
   // Available days for Christmas mini-sessions (Saturdays in Nov & Dec 2026)
-  const defaultSlots = ['13:00', '13:45', '14:30', '15:15'];
-  const lateSeasonSlots = ['12:30', '13:15', '14:00', '14:45'];
+  const novemberSlots = ['12:15', '13:00', '13:45', '14:30', '15:15'];
+  const lateNovemberSlots = ['11:45', '12:30', '13:15', '14:00', '14:45'];
+  const decemberSlots = ['12:30', '13:15', '14:00', '14:45'];
 
-  // Termíny, které již proběhly nebo jsou plně obsazené
+  // Termíny, které již proběhly nebo jsou plně obsazené (včetně dřívějších časů pro sociální důkaz)
   const closedSlots = [
+    // 7. 11. (proběhlo)
+    '2026-11-07 12:15',
     '2026-11-07 13:00',
     '2026-11-07 13:45',
     '2026-11-07 14:30',
-    '2026-11-07 15:15'
+    '2026-11-07 15:15',
+    // Obsazené dřívější termíny v listopadu (-45 min)
+    '2026-11-14 12:15',
+    '2026-11-28 11:45'
   ];
 
   const days = [
-    { date: '2026-11-07', label: 'Sobota 7. 11.', month: 'Listopad 2026 (Proběhlo)', slots: defaultSlots },
-    { date: '2026-11-14', label: 'Sobota 14. 11.', month: 'Listopad 2026', slots: defaultSlots },
-    { date: '2026-11-28', label: 'Sobota 28. 11.', month: 'Listopad 2026', slots: lateSeasonSlots },
-    { date: '2026-12-05', label: 'Sobota 5. 12.', month: 'Prosinec 2026', slots: lateSeasonSlots }
+    { date: '2026-11-07', label: 'Sobota 7. 11.', month: 'Listopad 2026 (Proběhlo)', slots: novemberSlots },
+    { date: '2026-11-14', label: 'Sobota 14. 11.', month: 'Listopad 2026', slots: novemberSlots },
+    { date: '2026-11-28', label: 'Sobota 28. 11.', month: 'Listopad 2026', slots: lateNovemberSlots },
+    { date: '2026-12-05', label: 'Sobota 5. 12.', month: 'Prosinec 2026', slots: decemberSlots }
   ];
 
   function getSlotsForDay(day) {
-    return day?.slots || defaultSlots;
+    return day?.slots || novemberSlots;
   }
 
   // Výchozí den nastaven na nejbližší volnou sobotu (Sobota 14. 11.)
