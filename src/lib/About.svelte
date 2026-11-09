@@ -9,6 +9,13 @@
   <meta name="description" content="Seznamte se s Nicol Juráňovou – fotografkou z Hranic na Moravě. Portrétní, rodinné a párové focení v přírodě s důrazem na spontánnost a přátelskou atmosféru." />
   <meta name="keywords" content="Nicol Juráňová fotografka, fotografka Hranice na Moravě, fotograf Olomoucký kraj, o mně Nicol Juráňová" />
   <link rel="canonical" href="https://nicolphotography.cz/about" />
+
+  <!-- Geo Meta Tags for Local Search -->
+  <meta name="geo.region" content="CZ-71" />
+  <meta name="geo.placename" content="Hranice na Moravě" />
+  <meta name="geo.position" content="49.5516;17.7348" />
+  <meta name="ICBM" content="49.5516, 17.7348" />
+
   <meta property="og:title" content="O mně | Nicol Juráňová photography" />
   <meta property="og:description" content="Fotografka z Hranic na Moravě. Portrétní, rodinné a párové focení v přírodě v přátelské atmosféře." />
   <meta property="og:url" content="https://nicolphotography.cz/about" />
@@ -20,6 +27,31 @@
   <meta name="twitter:title" content="O mně | Nicol Juráňová photography" />
   <meta name="twitter:description" content="Fotografka z Hranic na Moravě a Olomouckého kraje." />
   <meta name="twitter:image" content="https://nicolphotography.cz/og-image-2026.jpg" />
+
+  {@html `<script type="application/ld+json">${JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "name": "O mně | Nicol Juráňová – Fotografka",
+    "url": "https://nicolphotography.cz/about",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Nicol Juráňová",
+      "jobTitle": "Fotografka",
+      "url": "https://nicolphotography.cz",
+      "image": "https://nicolphotography.cz/images/portfolio/about/IMG_3078-2.webp",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Hranice na Moravě",
+        "postalCode": "75301",
+        "addressRegion": "Olomoucký kraj",
+        "addressCountry": "CZ"
+      },
+      "sameAs": [
+        "https://www.instagram.com/n.i.c.o.l_photography/",
+        "https://www.facebook.com/profile.php?id=61572752776606"
+      ]
+    }
+  })}</script>`}
 </svelte:head>
 
 <div class="about-page">

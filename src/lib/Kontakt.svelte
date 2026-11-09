@@ -10,6 +10,13 @@
   <meta name="description" content="Kontaktujte fotografku Nicol Juráňovou. Domluvte si termín pro rodinné, párové, portrétní nebo vánoční focení v okolí Hranic na Moravě a Olomouckém kraji." />
   <meta name="keywords" content="kontakt fotografka Hranice, rezervace focení Olomouc, fotograf Hranice na Moravě kontakt, Nicol Juráňová telefon email" />
   <link rel="canonical" href="https://nicolphotography.cz/kontakt" />
+
+  <!-- Geo Meta Tags for Local Search -->
+  <meta name="geo.region" content="CZ-71" />
+  <meta name="geo.placename" content="Hranice na Moravě" />
+  <meta name="geo.position" content="49.5516;17.7348" />
+  <meta name="ICBM" content="49.5516, 17.7348" />
+
   <meta property="og:title" content="Kontakt & Rezervace | Nicol Juráňová photography" />
   <meta property="og:description" content="Napište mi nebo zavolejte a domluvme si termín focení. Působím v okolí Hranic na Moravě a celém Olomouckém kraji." />
   <meta property="og:url" content="https://nicolphotography.cz/kontakt" />
@@ -19,6 +26,36 @@
   <meta name="twitter:title" content="Kontakt & Rezervace | Nicol Juráňová" />
   <meta name="twitter:description" content="Domluvte si focení v okolí Hranic na Moravě a Olomouckém kraji." />
   <meta name="twitter:image" content="https://nicolphotography.cz/og-image-2026.jpg" />
+
+  {@html `<script type="application/ld+json">${JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Kontakt & Rezervace | Nicol Juráňová photography",
+    "url": "https://nicolphotography.cz/kontakt",
+    "mainEntity": {
+      "@type": ["Photographer", "LocalBusiness"],
+      "name": "Nicol Juráňová photography",
+      "telephone": "+420771161818",
+      "email": "njuranova2003@gmail.com",
+      "url": "https://nicolphotography.cz",
+      "taxID": "24396338",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Hranice",
+        "postalCode": "75301",
+        "addressRegion": "Olomoucký kraj",
+        "addressCountry": "CZ"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 49.5516,
+        "longitude": 17.7348
+      },
+      "areaServed": [
+        "Hranice", "Olomouc", "Přerov", "Lipník nad Bečvou", "Teplice nad Bečvou", "Valašské Meziříčí", "Nový Jičín", "Olomoucký kraj"
+      ]
+    }
+  })}</script>`}
 </svelte:head>
 
 <div class="kontakt-page">
@@ -78,8 +115,21 @@
                 </svg>
               </div>
               <div>
-                <h4>Lokalita</h4>
-                <span>Působím v okolí Hranic na Moravě, ale ráda za vámi přijedu kamkoliv.</span>
+                <h4>Lokalita & Působnost</h4>
+                <span>Hranice na Moravě (753 01), Olomouc, Přerov, Lipník nad Bečvou, Teplice nad Bečvou, Valašské Meziříčí, Nový Jičín i celá Morava.</span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                </svg>
+              </div>
+              <div>
+                <h4>Fakturační údaje</h4>
+                <span>Nicol Juráňová • IČO: 24396338, Hranice na Moravě</span>
               </div>
             </div>
           </div>

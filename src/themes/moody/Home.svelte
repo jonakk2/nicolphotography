@@ -124,6 +124,13 @@
   <meta name="description" content="Nicol Juráňová – fotografka z Hranic na Moravě. Přirozené portréty, rodinné a párové focení v přírodě i focení se psy v Olomouckém kraji bez nucených póz." />
   <meta name="keywords" content="fotografka Hranice na Moravě, fotograf Hranice, fotografka Olomouc, rodinné focení Hranice, párové focení Olomouc, focení se psy Olomoucký kraj, vánoční minifocení Hranice" />
   <link rel="canonical" href="https://nicolphotography.cz/" />
+
+  <!-- Geo Meta Tags for Local & Regional Search (Seznam, Bing, Google) -->
+  <meta name="geo.region" content="CZ-71" />
+  <meta name="geo.placename" content="Hranice na Moravě" />
+  <meta name="geo.position" content="49.5516;17.7348" />
+  <meta name="ICBM" content="49.5516, 17.7348" />
+
   <meta property="og:title" content="Nicol Juráňová | Fotografka Hranice na Moravě & Olomoucký kraj" />
   <meta property="og:description" content="Autentické portréty, rodiny a páry venku v přírodě bez strojených póz. Hranice na Moravě a okolí." />
   <meta property="og:url" content="https://nicolphotography.cz/" />
@@ -298,6 +305,76 @@
       <p class="retouch-sub">Posuňte jezdcem pro srovnání. Fotografie ladím citlivě do teplých přírodních tónů — bez voskové retuše a s důrazem na skutečné emoce.</p>
     </div>
     <BeforeAfter />
+  </section>
+
+  <!-- Geo / Local SEO: Favorite locations & operating area -->
+  <section class="locations-section">
+    <div class="locations-header">
+      <span class="label">Kde nejčastěji fotím</span>
+      <h2>Oblíbená fotomísta & region působnosti</h2>
+      <p class="locations-sub">Jsem doma v Hranicích na Moravě, ale za krásným přirozeným světlem a uvolněnou atmosférou vyrážím po celém Olomouckém kraji i do sousedních regionů.</p>
+    </div>
+
+    <div class="locations-grid">
+      <div class="location-card">
+        <div class="location-top">
+          <span class="location-pin-icon" aria-hidden="true">📍</span>
+          <span class="location-badge">Domovská základna</span>
+        </div>
+        <h3>Hranice na Moravě & Teplice</h3>
+        <p>Zámecký park v Hranicích, nábřeží řeky Bečvy, rozkvetlé louky podél cyklostezek a lesní zákoutí u Teplic nad Bečvou a Hranické propasti.</p>
+        <div class="location-footer-note">
+          <span>🌿 Rodiny • Páry • Mazlíčci • Portréty</span>
+        </div>
+      </div>
+
+      <div class="location-card">
+        <div class="location-top">
+          <span class="location-pin-icon" aria-hidden="true">📍</span>
+          <span class="location-badge">Cca 35 min z Hranic</span>
+        </div>
+        <h3>Olomouc & hanácká krajina</h3>
+        <p>Vzrostlé stromy ve Smetanových a Bezručových sadech, malebná přírodní zákoutí v okolí Hané a focení při západu slunce ve zlaté hodince.</p>
+        <div class="location-footer-note">
+          <span>🌾 Párové focení • Portréty • Těhotenské</span>
+        </div>
+      </div>
+
+      <div class="location-card">
+        <div class="location-top">
+          <span class="location-pin-icon" aria-hidden="true">📍</span>
+          <span class="location-badge">Cca 10 min z Hranic</span>
+        </div>
+        <h3>Lipník nad Bečvou & Helfštýn</h3>
+        <p>Romantická příroda v podhradí hradu Helfštýn, klidný zámecký park a aleje v údolí Moravské brány pro pohodové a nerušené rodinné focení.</p>
+        <div class="location-footer-note">
+          <span>🏰 Rodinné focení • Děti v přírodě</span>
+        </div>
+      </div>
+
+      <div class="location-card">
+        <div class="location-top">
+          <span class="location-pin-icon" aria-hidden="true">📍</span>
+          <span class="location-badge">Cca 20 min z Hranic</span>
+        </div>
+        <h3>Přerov & lužní zákoutí</h3>
+        <p>Kouzelný park Michalov, tiché laguny a zelené lužní břehy řeky Bečvy – ideální pro uvolněné procházky a spontánní focení s pejsky.</p>
+        <div class="location-footer-note">
+          <span>🐾 Focení se psy • Procházky přírodou</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="locations-callout-wrap">
+      <div class="locations-callout">
+        <div class="callout-icon" aria-hidden="true">🚗</div>
+        <div class="callout-body">
+          <h4>Máte své vlastní oblíbené místo?</h4>
+          <p>Ať už je to zahrada u vašeho domu, louka za chalupou, Valašské Meziříčí, Nový Jičín, Bělotín, Drahotuše, Hustopeče nad Bečvou nebo kamkoliv jinam – velmi ráda za vámi přijedu.</p>
+        </div>
+        <a href="/kontakt" class="btn-location-cta">Navrhnout místo focení →</a>
+      </div>
+    </div>
   </section>
 
   <!-- Pricing -->
@@ -970,6 +1047,193 @@
     font-size: 1rem;
     line-height: 1.6;
     margin: 0;
+  }
+
+  /* Locations Section (Local SEO & Geo) */
+  .locations-section {
+    padding: 7rem 1.5rem;
+    background-color: #0d0d0d;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .locations-header {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 3.5rem;
+  }
+
+  .locations-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: var(--text);
+  }
+
+  .locations-sub {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .locations-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    max-width: 1240px;
+    margin: 0 auto 3rem;
+  }
+
+  .location-card {
+    background-color: #141414;
+    border: 1px solid rgba(201, 168, 124, 0.15);
+    border-radius: 8px;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .location-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(201, 168, 124, 0.4);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+  }
+
+  .location-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+
+  .location-pin-icon {
+    font-size: 1.25rem;
+  }
+
+  .location-badge {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    background: rgba(201, 168, 124, 0.1);
+    padding: 0.25rem 0.6rem;
+    border-radius: 20px;
+    border: 1px solid rgba(201, 168, 124, 0.2);
+  }
+
+  .location-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--text);
+    margin: 0 0 0.85rem;
+  }
+
+  .location-card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0 0 1.25rem;
+    flex-grow: 1;
+  }
+
+  .location-footer-note {
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding-top: 0.85rem;
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 0.02em;
+  }
+
+  .locations-callout-wrap {
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+
+  .locations-callout {
+    background: linear-gradient(135deg, rgba(201, 168, 124, 0.08) 0%, rgba(20, 20, 20, 0.95) 100%);
+    border: 1px solid rgba(201, 168, 124, 0.25);
+    border-radius: 8px;
+    padding: 1.75rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+  }
+
+  .callout-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+  }
+
+  .callout-body {
+    flex-grow: 1;
+  }
+
+  .callout-body h4 {
+    color: var(--text);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 0.35rem;
+  }
+
+  .callout-body p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .btn-location-cta {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.85rem 1.6rem;
+    background: var(--accent);
+    color: #0a0a0a;
+    font-weight: 600;
+    font-size: 0.88rem;
+    letter-spacing: 0.03em;
+    border-radius: 4px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+  }
+
+  .btn-location-cta:hover {
+    background: #e0be91;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(201, 168, 124, 0.3);
+  }
+
+  @media (max-width: 1100px) {
+    .locations-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .locations-grid {
+      grid-template-columns: 1fr;
+      max-width: 500px;
+    }
+
+    .locations-callout {
+      flex-direction: column;
+      text-align: center;
+      gap: 1.25rem;
+      padding: 1.5rem;
+    }
+
+    .btn-location-cta {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .locations-section {
+      padding: 5rem 1.25rem;
+    }
   }
 
   .pricing-extra-links {
