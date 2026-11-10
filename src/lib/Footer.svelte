@@ -59,6 +59,11 @@
             <Fa icon={faFacebook} />
           </a>
         </div>
+        <p class="footer-review-link">
+          <a href="https://g.page/r/CVYP-p73tlzLEBM/review" target="_blank" rel="noopener noreferrer">
+            ⭐ Ohodnotit na Google
+          </a>
+        </p>
       </div>
     </div>
 
@@ -172,6 +177,24 @@
     display: flex;
     gap: 0.75rem;
     margin-top: 1.25rem;
+  }
+
+  .footer-review-link {
+    margin-top: 0.85rem;
+  }
+
+  .footer-review-link a {
+    color: #f0deb8;
+    font-size: 0.85rem;
+    text-decoration: none;
+    border-bottom: 1px dashed rgba(201, 168, 124, 0.4);
+    padding-bottom: 2px;
+    transition: all 0.2s ease;
+  }
+
+  .footer-review-link a:hover {
+    color: #ffffff;
+    border-bottom-color: #ffffff;
   }
 
   .footer-socials a {

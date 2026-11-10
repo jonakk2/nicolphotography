@@ -295,6 +295,13 @@
         </div>
       {/each}
     </div>
+
+    <div class="testimonials-footer-cta">
+      <span>Byli jste se mnou fotit a chcete se podělit o zkušenost?</span>
+      <a href="https://g.page/r/CVYP-p73tlzLEBM/review" target="_blank" rel="noopener noreferrer" class="btn-review-google">
+        ⭐ Ohodnotit na Google
+      </a>
+    </div>
   </section>
 
   <!-- Before / After Edit Showcase -->
@@ -1019,6 +1026,40 @@
     .testimonials {
       padding: 5rem 1.5rem;
     }
+  }
+
+  .testimonials-footer-cta {
+    margin-top: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+  }
+
+  .btn-review-google {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.35rem;
+    background: rgba(201, 168, 124, 0.12);
+    border: 1px solid rgba(201, 168, 124, 0.35);
+    color: #f0deb8;
+    border-radius: 24px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .btn-review-google:hover {
+    background: var(--accent);
+    color: #0a0a0a;
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(201, 168, 124, 0.3);
   }
 
   /* Retouch Showcase */
