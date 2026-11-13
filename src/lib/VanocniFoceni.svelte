@@ -345,6 +345,23 @@
             "text": f.a
           }
         }))
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Domů",
+            "item": "https://nicolphotography.cz/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Vánoční focení",
+            "item": "https://nicolphotography.cz/vanocni-foceni"
+          }
+        ]
       }
     ]
   })}</script>`}

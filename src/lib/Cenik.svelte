@@ -47,15 +47,36 @@
   <meta name="twitter:image" content="https://nicolphotography.cz/og-image-2026.jpg" />
   {@html `<script type="application/ld+json">${JSON.stringify({
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqs.map(f => ({
-      "@type": "Question",
-      "name": f.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": f.answer
+    "@graph": [
+      {
+        "@type": "FAQPage",
+        "mainEntity": faqs.map(f => ({
+          "@type": "Question",
+          "name": f.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": f.answer
+          }
+        }))
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Domů",
+            "item": "https://nicolphotography.cz/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Ceník",
+            "item": "https://nicolphotography.cz/cenik"
+          }
+        ]
       }
-    }))
+    ]
   })}</script>`}
 </svelte:head>
 

@@ -107,6 +107,40 @@
   <meta name="twitter:title" content="Portfolio fotografií | Nicol Juráňová" />
   <meta name="twitter:description" content="Ukázky přirozeného focení v přírodě – rodiny, páry, portréty i mazlíčci. Hranice a okolí." />
   <meta name="twitter:image" content="https://nicolphotography.cz/og-image-2026.jpg" />
+
+  {@html `<script type="application/ld+json">${JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "name": "Portfolio fotografií | Nicol Juráňová photography",
+        "url": "https://nicolphotography.cz/portfolio",
+        "description": "Ukázky přirozeného focení v přírodě: portréty, rodiny, páry, mazlíčci a vánoční focení.",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Nicol Juráňová photography",
+          "url": "https://nicolphotography.cz"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Domů",
+            "item": "https://nicolphotography.cz/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Portfolio",
+            "item": "https://nicolphotography.cz/portfolio"
+          }
+        ]
+      }
+    ]
+  })}</script>`}
 </svelte:head>
 
 <svelte:window on:keydown={handleKeydown} />
